@@ -10,6 +10,8 @@ namespace Library_Management
     {
         static void Main(string[] args)
         {
+            Home home = new Home();
+            home.ShowDialog();
         }
     }
 }
