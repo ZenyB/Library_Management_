@@ -51,30 +51,6 @@
             this.lb_Name = new System.Windows.Forms.Label();
             this.pic_Logo = new System.Windows.Forms.PictureBox();
             this.pnl_Content = new System.Windows.Forms.Panel();
-            this.lb_Book = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lb_BookName = new System.Windows.Forms.Label();
-            this.lb_PublCom = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lb_Quantity = new System.Windows.Forms.Label();
-            this.lb_Time = new System.Windows.Forms.Label();
-            this.lb_Author = new System.Windows.Forms.Label();
-            this.lb_TitleCode = new System.Windows.Forms.Label();
-            this.lb_BookCode = new System.Windows.Forms.Label();
-            this.txt_BookCode = new System.Windows.Forms.TextBox();
-            this.cbb_TitleCode = new System.Windows.Forms.ComboBox();
-            this.cbb_BookName = new System.Windows.Forms.ComboBox();
-            this.cbb_Author = new System.Windows.Forms.ComboBox();
-            this.txt_Time = new System.Windows.Forms.TextBox();
-            this.txt_PublCom = new System.Windows.Forms.TextBox();
-            this.txt_Cost = new System.Windows.Forms.TextBox();
-            this.txt_Quantity = new System.Windows.Forms.TextBox();
-            this.lb_CurrencyUnit = new System.Windows.Forms.Label();
-            this.pnl_Buttons = new System.Windows.Forms.Panel();
-            this.btn_Update = new System.Windows.Forms.Button();
-            this.btn_Save = new System.Windows.Forms.Button();
-            this.btn_Delete = new System.Windows.Forms.Button();
-            this.btn_Add = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgrv_Book = new System.Windows.Forms.DataGridView();
             this.col_BookCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,15 +61,39 @@
             this.col_PublCom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnl_Buttons = new System.Windows.Forms.Panel();
+            this.btn_Update = new System.Windows.Forms.Button();
+            this.btn_Save = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_CurrencyUnit = new System.Windows.Forms.Label();
+            this.txt_Quantity = new System.Windows.Forms.TextBox();
+            this.txt_Cost = new System.Windows.Forms.TextBox();
+            this.txt_PublCom = new System.Windows.Forms.TextBox();
+            this.txt_Time = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lb_Quantity = new System.Windows.Forms.Label();
+            this.cbb_Author = new System.Windows.Forms.ComboBox();
+            this.cbb_BookName = new System.Windows.Forms.ComboBox();
+            this.cbb_TitleCode = new System.Windows.Forms.ComboBox();
+            this.lb_PublCom = new System.Windows.Forms.Label();
+            this.lb_Time = new System.Windows.Forms.Label();
+            this.lb_Author = new System.Windows.Forms.Label();
+            this.txt_BookCode = new System.Windows.Forms.TextBox();
+            this.lb_BookCode = new System.Windows.Forms.Label();
+            this.lb_TitleCode = new System.Windows.Forms.Label();
+            this.lb_BookName = new System.Windows.Forms.Label();
+            this.lb_Book = new System.Windows.Forms.Label();
             this.pnl_Menu.SuspendLayout();
             this.mnstr_1.SuspendLayout();
             this.pnl_Name.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Logo)).BeginInit();
             this.pnl_Content.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.pnl_Buttons.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrv_Book)).BeginInit();
+            this.pnl_Buttons.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_Menu
@@ -149,31 +149,31 @@
             // đâuToolStripMenuItem
             // 
             this.đâuToolStripMenuItem.Name = "đâuToolStripMenuItem";
-            this.đâuToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
+            this.đâuToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.đâuToolStripMenuItem.Text = "Đầu sách";
             // 
             // sáchToolStripMenuItem1
             // 
             this.sáchToolStripMenuItem1.Name = "sáchToolStripMenuItem1";
-            this.sáchToolStripMenuItem1.Size = new System.Drawing.Size(242, 34);
+            this.sáchToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.sáchToolStripMenuItem1.Text = "Sách";
             // 
             // tácGiảToolStripMenuItem
             // 
             this.tácGiảToolStripMenuItem.Name = "tácGiảToolStripMenuItem";
-            this.tácGiảToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
+            this.tácGiảToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.tácGiảToolStripMenuItem.Text = "Thể loại";
             // 
             // thểLoạiToolStripMenuItem
             // 
             this.thểLoạiToolStripMenuItem.Name = "thểLoạiToolStripMenuItem";
-            this.thểLoạiToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
+            this.thểLoạiToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.thểLoạiToolStripMenuItem.Text = "Tác giả";
             // 
             // phiếuNhậpSáchToolStripMenuItem
             // 
             this.phiếuNhậpSáchToolStripMenuItem.Name = "phiếuNhậpSáchToolStripMenuItem";
-            this.phiếuNhậpSáchToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
+            this.phiếuNhậpSáchToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.phiếuNhậpSáchToolStripMenuItem.Text = "Phiếu nhập sách";
             // 
             // đỘCGIẢToolStripMenuItem
@@ -290,244 +290,6 @@
             this.pnl_Content.Size = new System.Drawing.Size(1028, 442);
             this.pnl_Content.TabIndex = 6;
             // 
-            // lb_Book
-            // 
-            this.lb_Book.AutoSize = true;
-            this.lb_Book.Font = new System.Drawing.Font("MS Reference Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Book.Location = new System.Drawing.Point(425, 3);
-            this.lb_Book.Name = "lb_Book";
-            this.lb_Book.Size = new System.Drawing.Size(98, 35);
-            this.lb_Book.TabIndex = 1;
-            this.lb_Book.Text = "SÁCH";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lb_CurrencyUnit);
-            this.panel1.Controls.Add(this.txt_Quantity);
-            this.panel1.Controls.Add(this.txt_Cost);
-            this.panel1.Controls.Add(this.txt_PublCom);
-            this.panel1.Controls.Add(this.txt_Time);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lb_Quantity);
-            this.panel1.Controls.Add(this.cbb_Author);
-            this.panel1.Controls.Add(this.cbb_BookName);
-            this.panel1.Controls.Add(this.cbb_TitleCode);
-            this.panel1.Controls.Add(this.lb_PublCom);
-            this.panel1.Controls.Add(this.lb_Time);
-            this.panel1.Controls.Add(this.lb_Author);
-            this.panel1.Controls.Add(this.txt_BookCode);
-            this.panel1.Controls.Add(this.lb_BookCode);
-            this.panel1.Controls.Add(this.lb_TitleCode);
-            this.panel1.Controls.Add(this.lb_BookName);
-            this.panel1.Location = new System.Drawing.Point(0, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1027, 117);
-            this.panel1.TabIndex = 2;
-            // 
-            // lb_BookName
-            // 
-            this.lb_BookName.AutoSize = true;
-            this.lb_BookName.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_BookName.Location = new System.Drawing.Point(3, 81);
-            this.lb_BookName.Name = "lb_BookName";
-            this.lb_BookName.Size = new System.Drawing.Size(110, 26);
-            this.lb_BookName.TabIndex = 2;
-            this.lb_BookName.Text = "Tên sách:";
-            // 
-            // lb_PublCom
-            // 
-            this.lb_PublCom.AutoSize = true;
-            this.lb_PublCom.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_PublCom.Location = new System.Drawing.Point(348, 81);
-            this.lb_PublCom.Name = "lb_PublCom";
-            this.lb_PublCom.Size = new System.Drawing.Size(157, 26);
-            this.lb_PublCom.TabIndex = 3;
-            this.lb_PublCom.Text = "Nhà xuất bản:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(715, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 26);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Trị giá: ";
-            // 
-            // lb_Quantity
-            // 
-            this.lb_Quantity.AutoSize = true;
-            this.lb_Quantity.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Quantity.Location = new System.Drawing.Point(715, 11);
-            this.lb_Quantity.Name = "lb_Quantity";
-            this.lb_Quantity.Size = new System.Drawing.Size(110, 26);
-            this.lb_Quantity.TabIndex = 5;
-            this.lb_Quantity.Text = "Số lượng:";
-            // 
-            // lb_Time
-            // 
-            this.lb_Time.AutoSize = true;
-            this.lb_Time.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Time.Location = new System.Drawing.Point(348, 45);
-            this.lb_Time.Name = "lb_Time";
-            this.lb_Time.Size = new System.Drawing.Size(163, 26);
-            this.lb_Time.TabIndex = 6;
-            this.lb_Time.Text = "Năm xuất bản:";
-            // 
-            // lb_Author
-            // 
-            this.lb_Author.AutoSize = true;
-            this.lb_Author.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Author.Location = new System.Drawing.Point(348, 9);
-            this.lb_Author.Name = "lb_Author";
-            this.lb_Author.Size = new System.Drawing.Size(92, 26);
-            this.lb_Author.TabIndex = 7;
-            this.lb_Author.Text = "Tác giả:";
-            // 
-            // lb_TitleCode
-            // 
-            this.lb_TitleCode.AutoSize = true;
-            this.lb_TitleCode.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_TitleCode.Location = new System.Drawing.Point(3, 45);
-            this.lb_TitleCode.Name = "lb_TitleCode";
-            this.lb_TitleCode.Size = new System.Drawing.Size(146, 26);
-            this.lb_TitleCode.TabIndex = 8;
-            this.lb_TitleCode.Text = "Mã đầu sách:";
-            // 
-            // lb_BookCode
-            // 
-            this.lb_BookCode.AutoSize = true;
-            this.lb_BookCode.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_BookCode.Location = new System.Drawing.Point(3, 9);
-            this.lb_BookCode.Name = "lb_BookCode";
-            this.lb_BookCode.Size = new System.Drawing.Size(102, 26);
-            this.lb_BookCode.TabIndex = 9;
-            this.lb_BookCode.Text = "Mã sách:";
-            // 
-            // txt_BookCode
-            // 
-            this.txt_BookCode.Location = new System.Drawing.Point(150, 9);
-            this.txt_BookCode.Name = "txt_BookCode";
-            this.txt_BookCode.Size = new System.Drawing.Size(182, 26);
-            this.txt_BookCode.TabIndex = 10;
-            // 
-            // cbb_TitleCode
-            // 
-            this.cbb_TitleCode.FormattingEnabled = true;
-            this.cbb_TitleCode.Location = new System.Drawing.Point(150, 47);
-            this.cbb_TitleCode.Name = "cbb_TitleCode";
-            this.cbb_TitleCode.Size = new System.Drawing.Size(181, 28);
-            this.cbb_TitleCode.TabIndex = 11;
-            // 
-            // cbb_BookName
-            // 
-            this.cbb_BookName.FormattingEnabled = true;
-            this.cbb_BookName.Location = new System.Drawing.Point(150, 83);
-            this.cbb_BookName.Name = "cbb_BookName";
-            this.cbb_BookName.Size = new System.Drawing.Size(181, 28);
-            this.cbb_BookName.TabIndex = 12;
-            // 
-            // cbb_Author
-            // 
-            this.cbb_Author.FormattingEnabled = true;
-            this.cbb_Author.Location = new System.Drawing.Point(512, 7);
-            this.cbb_Author.Name = "cbb_Author";
-            this.cbb_Author.Size = new System.Drawing.Size(181, 28);
-            this.cbb_Author.TabIndex = 13;
-            // 
-            // txt_Time
-            // 
-            this.txt_Time.Location = new System.Drawing.Point(511, 47);
-            this.txt_Time.Name = "txt_Time";
-            this.txt_Time.Size = new System.Drawing.Size(182, 26);
-            this.txt_Time.TabIndex = 14;
-            // 
-            // txt_PublCom
-            // 
-            this.txt_PublCom.Location = new System.Drawing.Point(511, 83);
-            this.txt_PublCom.Name = "txt_PublCom";
-            this.txt_PublCom.Size = new System.Drawing.Size(182, 26);
-            this.txt_PublCom.TabIndex = 15;
-            // 
-            // txt_Cost
-            // 
-            this.txt_Cost.Location = new System.Drawing.Point(822, 47);
-            this.txt_Cost.Name = "txt_Cost";
-            this.txt_Cost.Size = new System.Drawing.Size(108, 26);
-            this.txt_Cost.TabIndex = 16;
-            // 
-            // txt_Quantity
-            // 
-            this.txt_Quantity.Location = new System.Drawing.Point(822, 9);
-            this.txt_Quantity.Name = "txt_Quantity";
-            this.txt_Quantity.Size = new System.Drawing.Size(108, 26);
-            this.txt_Quantity.TabIndex = 17;
-            // 
-            // lb_CurrencyUnit
-            // 
-            this.lb_CurrencyUnit.AutoSize = true;
-            this.lb_CurrencyUnit.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_CurrencyUnit.Location = new System.Drawing.Point(936, 47);
-            this.lb_CurrencyUnit.Name = "lb_CurrencyUnit";
-            this.lb_CurrencyUnit.Size = new System.Drawing.Size(61, 26);
-            this.lb_CurrencyUnit.TabIndex = 18;
-            this.lb_CurrencyUnit.Text = "đồng";
-            // 
-            // pnl_Buttons
-            // 
-            this.pnl_Buttons.Controls.Add(this.btn_Update);
-            this.pnl_Buttons.Controls.Add(this.btn_Save);
-            this.pnl_Buttons.Controls.Add(this.btn_Delete);
-            this.pnl_Buttons.Controls.Add(this.btn_Add);
-            this.pnl_Buttons.Location = new System.Drawing.Point(12, 157);
-            this.pnl_Buttons.Name = "pnl_Buttons";
-            this.pnl_Buttons.Size = new System.Drawing.Size(1004, 40);
-            this.pnl_Buttons.TabIndex = 3;
-            // 
-            // btn_Update
-            // 
-            this.btn_Update.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btn_Update.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Update.Location = new System.Drawing.Point(518, 3);
-            this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(119, 35);
-            this.btn_Update.TabIndex = 3;
-            this.btn_Update.Text = "Cập nhật";
-            this.btn_Update.UseVisualStyleBackColor = false;
-            // 
-            // btn_Save
-            // 
-            this.btn_Save.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btn_Save.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.Location = new System.Drawing.Point(360, 3);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(119, 35);
-            this.btn_Save.TabIndex = 2;
-            this.btn_Save.Text = "Lưu";
-            this.btn_Save.UseVisualStyleBackColor = false;
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btn_Delete.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Delete.Location = new System.Drawing.Point(681, 3);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(119, 35);
-            this.btn_Delete.TabIndex = 1;
-            this.btn_Delete.Text = "Xoá";
-            this.btn_Delete.UseVisualStyleBackColor = false;
-            // 
-            // btn_Add
-            // 
-            this.btn_Add.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btn_Add.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Add.Location = new System.Drawing.Point(209, 3);
-            this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(119, 35);
-            this.btn_Add.TabIndex = 0;
-            this.btn_Add.Text = "Thêm";
-            this.btn_Add.UseVisualStyleBackColor = false;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgrv_Book);
@@ -624,6 +386,244 @@
             this.col_Cost.ReadOnly = true;
             this.col_Cost.Width = 150;
             // 
+            // pnl_Buttons
+            // 
+            this.pnl_Buttons.Controls.Add(this.btn_Update);
+            this.pnl_Buttons.Controls.Add(this.btn_Save);
+            this.pnl_Buttons.Controls.Add(this.btn_Delete);
+            this.pnl_Buttons.Controls.Add(this.btn_Add);
+            this.pnl_Buttons.Location = new System.Drawing.Point(12, 157);
+            this.pnl_Buttons.Name = "pnl_Buttons";
+            this.pnl_Buttons.Size = new System.Drawing.Size(1004, 40);
+            this.pnl_Buttons.TabIndex = 3;
+            // 
+            // btn_Update
+            // 
+            this.btn_Update.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btn_Update.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Update.Location = new System.Drawing.Point(518, 3);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(119, 35);
+            this.btn_Update.TabIndex = 3;
+            this.btn_Update.Text = "Cập nhật";
+            this.btn_Update.UseVisualStyleBackColor = false;
+            // 
+            // btn_Save
+            // 
+            this.btn_Save.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btn_Save.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.Location = new System.Drawing.Point(360, 3);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(119, 35);
+            this.btn_Save.TabIndex = 2;
+            this.btn_Save.Text = "Lưu";
+            this.btn_Save.UseVisualStyleBackColor = false;
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btn_Delete.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Delete.Location = new System.Drawing.Point(681, 3);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(119, 35);
+            this.btn_Delete.TabIndex = 1;
+            this.btn_Delete.Text = "Xoá";
+            this.btn_Delete.UseVisualStyleBackColor = false;
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btn_Add.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Add.Location = new System.Drawing.Point(209, 3);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(119, 35);
+            this.btn_Add.TabIndex = 0;
+            this.btn_Add.Text = "Thêm";
+            this.btn_Add.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lb_CurrencyUnit);
+            this.panel1.Controls.Add(this.txt_Quantity);
+            this.panel1.Controls.Add(this.txt_Cost);
+            this.panel1.Controls.Add(this.txt_PublCom);
+            this.panel1.Controls.Add(this.txt_Time);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lb_Quantity);
+            this.panel1.Controls.Add(this.cbb_Author);
+            this.panel1.Controls.Add(this.cbb_BookName);
+            this.panel1.Controls.Add(this.cbb_TitleCode);
+            this.panel1.Controls.Add(this.lb_PublCom);
+            this.panel1.Controls.Add(this.lb_Time);
+            this.panel1.Controls.Add(this.lb_Author);
+            this.panel1.Controls.Add(this.txt_BookCode);
+            this.panel1.Controls.Add(this.lb_BookCode);
+            this.panel1.Controls.Add(this.lb_TitleCode);
+            this.panel1.Controls.Add(this.lb_BookName);
+            this.panel1.Location = new System.Drawing.Point(0, 40);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1027, 117);
+            this.panel1.TabIndex = 2;
+            // 
+            // lb_CurrencyUnit
+            // 
+            this.lb_CurrencyUnit.AutoSize = true;
+            this.lb_CurrencyUnit.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_CurrencyUnit.Location = new System.Drawing.Point(936, 47);
+            this.lb_CurrencyUnit.Name = "lb_CurrencyUnit";
+            this.lb_CurrencyUnit.Size = new System.Drawing.Size(61, 26);
+            this.lb_CurrencyUnit.TabIndex = 18;
+            this.lb_CurrencyUnit.Text = "đồng";
+            // 
+            // txt_Quantity
+            // 
+            this.txt_Quantity.Location = new System.Drawing.Point(822, 9);
+            this.txt_Quantity.Name = "txt_Quantity";
+            this.txt_Quantity.Size = new System.Drawing.Size(108, 26);
+            this.txt_Quantity.TabIndex = 17;
+            // 
+            // txt_Cost
+            // 
+            this.txt_Cost.Location = new System.Drawing.Point(822, 47);
+            this.txt_Cost.Name = "txt_Cost";
+            this.txt_Cost.Size = new System.Drawing.Size(108, 26);
+            this.txt_Cost.TabIndex = 16;
+            // 
+            // txt_PublCom
+            // 
+            this.txt_PublCom.Location = new System.Drawing.Point(511, 83);
+            this.txt_PublCom.Name = "txt_PublCom";
+            this.txt_PublCom.Size = new System.Drawing.Size(182, 26);
+            this.txt_PublCom.TabIndex = 15;
+            // 
+            // txt_Time
+            // 
+            this.txt_Time.Location = new System.Drawing.Point(511, 47);
+            this.txt_Time.Name = "txt_Time";
+            this.txt_Time.Size = new System.Drawing.Size(182, 26);
+            this.txt_Time.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(715, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 26);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Trị giá: ";
+            // 
+            // lb_Quantity
+            // 
+            this.lb_Quantity.AutoSize = true;
+            this.lb_Quantity.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Quantity.Location = new System.Drawing.Point(715, 11);
+            this.lb_Quantity.Name = "lb_Quantity";
+            this.lb_Quantity.Size = new System.Drawing.Size(110, 26);
+            this.lb_Quantity.TabIndex = 5;
+            this.lb_Quantity.Text = "Số lượng:";
+            // 
+            // cbb_Author
+            // 
+            this.cbb_Author.FormattingEnabled = true;
+            this.cbb_Author.Location = new System.Drawing.Point(512, 7);
+            this.cbb_Author.Name = "cbb_Author";
+            this.cbb_Author.Size = new System.Drawing.Size(181, 28);
+            this.cbb_Author.TabIndex = 13;
+            // 
+            // cbb_BookName
+            // 
+            this.cbb_BookName.FormattingEnabled = true;
+            this.cbb_BookName.Location = new System.Drawing.Point(150, 83);
+            this.cbb_BookName.Name = "cbb_BookName";
+            this.cbb_BookName.Size = new System.Drawing.Size(181, 28);
+            this.cbb_BookName.TabIndex = 12;
+            // 
+            // cbb_TitleCode
+            // 
+            this.cbb_TitleCode.FormattingEnabled = true;
+            this.cbb_TitleCode.Location = new System.Drawing.Point(150, 47);
+            this.cbb_TitleCode.Name = "cbb_TitleCode";
+            this.cbb_TitleCode.Size = new System.Drawing.Size(181, 28);
+            this.cbb_TitleCode.TabIndex = 11;
+            // 
+            // lb_PublCom
+            // 
+            this.lb_PublCom.AutoSize = true;
+            this.lb_PublCom.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_PublCom.Location = new System.Drawing.Point(348, 81);
+            this.lb_PublCom.Name = "lb_PublCom";
+            this.lb_PublCom.Size = new System.Drawing.Size(157, 26);
+            this.lb_PublCom.TabIndex = 3;
+            this.lb_PublCom.Text = "Nhà xuất bản:";
+            // 
+            // lb_Time
+            // 
+            this.lb_Time.AutoSize = true;
+            this.lb_Time.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Time.Location = new System.Drawing.Point(348, 45);
+            this.lb_Time.Name = "lb_Time";
+            this.lb_Time.Size = new System.Drawing.Size(163, 26);
+            this.lb_Time.TabIndex = 6;
+            this.lb_Time.Text = "Năm xuất bản:";
+            // 
+            // lb_Author
+            // 
+            this.lb_Author.AutoSize = true;
+            this.lb_Author.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Author.Location = new System.Drawing.Point(348, 9);
+            this.lb_Author.Name = "lb_Author";
+            this.lb_Author.Size = new System.Drawing.Size(92, 26);
+            this.lb_Author.TabIndex = 7;
+            this.lb_Author.Text = "Tác giả:";
+            // 
+            // txt_BookCode
+            // 
+            this.txt_BookCode.Location = new System.Drawing.Point(150, 9);
+            this.txt_BookCode.Name = "txt_BookCode";
+            this.txt_BookCode.Size = new System.Drawing.Size(182, 26);
+            this.txt_BookCode.TabIndex = 10;
+            // 
+            // lb_BookCode
+            // 
+            this.lb_BookCode.AutoSize = true;
+            this.lb_BookCode.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_BookCode.Location = new System.Drawing.Point(3, 9);
+            this.lb_BookCode.Name = "lb_BookCode";
+            this.lb_BookCode.Size = new System.Drawing.Size(102, 26);
+            this.lb_BookCode.TabIndex = 9;
+            this.lb_BookCode.Text = "Mã sách:";
+            // 
+            // lb_TitleCode
+            // 
+            this.lb_TitleCode.AutoSize = true;
+            this.lb_TitleCode.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_TitleCode.Location = new System.Drawing.Point(3, 45);
+            this.lb_TitleCode.Name = "lb_TitleCode";
+            this.lb_TitleCode.Size = new System.Drawing.Size(146, 26);
+            this.lb_TitleCode.TabIndex = 8;
+            this.lb_TitleCode.Text = "Mã đầu sách:";
+            // 
+            // lb_BookName
+            // 
+            this.lb_BookName.AutoSize = true;
+            this.lb_BookName.Font = new System.Drawing.Font("MS Reference Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_BookName.Location = new System.Drawing.Point(3, 81);
+            this.lb_BookName.Name = "lb_BookName";
+            this.lb_BookName.Size = new System.Drawing.Size(110, 26);
+            this.lb_BookName.TabIndex = 2;
+            this.lb_BookName.Text = "Tên sách:";
+            // 
+            // lb_Book
+            // 
+            this.lb_Book.AutoSize = true;
+            this.lb_Book.Font = new System.Drawing.Font("MS Reference Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Book.Location = new System.Drawing.Point(425, 3);
+            this.lb_Book.Name = "lb_Book";
+            this.lb_Book.Size = new System.Drawing.Size(98, 35);
+            this.lb_Book.TabIndex = 1;
+            this.lb_Book.Text = "SÁCH";
+            // 
             // Book
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -646,11 +646,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_Logo)).EndInit();
             this.pnl_Content.ResumeLayout(false);
             this.pnl_Content.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.pnl_Buttons.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgrv_Book)).EndInit();
+            this.pnl_Buttons.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
