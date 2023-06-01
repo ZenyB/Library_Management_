@@ -45,24 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Book.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Book.Designer.cs">
-      <DependentUpon>Book.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BookTitle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BookTitle.Designer.cs">
-      <DependentUpon>BookTitle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Genre.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Genre.Designer.cs">
-      <DependentUpon>Genre.cs</DependentUpon>
-    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,15 +63,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Book.resx">
-      <DependentUpon>Book.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BookTitle.resx">
-      <DependentUpon>BookTitle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Genre.resx">
-      <DependentUpon>Genre.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
