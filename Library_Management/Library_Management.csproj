@@ -52,6 +52,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\Kho Sach\addBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Kho Sach\addBooks.Designer.cs">
+      <DependentUpon>addBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,10 +76,10 @@
     <Compile Include="Forms\FormHoTro.Designer.cs">
       <DependentUpon>FormHoTro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormKhoSach.cs">
+    <Compile Include="Forms\Kho Sach\FormKhoSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormKhoSach.Designer.cs">
+    <Compile Include="Forms\Kho Sach\FormKhoSach.Designer.cs">
       <DependentUpon>FormKhoSach.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormThongKe.cs">
@@ -106,12 +112,41 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\FormDichVu.resx">
+      <DependentUpon>FormDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormDocGia.resx">
+      <DependentUpon>FormDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormHoTro.resx">
+      <DependentUpon>FormHoTro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Kho Sach\addBooks.resx">
+      <DependentUpon>addBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Kho Sach\FormKhoSach.resx">
+      <DependentUpon>FormKhoSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormThongKe.resx">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTuyChinh.resx">
+      <DependentUpon>FormTuyChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="packages.config" />
     <None Include="Resources\library %281%291.png" />
   </ItemGroup>
@@ -138,6 +173,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\24manguel-superJumbo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
