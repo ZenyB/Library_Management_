@@ -592,6 +592,9 @@
             this.Controls.Add(this.panelShadow);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Home";
             this.Text = "Home";
             this.panelMenu.ResumeLayout(false);
