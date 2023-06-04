@@ -189,6 +189,7 @@ namespace Library_Management
 
         private void button8_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new phieuNhapSach());
             //...
             hideSubMenu();
         }
@@ -320,6 +321,56 @@ namespace Library_Management
                 FormBorderStyle = FormBorderStyle.None;
             else
                 FormBorderStyle = FormBorderStyle.Sizable;
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelDichVuSubMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelDocGiaSubMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelKhoSachSubMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void iconCurrentChildForm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelShadow_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
