@@ -29,18 +29,12 @@ namespace Library_Management
         }
 
 
-        private void thongTinPN_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void btnLuu_MouseHover(object sender, EventArgs e)
         {
            // btnLuu.BackColor = Color.FromArgb(79, 224, 181);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnChiTiet_Click(object sender, EventArgs e)
         {
             // hide form 1
             // this.Hide();
@@ -51,10 +45,7 @@ namespace Library_Management
             // dispose form 2 instance
             f2 = null;
             //show form 1 again
-            this.Show();        
+            this.Show();
         }
-
-    
-
     }
 }

@@ -123,6 +123,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Kho Sach\Sach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Kho Sach\Sach.Designer.cs">
+      <DependentUpon>Sach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Kho Sach\tacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Kho Sach\tacGia.Designer.cs">
+      <DependentUpon>tacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Kho Sach\theLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Kho Sach\theLoai.Designer.cs">
+      <DependentUpon>theLoai.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -161,6 +179,15 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Kho Sach\Sach.resx">
+      <DependentUpon>Sach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Kho Sach\tacGia.resx">
+      <DependentUpon>tacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Kho Sach\theLoai.resx">
+      <DependentUpon>theLoai.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
