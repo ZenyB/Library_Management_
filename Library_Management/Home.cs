@@ -165,24 +165,28 @@ namespace Library_Management
 
         private void button12_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new dauSach());
             //...
             hideSubMenu();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new Sach());
             //...
             hideSubMenu();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new theLoai());
             //...
             hideSubMenu();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new tacGia());
             //...
             hideSubMenu();
         }
@@ -303,10 +307,10 @@ namespace Library_Management
 
         private void btnMaximize_Click(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Normal)
-                WindowState = FormWindowState.Maximized;
-            else
-                WindowState = FormWindowState.Normal;
+        //    if (WindowState == FormWindowState.Normal)
+        //        WindowState = FormWindowState.Maximized;
+        //    else
+        //        WindowState = FormWindowState.Normal;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -369,6 +373,11 @@ namespace Library_Management
         }
 
         private void panelShadow_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Home_Load(object sender, EventArgs e)
         {
 
         }
