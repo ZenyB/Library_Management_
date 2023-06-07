@@ -5,13 +5,14 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{551E826A-B69A-494C-A037-78FDB9FE61A1}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>Library_Management</RootNamespace>
     <AssemblyName>Library_Management</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +32,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
@@ -52,11 +56,23 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Kho Sach\addBooks.cs">
+    <Compile Include="Forms\Kho Sach\dauSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Kho Sach\addBooks.Designer.cs">
-      <DependentUpon>addBooks.cs</DependentUpon>
+    <Compile Include="Forms\Kho Sach\dauSach.Designer.cs">
+      <DependentUpon>dauSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Kho Sach\chiTietPNS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Kho Sach\chiTietPNS.Designer.cs">
+      <DependentUpon>chiTietPNS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Kho Sach\phieuNhapSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Kho Sach\phieuNhapSach.Designer.cs">
+      <DependentUpon>phieuNhapSach.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormDichVu.cs">
       <SubType>Form</SubType>
@@ -112,6 +128,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\Kho Sach\chiTietPNS.resx">
+      <DependentUpon>chiTietPNS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormDichVu.resx">
       <DependentUpon>FormDichVu.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,8 +140,11 @@
     <EmbeddedResource Include="Forms\FormHoTro.resx">
       <DependentUpon>FormHoTro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Kho Sach\addBooks.resx">
-      <DependentUpon>addBooks.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Kho Sach\dauSach.resx">
+      <DependentUpon>dauSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Kho Sach\phieuNhapSach.resx">
+      <DependentUpon>phieuNhapSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Kho Sach\FormKhoSach.resx">
       <DependentUpon>FormKhoSach.cs</DependentUpon>
