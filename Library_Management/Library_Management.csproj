@@ -56,6 +56,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\DocGia\LoaiDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DocGia\LoaiDocGia.Designer.cs">
+      <DependentUpon>LoaiDocGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DocGia\PhieuThuTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DocGia\PhieuThuTien.Designer.cs">
+      <DependentUpon>PhieuThuTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DocGia\TheDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DocGia\TheDocGia.Designer.cs">
+      <DependentUpon>TheDocGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Kho Sach\dauSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,10 +98,10 @@
     <Compile Include="Forms\FormDichVu.Designer.cs">
       <DependentUpon>FormDichVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormDocGia.cs">
+    <Compile Include="Forms\DocGia\FormDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormDocGia.Designer.cs">
+    <Compile Include="Forms\DocGia\FormDocGia.Designer.cs">
       <DependentUpon>FormDocGia.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormHoTro.cs">
@@ -146,13 +164,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\DocGia\LoaiDocGia.resx">
+      <DependentUpon>LoaiDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DocGia\PhieuThuTien.resx">
+      <DependentUpon>PhieuThuTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DocGia\TheDocGia.resx">
+      <DependentUpon>TheDocGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Kho Sach\chiTietPNS.resx">
       <DependentUpon>chiTietPNS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormDichVu.resx">
       <DependentUpon>FormDichVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormDocGia.resx">
+    <EmbeddedResource Include="Forms\DocGia\FormDocGia.resx">
       <DependentUpon>FormDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormHoTro.resx">

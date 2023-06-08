@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Windows.Media;
 using FontAwesome.Sharp;
 using Library_Management;
+using Library_Management.Forms.DocGia;
 using Color = System.Drawing.Color;
 
 namespace Library_Management
@@ -204,25 +205,25 @@ namespace Library_Management
 
             showSubMenu(panelDocGiaSubMenu);
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new FormDocGia());
+           // OpenChildForm(new FormDocGia());
         }
 
         #region PanelDocGia
         private void button18_Click(object sender, EventArgs e)
         {
-            //...
+            OpenChildForm(new TheDocGia());
             hideSubMenu();
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
-            //...
+            OpenChildForm(new LoaiDocGia());
             hideSubMenu();
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
-            //...
+            OpenChildForm(new PhieuThuTien());
             hideSubMenu();
         }
 
