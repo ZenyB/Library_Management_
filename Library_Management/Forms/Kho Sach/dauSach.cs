@@ -45,5 +45,10 @@ namespace Library_Management
             //show form 1 again
             this.Show();
         }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

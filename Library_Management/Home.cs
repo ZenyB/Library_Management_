@@ -159,7 +159,7 @@ namespace Library_Management
 
             showSubMenu(panelKhoSachSubMenu);
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new FormKhoSach());
+           // OpenChildForm(new FormKhoSach());
         }
 
         #region PanelKhoSach
@@ -234,21 +234,24 @@ namespace Library_Management
 
             showSubMenu(panelDichVuSubMenu);
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new FormDichVu());
+            //OpenChildForm(new FormDichVu());
         }
 
         #region PanelDichVu
         private void button5_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new muonSach());
             //...
             hideSubMenu();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new traSach());
             //...
             hideSubMenu();
         }
+
 
         #endregion
 
@@ -381,6 +384,13 @@ namespace Library_Management
         private void Home_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_TraCuu_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new traCuu());
+            //...
+            hideSubMenu();
         }
     }
 

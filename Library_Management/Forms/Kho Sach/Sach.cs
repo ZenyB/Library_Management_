@@ -16,5 +16,25 @@ namespace Library_Management
         {
             InitializeComponent();
         }
+
+        private void btnXemVaCapNhat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTaoMoi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

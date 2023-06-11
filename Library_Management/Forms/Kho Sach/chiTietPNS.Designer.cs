@@ -61,6 +61,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.DS_chitietPNS = new System.Windows.Forms.DataGridView();
             this.maCTPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,9 +74,6 @@
             this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -81,8 +81,8 @@
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DS_chitietPNS)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DS_chitietPNS)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -123,7 +123,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 55);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1244, 347);
+            this.panel1.Size = new System.Drawing.Size(1244, 315);
             this.panel1.TabIndex = 8;
             // 
             // panel9
@@ -146,7 +146,7 @@
             this.panel9.Controls.Add(this.txbTenSach);
             this.panel9.Location = new System.Drawing.Point(446, 58);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(785, 283);
+            this.panel9.Size = new System.Drawing.Size(785, 257);
             this.panel9.TabIndex = 30;
             // 
             // btnXemVaCapNhat
@@ -157,7 +157,7 @@
             this.btnXemVaCapNhat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(224)))), ((int)(((byte)(181)))));
             this.btnXemVaCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXemVaCapNhat.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXemVaCapNhat.Location = new System.Drawing.Point(559, 239);
+            this.btnXemVaCapNhat.Location = new System.Drawing.Point(558, 214);
             this.btnXemVaCapNhat.Name = "btnXemVaCapNhat";
             this.btnXemVaCapNhat.Size = new System.Drawing.Size(206, 29);
             this.btnXemVaCapNhat.TabIndex = 28;
@@ -169,7 +169,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(437, 152);
+            this.label13.Location = new System.Drawing.Point(437, 132);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(81, 19);
             this.label13.TabIndex = 24;
@@ -180,7 +180,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(437, 82);
+            this.label14.Location = new System.Drawing.Point(437, 72);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(66, 19);
             this.label14.TabIndex = 23;
@@ -200,7 +200,7 @@
             // txb_ThanhTien
             // 
             this.txb_ThanhTien.HideSelection = false;
-            this.txb_ThanhTien.Location = new System.Drawing.Point(441, 174);
+            this.txb_ThanhTien.Location = new System.Drawing.Point(441, 154);
             this.txb_ThanhTien.Name = "txb_ThanhTien";
             this.txb_ThanhTien.Size = new System.Drawing.Size(324, 22);
             this.txb_ThanhTien.TabIndex = 20;
@@ -209,7 +209,7 @@
             // txb_DonGia
             // 
             this.txb_DonGia.HideSelection = false;
-            this.txb_DonGia.Location = new System.Drawing.Point(441, 104);
+            this.txb_DonGia.Location = new System.Drawing.Point(441, 94);
             this.txb_DonGia.Name = "txb_DonGia";
             this.txb_DonGia.Size = new System.Drawing.Size(324, 22);
             this.txb_DonGia.TabIndex = 19;
@@ -229,7 +229,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(29, 222);
+            this.label8.Location = new System.Drawing.Point(29, 192);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 19);
             this.label8.TabIndex = 17;
@@ -240,7 +240,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(29, 152);
+            this.label9.Location = new System.Drawing.Point(29, 132);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(104, 19);
             this.label9.TabIndex = 16;
@@ -251,7 +251,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(29, 82);
+            this.label10.Location = new System.Drawing.Point(29, 72);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 19);
             this.label10.TabIndex = 15;
@@ -271,7 +271,7 @@
             // txb_NamXB
             // 
             this.txb_NamXB.HideSelection = false;
-            this.txb_NamXB.Location = new System.Drawing.Point(33, 244);
+            this.txb_NamXB.Location = new System.Drawing.Point(33, 214);
             this.txb_NamXB.Name = "txb_NamXB";
             this.txb_NamXB.Size = new System.Drawing.Size(324, 22);
             this.txb_NamXB.TabIndex = 13;
@@ -280,7 +280,7 @@
             // txb_NhaXB
             // 
             this.txb_NhaXB.HideSelection = false;
-            this.txb_NhaXB.Location = new System.Drawing.Point(33, 174);
+            this.txb_NhaXB.Location = new System.Drawing.Point(33, 154);
             this.txb_NhaXB.Name = "txb_NhaXB";
             this.txb_NhaXB.Size = new System.Drawing.Size(324, 22);
             this.txb_NhaXB.TabIndex = 12;
@@ -289,7 +289,7 @@
             // txb_TacGia
             // 
             this.txb_TacGia.HideSelection = false;
-            this.txb_TacGia.Location = new System.Drawing.Point(33, 104);
+            this.txb_TacGia.Location = new System.Drawing.Point(33, 94);
             this.txb_TacGia.Name = "txb_TacGia";
             this.txb_TacGia.Size = new System.Drawing.Size(324, 22);
             this.txb_TacGia.TabIndex = 11;
@@ -316,7 +316,7 @@
             this.panel8.Controls.Add(this.txb_MaPNS);
             this.panel8.Location = new System.Drawing.Point(12, 57);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(428, 284);
+            this.panel8.Size = new System.Drawing.Size(428, 258);
             this.panel8.TabIndex = 20;
             // 
             // btnLuu
@@ -327,7 +327,7 @@
             this.btnLuu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(224)))), ((int)(((byte)(181)))));
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(53, 207);
+            this.btnLuu.Location = new System.Drawing.Point(53, 180);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(315, 29);
             this.btnLuu.TabIndex = 27;
@@ -343,7 +343,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(245, 242);
+            this.btnXoa.Location = new System.Drawing.Point(245, 215);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(123, 29);
             this.btnXoa.TabIndex = 26;
@@ -356,7 +356,7 @@
             this.btnTaoMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaoMoi.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoMoi.ForeColor = System.Drawing.Color.White;
-            this.btnTaoMoi.Location = new System.Drawing.Point(53, 242);
+            this.btnTaoMoi.Location = new System.Drawing.Point(53, 215);
             this.btnTaoMoi.Name = "btnTaoMoi";
             this.btnTaoMoi.Size = new System.Drawing.Size(177, 29);
             this.btnTaoMoi.TabIndex = 25;
@@ -419,7 +419,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("UTM Avo", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(44, 12);
+            this.label2.Location = new System.Drawing.Point(42, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(365, 29);
             this.label2.TabIndex = 0;
@@ -430,9 +430,9 @@
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 402);
+            this.panel3.Location = new System.Drawing.Point(0, 370);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1244, 474);
+            this.panel3.Size = new System.Drawing.Size(1244, 356);
             this.panel3.TabIndex = 9;
             // 
             // panel6
@@ -440,8 +440,39 @@
             this.panel6.Controls.Add(this.DS_chitietPNS);
             this.panel6.Location = new System.Drawing.Point(12, 63);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1220, 399);
+            this.panel6.Size = new System.Drawing.Size(1220, 281);
             this.panel6.TabIndex = 10;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel10);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1244, 57);
+            this.panel5.TabIndex = 9;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(4)))), ((int)(((byte)(32)))));
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1244, 5);
+            this.panel10.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("UTM Avo", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(430, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(402, 29);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Danh sách thông tin Phiếu nhập sách";
             // 
             // DS_chitietPNS
             // 
@@ -473,8 +504,8 @@
             this.DS_chitietPNS.RowHeadersVisible = false;
             this.DS_chitietPNS.RowHeadersWidth = 51;
             this.DS_chitietPNS.RowTemplate.Height = 24;
-            this.DS_chitietPNS.Size = new System.Drawing.Size(1220, 399);
-            this.DS_chitietPNS.TabIndex = 9;
+            this.DS_chitietPNS.Size = new System.Drawing.Size(1220, 281);
+            this.DS_chitietPNS.TabIndex = 12;
             // 
             // maCTPN
             // 
@@ -530,43 +561,12 @@
             this.thanhTien.MinimumWidth = 6;
             this.thanhTien.Name = "thanhTien";
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.panel10);
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1244, 57);
-            this.panel5.TabIndex = 9;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(4)))), ((int)(((byte)(32)))));
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1244, 5);
-            this.panel10.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("UTM Avo", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(430, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(402, 29);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Danh sách thông tin Phiếu nhập sách";
-            // 
             // chiTietPNS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(1244, 876);
+            this.ClientSize = new System.Drawing.Size(1244, 726);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
@@ -587,9 +587,9 @@
             this.panel7.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DS_chitietPNS)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DS_chitietPNS)).EndInit();
             this.ResumeLayout(false);
 
         }
