@@ -32,6 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -65,13 +72,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txb_TenSach = new System.Windows.Forms.TextBox();
             this.txb_ThoiHanThe = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -132,6 +132,85 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(924, 698);
             this.panel3.TabIndex = 27;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.label18.Location = new System.Drawing.Point(354, 475);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(72, 24);
+            this.label18.TabIndex = 41;
+            this.label18.Text = "x đồng";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.label20.Location = new System.Drawing.Point(431, 349);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(71, 24);
+            this.label20.TabIndex = 40;
+            this.label20.Text = "x ngày";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.label21.Location = new System.Drawing.Point(407, 412);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(71, 24);
+            this.label21.TabIndex = 39;
+            this.label21.Text = "x ngày";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.label22.Location = new System.Drawing.Point(496, 286);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(59, 24);
+            this.label22.TabIndex = 38;
+            this.label22.Text = "x tuổi";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.label23.Location = new System.Drawing.Point(480, 223);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(59, 24);
+            this.label23.TabIndex = 37;
+            this.label23.Text = "x tuổi";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.label24.Location = new System.Drawing.Point(531, 160);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(65, 24);
+            this.label24.TabIndex = 36;
+            this.label24.Text = "x năm";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.label25.Location = new System.Drawing.Point(357, 97);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(78, 24);
+            this.label25.TabIndex = 35;
+            this.label25.Text = "x tháng";
             // 
             // label19
             // 
@@ -308,7 +387,7 @@
             this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCapNhat.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhat.Location = new System.Drawing.Point(24, 507);
+            this.btnCapNhat.Location = new System.Drawing.Point(34, 507);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(272, 62);
             this.btnCapNhat.TabIndex = 40;
@@ -320,7 +399,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(20, 393);
+            this.label11.Location = new System.Drawing.Point(30, 393);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(182, 19);
             this.label11.TabIndex = 39;
@@ -331,7 +410,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(20, 318);
+            this.label10.Location = new System.Drawing.Point(30, 318);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(150, 19);
             this.label10.TabIndex = 38;
@@ -342,7 +421,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(20, 243);
+            this.label9.Location = new System.Drawing.Point(30, 243);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(152, 19);
             this.label9.TabIndex = 37;
@@ -351,7 +430,7 @@
             // textBox4
             // 
             this.textBox4.HideSelection = false;
-            this.textBox4.Location = new System.Drawing.Point(23, 190);
+            this.textBox4.Location = new System.Drawing.Point(33, 190);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(114, 22);
             this.textBox4.TabIndex = 36;
@@ -360,7 +439,7 @@
             // textBox8
             // 
             this.textBox8.HideSelection = false;
-            this.textBox8.Location = new System.Drawing.Point(183, 190);
+            this.textBox8.Location = new System.Drawing.Point(193, 190);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(114, 22);
             this.textBox8.TabIndex = 35;
@@ -368,14 +447,14 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(23, 415);
+            this.textBox7.Location = new System.Drawing.Point(33, 415);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(273, 22);
             this.textBox7.TabIndex = 33;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(24, 340);
+            this.textBox5.Location = new System.Drawing.Point(34, 340);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(273, 22);
             this.textBox5.TabIndex = 32;
@@ -385,7 +464,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(179, 168);
+            this.label7.Location = new System.Drawing.Point(189, 168);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 19);
             this.label7.TabIndex = 31;
@@ -396,7 +475,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(19, 168);
+            this.label8.Location = new System.Drawing.Point(29, 168);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 19);
             this.label8.TabIndex = 30;
@@ -404,7 +483,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(23, 265);
+            this.textBox3.Location = new System.Drawing.Point(33, 265);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(273, 22);
             this.textBox3.TabIndex = 29;
@@ -414,7 +493,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(19, 93);
+            this.label5.Location = new System.Drawing.Point(29, 93);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(183, 19);
             this.label5.TabIndex = 27;
@@ -425,7 +504,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(19, 18);
+            this.label6.Location = new System.Drawing.Point(29, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(150, 19);
             this.label6.TabIndex = 26;
@@ -433,7 +512,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(23, 115);
+            this.textBox1.Location = new System.Drawing.Point(33, 115);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(273, 22);
             this.textBox1.TabIndex = 25;
@@ -441,7 +520,7 @@
             // textBox2
             // 
             this.textBox2.HideSelection = false;
-            this.textBox2.Location = new System.Drawing.Point(23, 40);
+            this.textBox2.Location = new System.Drawing.Point(33, 40);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(273, 22);
             this.textBox2.TabIndex = 24;
@@ -484,85 +563,6 @@
             this.txb_ThoiHanThe.Size = new System.Drawing.Size(273, 22);
             this.txb_ThoiHanThe.TabIndex = 24;
             this.txb_ThoiHanThe.Tag = "";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.label18.Location = new System.Drawing.Point(344, 475);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(72, 24);
-            this.label18.TabIndex = 41;
-            this.label18.Text = "x đồng";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.label20.Location = new System.Drawing.Point(421, 349);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(71, 24);
-            this.label20.TabIndex = 40;
-            this.label20.Text = "x ngày";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.label21.Location = new System.Drawing.Point(397, 412);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(71, 24);
-            this.label21.TabIndex = 39;
-            this.label21.Text = "x ngày";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.label22.Location = new System.Drawing.Point(486, 286);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(59, 24);
-            this.label22.TabIndex = 38;
-            this.label22.Text = "x tuổi";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.label23.Location = new System.Drawing.Point(470, 223);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(59, 24);
-            this.label23.TabIndex = 37;
-            this.label23.Text = "x tuổi";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.label24.Location = new System.Drawing.Point(521, 160);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(65, 24);
-            this.label24.TabIndex = 36;
-            this.label24.Text = "x năm";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.label25.Location = new System.Drawing.Point(347, 97);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(78, 24);
-            this.label25.TabIndex = 35;
-            this.label25.Text = "x tháng";
             // 
             // FormTuyChinh
             // 
