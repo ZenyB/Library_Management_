@@ -26,5 +26,10 @@ namespace Library_Management
         {
 
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

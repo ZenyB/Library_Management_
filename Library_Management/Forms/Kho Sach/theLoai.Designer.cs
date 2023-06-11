@@ -28,13 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnXemVaCapNhat = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.DS_TheLoai = new System.Windows.Forms.DataGridView();
+            this.maTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,21 +53,15 @@
             this.txb_MaTL = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.thongTinPN = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btnXemVaCapNhat = new System.Windows.Forms.Button();
-            this.DS_TheLoai = new System.Windows.Forms.DataGridView();
-            this.maTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DS_TheLoai)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DS_TheLoai)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -88,7 +88,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("UTM Avo", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(224)))), ((int)(((byte)(181)))));
-            this.label1.Location = new System.Drawing.Point(450, 6);
+            this.label1.Location = new System.Drawing.Point(450, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(311, 41);
             this.label1.TabIndex = 0;
@@ -104,8 +104,16 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, 56);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1244, 820);
+            this.panel1.Size = new System.Drawing.Size(1244, 697);
             this.panel1.TabIndex = 11;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(4)))), ((int)(((byte)(32)))));
+            this.panel11.Location = new System.Drawing.Point(386, -5);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(5, 1000);
+            this.panel11.TabIndex = 16;
             // 
             // panel6
             // 
@@ -117,8 +125,34 @@
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Location = new System.Drawing.Point(395, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(846, 820);
+            this.panel6.Size = new System.Drawing.Size(846, 697);
             this.panel6.TabIndex = 7;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.Controls.Add(this.btnXemVaCapNhat);
+            this.panel8.Location = new System.Drawing.Point(633, 63);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(204, 42);
+            this.panel8.TabIndex = 12;
+            // 
+            // btnXemVaCapNhat
+            // 
+            this.btnXemVaCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXemVaCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(205)))), ((int)(((byte)(203)))));
+            this.btnXemVaCapNhat.FlatAppearance.BorderSize = 0;
+            this.btnXemVaCapNhat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
+            this.btnXemVaCapNhat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(224)))), ((int)(((byte)(181)))));
+            this.btnXemVaCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemVaCapNhat.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemVaCapNhat.Location = new System.Drawing.Point(1, 7);
+            this.btnXemVaCapNhat.Name = "btnXemVaCapNhat";
+            this.btnXemVaCapNhat.Size = new System.Drawing.Size(200, 29);
+            this.btnXemVaCapNhat.TabIndex = 2;
+            this.btnXemVaCapNhat.Text = "Xem và Cập nhật";
+            this.btnXemVaCapNhat.UseVisualStyleBackColor = false;
+            this.btnXemVaCapNhat.Click += new System.EventHandler(this.btnXemVaCapNhat_Click);
             // 
             // panel10
             // 
@@ -128,8 +162,48 @@
             this.panel10.Controls.Add(this.DS_TheLoai);
             this.panel10.Location = new System.Drawing.Point(14, 109);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(821, 699);
+            this.panel10.Size = new System.Drawing.Size(821, 576);
             this.panel10.TabIndex = 11;
+            // 
+            // DS_TheLoai
+            // 
+            this.DS_TheLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DS_TheLoai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DS_TheLoai.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_TheLoai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DS_TheLoai.ColumnHeadersHeight = 50;
+            this.DS_TheLoai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maTheLoai,
+            this.tenTheLoai});
+            this.DS_TheLoai.Location = new System.Drawing.Point(8, 8);
+            this.DS_TheLoai.Name = "DS_TheLoai";
+            this.DS_TheLoai.RowHeadersVisible = false;
+            this.DS_TheLoai.RowHeadersWidth = 51;
+            this.DS_TheLoai.RowTemplate.Height = 24;
+            this.DS_TheLoai.Size = new System.Drawing.Size(821, 565);
+            this.DS_TheLoai.TabIndex = 12;
+            // 
+            // maTheLoai
+            // 
+            this.maTheLoai.HeaderText = "Mã thể loại";
+            this.maTheLoai.MinimumWidth = 6;
+            this.maTheLoai.Name = "maTheLoai";
+            // 
+            // tenTheLoai
+            // 
+            this.tenTheLoai.HeaderText = "Tên thể loại";
+            this.tenTheLoai.MinimumWidth = 6;
+            this.tenTheLoai.Name = "tenTheLoai";
             // 
             // panel7
             // 
@@ -164,7 +238,7 @@
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(383, 808);
+            this.panel3.Size = new System.Drawing.Size(383, 697);
             this.panel3.TabIndex = 6;
             // 
             // btnLuu
@@ -271,103 +345,32 @@
             this.thongTinPN.TabIndex = 0;
             this.thongTinPN.Text = "Thông tin chi tiết";
             // 
-            // panel8
-            // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.Controls.Add(this.btnXemVaCapNhat);
-            this.panel8.Location = new System.Drawing.Point(633, 63);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(204, 42);
-            this.panel8.TabIndex = 12;
-            // 
-            // btnXemVaCapNhat
-            // 
-            this.btnXemVaCapNhat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXemVaCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(205)))), ((int)(((byte)(203)))));
-            this.btnXemVaCapNhat.FlatAppearance.BorderSize = 0;
-            this.btnXemVaCapNhat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
-            this.btnXemVaCapNhat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(224)))), ((int)(((byte)(181)))));
-            this.btnXemVaCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXemVaCapNhat.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXemVaCapNhat.Location = new System.Drawing.Point(1, 7);
-            this.btnXemVaCapNhat.Name = "btnXemVaCapNhat";
-            this.btnXemVaCapNhat.Size = new System.Drawing.Size(200, 29);
-            this.btnXemVaCapNhat.TabIndex = 2;
-            this.btnXemVaCapNhat.Text = "Xem và Cập nhật";
-            this.btnXemVaCapNhat.UseVisualStyleBackColor = false;
-            // 
-            // DS_TheLoai
-            // 
-            this.DS_TheLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DS_TheLoai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DS_TheLoai.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_TheLoai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.DS_TheLoai.ColumnHeadersHeight = 50;
-            this.DS_TheLoai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maTheLoai,
-            this.tenTheLoai});
-            this.DS_TheLoai.Location = new System.Drawing.Point(8, 8);
-            this.DS_TheLoai.Name = "DS_TheLoai";
-            this.DS_TheLoai.RowHeadersVisible = false;
-            this.DS_TheLoai.RowHeadersWidth = 51;
-            this.DS_TheLoai.RowTemplate.Height = 24;
-            this.DS_TheLoai.Size = new System.Drawing.Size(821, 699);
-            this.DS_TheLoai.TabIndex = 12;
-            // 
-            // maTheLoai
-            // 
-            this.maTheLoai.HeaderText = "Mã thể loại";
-            this.maTheLoai.MinimumWidth = 6;
-            this.maTheLoai.Name = "maTheLoai";
-            // 
-            // tenTheLoai
-            // 
-            this.tenTheLoai.HeaderText = "Tên thể loại";
-            this.tenTheLoai.MinimumWidth = 6;
-            this.tenTheLoai.Name = "tenTheLoai";
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(4)))), ((int)(((byte)(32)))));
-            this.panel11.Location = new System.Drawing.Point(386, -5);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(5, 1000);
-            this.panel11.TabIndex = 16;
-            // 
             // theLoai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(1244, 876);
+            this.ClientSize = new System.Drawing.Size(1244, 753);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "theLoai";
             this.Text = "Thể loại";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DS_TheLoai)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DS_TheLoai)).EndInit();
             this.ResumeLayout(false);
 
         }
