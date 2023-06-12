@@ -358,7 +358,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "tacGia";
-            this.Text = "tacGia";
+            this.Text = "Tác giả";
             this.Load += new System.EventHandler(this.tacGia_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

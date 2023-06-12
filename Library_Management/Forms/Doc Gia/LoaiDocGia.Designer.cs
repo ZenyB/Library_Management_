@@ -279,7 +279,7 @@
             this.Controls.Add(this.pnl_LoaiDG);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoaiDocGia";
-            this.Text = "LoaiDocGia";
+            this.Text = "Loại Độc giả";
             this.pnl_LoaiDG.ResumeLayout(false);
             this.pnl_LoaiDG.PerformLayout();
             this.pnl_TTChiTiet.ResumeLayout(false);
