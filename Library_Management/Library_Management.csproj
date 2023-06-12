@@ -158,6 +158,7 @@
     <Compile Include="Forms\Dich Vu\chITietPMS.Designer.cs">
       <DependentUpon>chITietPMS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Database.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

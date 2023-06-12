@@ -39,8 +39,6 @@
             this.btnXemVaCapNhat = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.DS_TacGia = new System.Windows.Forms.DataGridView();
-            this.maTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -86,11 +84,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("UTM Avo", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(224)))), ((int)(((byte)(181)))));
             this.label1.Location = new System.Drawing.Point(460, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 41);
+            this.label1.Size = new System.Drawing.Size(301, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN TÁC GIẢ";
             // 
@@ -145,13 +143,14 @@
             this.btnXemVaCapNhat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
             this.btnXemVaCapNhat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(224)))), ((int)(((byte)(181)))));
             this.btnXemVaCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXemVaCapNhat.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemVaCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemVaCapNhat.Location = new System.Drawing.Point(1, 7);
             this.btnXemVaCapNhat.Name = "btnXemVaCapNhat";
             this.btnXemVaCapNhat.Size = new System.Drawing.Size(200, 29);
             this.btnXemVaCapNhat.TabIndex = 2;
             this.btnXemVaCapNhat.Text = "Xem và Cập nhật";
             this.btnXemVaCapNhat.UseVisualStyleBackColor = false;
+            this.btnXemVaCapNhat.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnXemVaCapNhat_MouseDown);
             // 
             // panel10
             // 
@@ -166,6 +165,9 @@
             // 
             // DS_TacGia
             // 
+            this.DS_TacGia.AllowUserToAddRows = false;
+            this.DS_TacGia.AllowUserToDeleteRows = false;
+            this.DS_TacGia.AllowUserToResizeRows = false;
             this.DS_TacGia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -173,7 +175,7 @@
             this.DS_TacGia.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
@@ -181,28 +183,17 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DS_TacGia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DS_TacGia.ColumnHeadersHeight = 50;
-            this.DS_TacGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maTacGia,
-            this.tenTacGia});
             this.DS_TacGia.Location = new System.Drawing.Point(8, 8);
+            this.DS_TacGia.MultiSelect = false;
             this.DS_TacGia.Name = "DS_TacGia";
+            this.DS_TacGia.ReadOnly = true;
             this.DS_TacGia.RowHeadersVisible = false;
             this.DS_TacGia.RowHeadersWidth = 51;
             this.DS_TacGia.RowTemplate.Height = 24;
+            this.DS_TacGia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DS_TacGia.Size = new System.Drawing.Size(821, 568);
             this.DS_TacGia.TabIndex = 13;
-            // 
-            // maTacGia
-            // 
-            this.maTacGia.HeaderText = "Mã tác giả";
-            this.maTacGia.MinimumWidth = 6;
-            this.maTacGia.Name = "maTacGia";
-            // 
-            // tenTacGia
-            // 
-            this.tenTacGia.HeaderText = "Tên tác giả";
-            this.tenTacGia.MinimumWidth = 6;
-            this.tenTacGia.Name = "tenTacGia";
+            this.DS_TacGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DS_TacGia_CellClick);
             // 
             // panel7
             // 
@@ -217,11 +208,11 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("UTM Avo", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(257, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(356, 29);
+            this.label2.Size = new System.Drawing.Size(330, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Danh sách Tác giả trong thư viện";
             // 
@@ -247,13 +238,14 @@
             this.btnLuu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
             this.btnLuu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(224)))), ((int)(((byte)(181)))));
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuu.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Location = new System.Drawing.Point(30, 258);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(324, 29);
             this.btnLuu.TabIndex = 14;
             this.btnLuu.Text = "Lưu thông tin";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnLuu_MouseDown_1);
             // 
             // btnXoa
             // 
@@ -262,7 +254,7 @@
             this.btnXoa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
             this.btnXoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Location = new System.Drawing.Point(222, 293);
             this.btnXoa.Name = "btnXoa";
@@ -270,14 +262,14 @@
             this.btnXoa.TabIndex = 13;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnXoa.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnXoa_MouseDown);
             // 
             // btnTaoMoi
             // 
             this.btnTaoMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.btnTaoMoi.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnTaoMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaoMoi.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaoMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoMoi.ForeColor = System.Drawing.Color.White;
             this.btnTaoMoi.Location = new System.Drawing.Point(30, 293);
             this.btnTaoMoi.Name = "btnTaoMoi";
@@ -285,15 +277,16 @@
             this.btnTaoMoi.TabIndex = 12;
             this.btnTaoMoi.Text = "Tạo mới";
             this.btnTaoMoi.UseVisualStyleBackColor = false;
+            this.btnTaoMoi.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnTaoMoi_MouseDown);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(26, 169);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 19);
+            this.label5.Size = new System.Drawing.Size(95, 16);
             this.label5.TabIndex = 11;
             this.label5.Text = "Tên Tác giả:";
             // 
@@ -307,11 +300,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(26, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 19);
+            this.label3.Size = new System.Drawing.Size(89, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mã Tác giả:";
             // 
@@ -320,6 +313,7 @@
             this.txb_MaTG.HideSelection = false;
             this.txb_MaTG.Location = new System.Drawing.Point(30, 122);
             this.txb_MaTG.Name = "txb_MaTG";
+            this.txb_MaTG.ReadOnly = true;
             this.txb_MaTG.Size = new System.Drawing.Size(324, 22);
             this.txb_MaTG.TabIndex = 1;
             this.txb_MaTG.Tag = "";
@@ -337,11 +331,11 @@
             // 
             this.thongTinchitiet.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.thongTinchitiet.AutoSize = true;
-            this.thongTinchitiet.Font = new System.Drawing.Font("UTM Avo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thongTinchitiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thongTinchitiet.ForeColor = System.Drawing.Color.White;
             this.thongTinchitiet.Location = new System.Drawing.Point(92, 13);
             this.thongTinchitiet.Name = "thongTinchitiet";
-            this.thongTinchitiet.Size = new System.Drawing.Size(185, 29);
+            this.thongTinchitiet.Size = new System.Drawing.Size(172, 25);
             this.thongTinchitiet.TabIndex = 0;
             this.thongTinchitiet.Text = "Thông tin chi tiết";
             this.thongTinchitiet.Click += new System.EventHandler(this.thongTinPN_Click);
@@ -400,8 +394,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnXemVaCapNhat;
         private System.Windows.Forms.DataGridView DS_TacGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maTacGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenTacGia;
         private System.Windows.Forms.Panel panel11;
     }
 }
