@@ -243,6 +243,7 @@
             this.btnXemPhieuMuon.TabIndex = 12;
             this.btnXemPhieuMuon.Text = "Xem phiếu mượn";
             this.btnXemPhieuMuon.UseVisualStyleBackColor = false;
+            this.btnXemPhieuMuon.Click += new System.EventHandler(this.btnXemPhieuMuon_Click);
             // 
             // txb_TenSach
             // 
@@ -692,7 +693,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "muonSach";
-            this.Text = "muonSach";
+            this.Text = "Mượn sách";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);

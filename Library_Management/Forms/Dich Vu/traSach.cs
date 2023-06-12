@@ -16,5 +16,19 @@ namespace Library_Management
         {
             InitializeComponent();
         }
+
+        private void btnXemPhieuTra_Click(object sender, EventArgs e)
+        {
+            // hide form 1
+            // this.Hide();
+            // create an instace of form 2
+            DSPhieuTS f2 = new DSPhieuTS();
+            // show form 2
+            f2.ShowDialog(); // it fonna halt/ freeze the excution of click event.
+            // dispose form 2 instance
+            f2 = null;
+            //show form 1 again
+            this.Show();
+        }
     }
 }
