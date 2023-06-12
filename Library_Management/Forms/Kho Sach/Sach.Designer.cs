@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.cb_TenSach = new System.Windows.Forms.ComboBox();
             this.btnXemVaCapNhat = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -48,28 +49,19 @@
             this.txb_NamXB = new System.Windows.Forms.TextBox();
             this.txb_NhaXB = new System.Windows.Forms.TextBox();
             this.txb_TacGia = new System.Windows.Forms.TextBox();
-            this.txb_TenSach = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.cb_MaDS = new System.Windows.Forms.ComboBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnTaoMoi = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txb_MaDS = new System.Windows.Forms.TextBox();
             this.txb_MaSach = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.DS_Sach = new System.Windows.Forms.DataGridView();
-            this.maSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maDauSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nhaXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -144,6 +136,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.panel9.Controls.Add(this.cb_TenSach);
             this.panel9.Controls.Add(this.btnXemVaCapNhat);
             this.panel9.Controls.Add(this.label14);
             this.panel9.Controls.Add(this.label15);
@@ -156,11 +149,19 @@
             this.panel9.Controls.Add(this.txb_NamXB);
             this.panel9.Controls.Add(this.txb_NhaXB);
             this.panel9.Controls.Add(this.txb_TacGia);
-            this.panel9.Controls.Add(this.txb_TenSach);
             this.panel9.Location = new System.Drawing.Point(434, 0);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(798, 258);
             this.panel9.TabIndex = 41;
+            // 
+            // cb_TenSach
+            // 
+            this.cb_TenSach.FormattingEnabled = true;
+            this.cb_TenSach.Location = new System.Drawing.Point(36, 41);
+            this.cb_TenSach.Name = "cb_TenSach";
+            this.cb_TenSach.Size = new System.Drawing.Size(323, 24);
+            this.cb_TenSach.TabIndex = 29;
+            this.cb_TenSach.SelectedValueChanged += new System.EventHandler(this.cb_TenSach_SelectedValueChanged);
             // 
             // btnXemVaCapNhat
             // 
@@ -222,6 +223,7 @@
             this.txb_SoLuong.Size = new System.Drawing.Size(324, 22);
             this.txb_SoLuong.TabIndex = 18;
             this.txb_SoLuong.Tag = "";
+            this.txb_SoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_KeyPress);
             // 
             // label8
             // 
@@ -300,31 +302,31 @@
             this.txb_TacGia.Size = new System.Drawing.Size(324, 22);
             this.txb_TacGia.TabIndex = 11;
             this.txb_TacGia.Tag = "";
-            // 
-            // txb_TenSach
-            // 
-            this.txb_TenSach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txb_TenSach.HideSelection = false;
-            this.txb_TenSach.Location = new System.Drawing.Point(36, 37);
-            this.txb_TenSach.Name = "txb_TenSach";
-            this.txb_TenSach.Size = new System.Drawing.Size(324, 22);
-            this.txb_TenSach.TabIndex = 10;
-            this.txb_TenSach.Tag = "";
+            this.txb_TacGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_KeyPress);
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
+            this.panel8.Controls.Add(this.cb_MaDS);
             this.panel8.Controls.Add(this.btnLuu);
             this.panel8.Controls.Add(this.btnXoa);
             this.panel8.Controls.Add(this.btnTaoMoi);
             this.panel8.Controls.Add(this.label5);
             this.panel8.Controls.Add(this.label4);
-            this.panel8.Controls.Add(this.txb_MaDS);
             this.panel8.Controls.Add(this.txb_MaSach);
             this.panel8.Location = new System.Drawing.Point(0, -1);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(428, 259);
             this.panel8.TabIndex = 40;
+            // 
+            // cb_MaDS
+            // 
+            this.cb_MaDS.FormattingEnabled = true;
+            this.cb_MaDS.Location = new System.Drawing.Point(53, 110);
+            this.cb_MaDS.Name = "cb_MaDS";
+            this.cb_MaDS.Size = new System.Drawing.Size(315, 24);
+            this.cb_MaDS.TabIndex = 28;
+            this.cb_MaDS.SelectedValueChanged += new System.EventHandler(this.cb_MaDS_SelectedValueChanged);
             // 
             // btnLuu
             // 
@@ -395,15 +397,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Mã Sách:";
             // 
-            // txb_MaDS
-            // 
-            this.txb_MaDS.HideSelection = false;
-            this.txb_MaDS.Location = new System.Drawing.Point(53, 110);
-            this.txb_MaDS.Name = "txb_MaDS";
-            this.txb_MaDS.Size = new System.Drawing.Size(315, 22);
-            this.txb_MaDS.TabIndex = 3;
-            this.txb_MaDS.Tag = "";
-            // 
             // txb_MaSach
             // 
             this.txb_MaSach.HideSelection = false;
@@ -412,6 +405,7 @@
             this.txb_MaSach.Size = new System.Drawing.Size(315, 22);
             this.txb_MaSach.TabIndex = 2;
             this.txb_MaSach.Tag = "";
+            this.txb_MaSach.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_KeyPress);
             // 
             // panel3
             // 
@@ -459,25 +453,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DS_Sach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_Sach.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_Sach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_Sach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DS_Sach.ColumnHeadersHeight = 50;
-            this.DS_Sach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maSach,
-            this.maDauSach,
-            this.tenSach,
-            this.tacGia,
-            this.nhaXB,
-            this.namXB,
-            this.soLuong,
-            this.donGia});
             this.DS_Sach.Location = new System.Drawing.Point(12, 6);
             this.DS_Sach.Name = "DS_Sach";
             this.DS_Sach.RowHeadersVisible = false;
@@ -485,54 +470,7 @@
             this.DS_Sach.RowTemplate.Height = 24;
             this.DS_Sach.Size = new System.Drawing.Size(1220, 292);
             this.DS_Sach.TabIndex = 45;
-            // 
-            // maSach
-            // 
-            this.maSach.HeaderText = "Mã sách";
-            this.maSach.MinimumWidth = 6;
-            this.maSach.Name = "maSach";
-            // 
-            // maDauSach
-            // 
-            this.maDauSach.HeaderText = "Mã đầu sách";
-            this.maDauSach.MinimumWidth = 6;
-            this.maDauSach.Name = "maDauSach";
-            // 
-            // tenSach
-            // 
-            this.tenSach.HeaderText = "Tên sách";
-            this.tenSach.MinimumWidth = 6;
-            this.tenSach.Name = "tenSach";
-            // 
-            // tacGia
-            // 
-            this.tacGia.HeaderText = "Tác giả";
-            this.tacGia.MinimumWidth = 6;
-            this.tacGia.Name = "tacGia";
-            // 
-            // nhaXB
-            // 
-            this.nhaXB.HeaderText = "Nhà xuất bản";
-            this.nhaXB.MinimumWidth = 6;
-            this.nhaXB.Name = "nhaXB";
-            // 
-            // namXB
-            // 
-            this.namXB.HeaderText = "Năm xuất bản";
-            this.namXB.MinimumWidth = 6;
-            this.namXB.Name = "namXB";
-            // 
-            // soLuong
-            // 
-            this.soLuong.HeaderText = "Số lượng";
-            this.soLuong.MinimumWidth = 6;
-            this.soLuong.Name = "soLuong";
-            // 
-            // donGia
-            // 
-            this.donGia.HeaderText = "Đơn giá";
-            this.donGia.MinimumWidth = 6;
-            this.donGia.Name = "donGia";
+            this.DS_Sach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DS_Sach_CellClick);
             // 
             // Sach
             // 
@@ -551,6 +489,7 @@
             this.MinimizeBox = false;
             this.Name = "Sach";
             this.Text = "Sách";
+            this.Load += new System.EventHandler(this.Sach_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -589,27 +528,19 @@
         private System.Windows.Forms.TextBox txb_NamXB;
         private System.Windows.Forms.TextBox txb_NhaXB;
         private System.Windows.Forms.TextBox txb_TacGia;
-        private System.Windows.Forms.TextBox txb_TenSach;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnTaoMoi;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txb_MaDS;
         private System.Windows.Forms.TextBox txb_MaSach;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView DS_Sach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maDauSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tacGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nhaXB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namXB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn donGia;
+        private System.Windows.Forms.ComboBox cb_MaDS;
+        private System.Windows.Forms.ComboBox cb_TenSach;
     }
 }
