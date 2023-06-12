@@ -33,6 +33,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txb_tienPhat = new System.Windows.Forms.TextBox();
             this.btn_xemChiTiet = new System.Windows.Forms.Button();
             this.txb_MaPTS = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txb_TenDocGia = new System.Windows.Forms.TextBox();
-            this.txb_tienPhat = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.DS_chitietPNS = new System.Windows.Forms.DataGridView();
             this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,6 +108,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1244, 159);
             this.panel1.TabIndex = 14;
+            // 
+            // txb_tienPhat
+            // 
+            this.txb_tienPhat.HideSelection = false;
+            this.txb_tienPhat.Location = new System.Drawing.Point(877, 47);
+            this.txb_tienPhat.Name = "txb_tienPhat";
+            this.txb_tienPhat.Size = new System.Drawing.Size(235, 22);
+            this.txb_tienPhat.TabIndex = 60;
+            this.txb_tienPhat.Tag = "";
             // 
             // btn_xemChiTiet
             // 
@@ -213,15 +222,6 @@
             this.txb_TenDocGia.TabIndex = 49;
             this.txb_TenDocGia.Tag = "";
             // 
-            // txb_tienPhat
-            // 
-            this.txb_tienPhat.HideSelection = false;
-            this.txb_tienPhat.Location = new System.Drawing.Point(877, 47);
-            this.txb_tienPhat.Name = "txb_tienPhat";
-            this.txb_tienPhat.Size = new System.Drawing.Size(235, 22);
-            this.txb_tienPhat.TabIndex = 60;
-            this.txb_tienPhat.Tag = "";
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.DS_chitietPNS);
@@ -317,7 +317,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "DSPhieuTS";
-            this.Text = "DSPhieuTS";
+            this.Text = "Danh sách phiếu thu tiền";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
