@@ -42,6 +42,7 @@
             this.btnLienHe1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_GuiHT = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -208,7 +209,7 @@
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("UTM Avo", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
-            this.label6.Location = new System.Drawing.Point(843, 370);
+            this.label6.Location = new System.Drawing.Point(843, 352);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(286, 41);
             this.label6.TabIndex = 27;
@@ -217,11 +218,32 @@
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(725, 430);
+            this.textBox1.Location = new System.Drawing.Point(725, 412);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(515, 311);
+            this.textBox1.Size = new System.Drawing.Size(515, 266);
             this.textBox1.TabIndex = 28;
+            // 
+            // btn_GuiHT
+            // 
+            this.btn_GuiHT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(84)))), ((int)(((byte)(209)))));
+            this.btn_GuiHT.FlatAppearance.BorderSize = 0;
+            this.btn_GuiHT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_GuiHT.Font = new System.Drawing.Font("UTM Avo", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GuiHT.ForeColor = System.Drawing.Color.White;
+            this.btn_GuiHT.IconChar = FontAwesome.Sharp.IconChar.EnvelopeCircleCheck;
+            this.btn_GuiHT.IconColor = System.Drawing.Color.White;
+            this.btn_GuiHT.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_GuiHT.IconSize = 32;
+            this.btn_GuiHT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_GuiHT.Location = new System.Drawing.Point(725, 684);
+            this.btn_GuiHT.Name = "btn_GuiHT";
+            this.btn_GuiHT.Size = new System.Drawing.Size(132, 41);
+            this.btn_GuiHT.TabIndex = 29;
+            this.btn_GuiHT.Text = "Gửi hỗ trợ";
+            this.btn_GuiHT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_GuiHT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_GuiHT.UseVisualStyleBackColor = false;
             // 
             // FormHoTro
             // 
@@ -229,6 +251,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(1244, 753);
+            this.Controls.Add(this.btn_GuiHT);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
@@ -261,5 +284,6 @@
         private System.Windows.Forms.Button btnLienHe1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
+        private FontAwesome.Sharp.IconButton btn_GuiHT;
     }
 }
