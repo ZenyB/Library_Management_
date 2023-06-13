@@ -342,7 +342,7 @@
             this.btnLuu.TabIndex = 27;
             this.btnLuu.Text = "Lưu thông tin";
             this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            this.btnLuu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnLuu_MouseDown);
             // 
             // btnXoa
             // 
@@ -448,6 +448,9 @@
             // 
             // DS_Sach
             // 
+            this.DS_Sach.AllowUserToAddRows = false;
+            this.DS_Sach.AllowUserToDeleteRows = false;
+            this.DS_Sach.AllowUserToResizeRows = false;
             this.DS_Sach.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -464,7 +467,9 @@
             this.DS_Sach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DS_Sach.ColumnHeadersHeight = 50;
             this.DS_Sach.Location = new System.Drawing.Point(12, 6);
+            this.DS_Sach.MultiSelect = false;
             this.DS_Sach.Name = "DS_Sach";
+            this.DS_Sach.ReadOnly = true;
             this.DS_Sach.RowHeadersVisible = false;
             this.DS_Sach.RowHeadersWidth = 51;
             this.DS_Sach.RowTemplate.Height = 24;

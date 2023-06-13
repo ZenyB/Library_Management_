@@ -32,13 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lbTien = new System.Windows.Forms.Label();
+            this.lbNgayMax = new System.Windows.Forms.Label();
+            this.lbSachMax = new System.Windows.Forms.Label();
+            this.lbTuoiMin = new System.Windows.Forms.Label();
+            this.lbTuoiMax = new System.Windows.Forms.Label();
+            this.lbLuuHanh = new System.Windows.Forms.Label();
+            this.lbthoihan = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -57,17 +57,17 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txbTuoiToiDa = new System.Windows.Forms.TextBox();
+            this.txbTuoiToiThieu = new System.Windows.Forms.TextBox();
+            this.txbMucThuTienPhat = new System.Windows.Forms.TextBox();
+            this.txbSoSachMuonMax = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbSoNgayMuonMax = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbThoiGianLuuHanh = new System.Windows.Forms.TextBox();
+            this.txbThoiHanThe = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txb_TenSach = new System.Windows.Forms.TextBox();
@@ -112,13 +112,13 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.label23);
-            this.panel3.Controls.Add(this.label24);
-            this.panel3.Controls.Add(this.label25);
+            this.panel3.Controls.Add(this.lbTien);
+            this.panel3.Controls.Add(this.lbNgayMax);
+            this.panel3.Controls.Add(this.lbSachMax);
+            this.panel3.Controls.Add(this.lbTuoiMin);
+            this.panel3.Controls.Add(this.lbTuoiMax);
+            this.panel3.Controls.Add(this.lbLuuHanh);
+            this.panel3.Controls.Add(this.lbthoihan);
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.label16);
@@ -133,84 +133,82 @@
             this.panel3.Size = new System.Drawing.Size(924, 698);
             this.panel3.TabIndex = 27;
             // 
-            // label18
+            // lbTien
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.label18.Location = new System.Drawing.Point(354, 475);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(72, 24);
-            this.label18.TabIndex = 41;
-            this.label18.Text = "x đồng";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
+            this.lbTien.AutoSize = true;
+            this.lbTien.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.lbTien.Location = new System.Drawing.Point(354, 475);
+            this.lbTien.Name = "lbTien";
+            this.lbTien.Size = new System.Drawing.Size(72, 24);
+            this.lbTien.TabIndex = 41;
+            this.lbTien.Text = "x đồng";
             // 
-            // label20
+            // lbNgayMax
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.label20.Location = new System.Drawing.Point(431, 349);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(71, 24);
-            this.label20.TabIndex = 40;
-            this.label20.Text = "x ngày";
+            this.lbNgayMax.AutoSize = true;
+            this.lbNgayMax.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNgayMax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.lbNgayMax.Location = new System.Drawing.Point(431, 349);
+            this.lbNgayMax.Name = "lbNgayMax";
+            this.lbNgayMax.Size = new System.Drawing.Size(71, 24);
+            this.lbNgayMax.TabIndex = 40;
+            this.lbNgayMax.Text = "x ngày";
             // 
-            // label21
+            // lbSachMax
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.label21.Location = new System.Drawing.Point(407, 412);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(71, 24);
-            this.label21.TabIndex = 39;
-            this.label21.Text = "x ngày";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
+            this.lbSachMax.AutoSize = true;
+            this.lbSachMax.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSachMax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.lbSachMax.Location = new System.Drawing.Point(407, 412);
+            this.lbSachMax.Name = "lbSachMax";
+            this.lbSachMax.Size = new System.Drawing.Size(71, 24);
+            this.lbSachMax.TabIndex = 39;
+            this.lbSachMax.Text = "x ngày";
             // 
-            // label22
+            // lbTuoiMin
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.label22.Location = new System.Drawing.Point(496, 286);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(59, 24);
-            this.label22.TabIndex = 38;
-            this.label22.Text = "x tuổi";
+            this.lbTuoiMin.AutoSize = true;
+            this.lbTuoiMin.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTuoiMin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.lbTuoiMin.Location = new System.Drawing.Point(496, 286);
+            this.lbTuoiMin.Name = "lbTuoiMin";
+            this.lbTuoiMin.Size = new System.Drawing.Size(59, 24);
+            this.lbTuoiMin.TabIndex = 38;
+            this.lbTuoiMin.Text = "x tuổi";
             // 
-            // label23
+            // lbTuoiMax
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.label23.Location = new System.Drawing.Point(480, 223);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(59, 24);
-            this.label23.TabIndex = 37;
-            this.label23.Text = "x tuổi";
+            this.lbTuoiMax.AutoSize = true;
+            this.lbTuoiMax.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTuoiMax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.lbTuoiMax.Location = new System.Drawing.Point(480, 223);
+            this.lbTuoiMax.Name = "lbTuoiMax";
+            this.lbTuoiMax.Size = new System.Drawing.Size(59, 24);
+            this.lbTuoiMax.TabIndex = 37;
+            this.lbTuoiMax.Text = "x tuổi";
             // 
-            // label24
+            // lbLuuHanh
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.label24.Location = new System.Drawing.Point(531, 160);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(65, 24);
-            this.label24.TabIndex = 36;
-            this.label24.Text = "x năm";
+            this.lbLuuHanh.AutoSize = true;
+            this.lbLuuHanh.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLuuHanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.lbLuuHanh.Location = new System.Drawing.Point(531, 160);
+            this.lbLuuHanh.Name = "lbLuuHanh";
+            this.lbLuuHanh.Size = new System.Drawing.Size(65, 24);
+            this.lbLuuHanh.TabIndex = 36;
+            this.lbLuuHanh.Text = "x năm";
             // 
-            // label25
+            // lbthoihan
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
-            this.label25.Location = new System.Drawing.Point(357, 97);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(78, 24);
-            this.label25.TabIndex = 35;
-            this.label25.Text = "x tháng";
+            this.lbthoihan.AutoSize = true;
+            this.lbthoihan.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbthoihan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(156)))), ((int)(((byte)(255)))));
+            this.lbthoihan.Location = new System.Drawing.Point(357, 97);
+            this.lbthoihan.Name = "lbthoihan";
+            this.lbthoihan.Size = new System.Drawing.Size(78, 24);
+            this.lbthoihan.TabIndex = 35;
+            this.lbthoihan.Text = "x tháng";
             // 
             // label19
             // 
@@ -361,17 +359,17 @@
             this.panel7.Controls.Add(this.label11);
             this.panel7.Controls.Add(this.label10);
             this.panel7.Controls.Add(this.label9);
-            this.panel7.Controls.Add(this.textBox4);
-            this.panel7.Controls.Add(this.textBox8);
-            this.panel7.Controls.Add(this.textBox7);
-            this.panel7.Controls.Add(this.textBox5);
+            this.panel7.Controls.Add(this.txbTuoiToiDa);
+            this.panel7.Controls.Add(this.txbTuoiToiThieu);
+            this.panel7.Controls.Add(this.txbMucThuTienPhat);
+            this.panel7.Controls.Add(this.txbSoSachMuonMax);
             this.panel7.Controls.Add(this.label7);
             this.panel7.Controls.Add(this.label8);
-            this.panel7.Controls.Add(this.textBox3);
+            this.panel7.Controls.Add(this.txbSoNgayMuonMax);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Controls.Add(this.label6);
-            this.panel7.Controls.Add(this.textBox1);
-            this.panel7.Controls.Add(this.textBox2);
+            this.panel7.Controls.Add(this.txbThoiGianLuuHanh);
+            this.panel7.Controls.Add(this.txbThoiHanThe);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
@@ -393,6 +391,7 @@
             this.btnCapNhat.TabIndex = 40;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = false;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // label11
             // 
@@ -427,37 +426,43 @@
             this.label9.TabIndex = 37;
             this.label9.Text = "Số ngày mượn tối đa:";
             // 
-            // textBox4
+            // txbTuoiToiDa
             // 
-            this.textBox4.HideSelection = false;
-            this.textBox4.Location = new System.Drawing.Point(33, 190);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(114, 22);
-            this.textBox4.TabIndex = 36;
-            this.textBox4.Tag = "";
+            this.txbTuoiToiDa.HideSelection = false;
+            this.txbTuoiToiDa.Location = new System.Drawing.Point(33, 190);
+            this.txbTuoiToiDa.Name = "txbTuoiToiDa";
+            this.txbTuoiToiDa.Size = new System.Drawing.Size(114, 22);
+            this.txbTuoiToiDa.TabIndex = 36;
+            this.txbTuoiToiDa.Tag = "";
+            this.txbTuoiToiDa.TextChanged += new System.EventHandler(this.txbTuoiToiDa_TextChanged);
+            this.txbTuoiToiDa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
-            // textBox8
+            // txbTuoiToiThieu
             // 
-            this.textBox8.HideSelection = false;
-            this.textBox8.Location = new System.Drawing.Point(193, 190);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(114, 22);
-            this.textBox8.TabIndex = 35;
-            this.textBox8.Tag = "";
+            this.txbTuoiToiThieu.HideSelection = false;
+            this.txbTuoiToiThieu.Location = new System.Drawing.Point(193, 190);
+            this.txbTuoiToiThieu.Name = "txbTuoiToiThieu";
+            this.txbTuoiToiThieu.Size = new System.Drawing.Size(114, 22);
+            this.txbTuoiToiThieu.TabIndex = 35;
+            this.txbTuoiToiThieu.Tag = "";
+            this.txbTuoiToiThieu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
-            // textBox7
+            // txbMucThuTienPhat
             // 
-            this.textBox7.Location = new System.Drawing.Point(33, 415);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(273, 22);
-            this.textBox7.TabIndex = 33;
+            this.txbMucThuTienPhat.Location = new System.Drawing.Point(33, 415);
+            this.txbMucThuTienPhat.Name = "txbMucThuTienPhat";
+            this.txbMucThuTienPhat.Size = new System.Drawing.Size(273, 22);
+            this.txbMucThuTienPhat.TabIndex = 33;
+            this.txbMucThuTienPhat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
-            // textBox5
+            // txbSoSachMuonMax
             // 
-            this.textBox5.Location = new System.Drawing.Point(34, 340);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(273, 22);
-            this.textBox5.TabIndex = 32;
+            this.txbSoSachMuonMax.Location = new System.Drawing.Point(34, 340);
+            this.txbSoSachMuonMax.Name = "txbSoSachMuonMax";
+            this.txbSoSachMuonMax.Size = new System.Drawing.Size(273, 22);
+            this.txbSoSachMuonMax.TabIndex = 32;
+            this.txbSoSachMuonMax.TextChanged += new System.EventHandler(this.txbSoSachMuonMax_TextChanged);
+            this.txbSoSachMuonMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // label7
             // 
@@ -481,12 +486,14 @@
             this.label8.TabIndex = 30;
             this.label8.Text = "Tuổi tối đa:";
             // 
-            // textBox3
+            // txbSoNgayMuonMax
             // 
-            this.textBox3.Location = new System.Drawing.Point(33, 265);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(273, 22);
-            this.textBox3.TabIndex = 29;
+            this.txbSoNgayMuonMax.Location = new System.Drawing.Point(33, 265);
+            this.txbSoNgayMuonMax.Name = "txbSoNgayMuonMax";
+            this.txbSoNgayMuonMax.Size = new System.Drawing.Size(273, 22);
+            this.txbSoNgayMuonMax.TabIndex = 29;
+            this.txbSoNgayMuonMax.TextChanged += new System.EventHandler(this.txbSoNgayMuonMax_TextChanged);
+            this.txbSoNgayMuonMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // label5
             // 
@@ -510,21 +517,25 @@
             this.label6.TabIndex = 26;
             this.label6.Text = "Thời hạn thẻ (Tháng):";
             // 
-            // textBox1
+            // txbThoiGianLuuHanh
             // 
-            this.textBox1.Location = new System.Drawing.Point(33, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(273, 22);
-            this.textBox1.TabIndex = 25;
+            this.txbThoiGianLuuHanh.Location = new System.Drawing.Point(33, 115);
+            this.txbThoiGianLuuHanh.Name = "txbThoiGianLuuHanh";
+            this.txbThoiGianLuuHanh.Size = new System.Drawing.Size(273, 22);
+            this.txbThoiGianLuuHanh.TabIndex = 25;
+            this.txbThoiGianLuuHanh.TextChanged += new System.EventHandler(this.txbThoiGianLuuHanh_TextChanged);
+            this.txbThoiGianLuuHanh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
-            // textBox2
+            // txbThoiHanThe
             // 
-            this.textBox2.HideSelection = false;
-            this.textBox2.Location = new System.Drawing.Point(33, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(273, 22);
-            this.textBox2.TabIndex = 24;
-            this.textBox2.Tag = "";
+            this.txbThoiHanThe.HideSelection = false;
+            this.txbThoiHanThe.Location = new System.Drawing.Point(33, 40);
+            this.txbThoiHanThe.Name = "txbThoiHanThe";
+            this.txbThoiHanThe.Size = new System.Drawing.Size(273, 22);
+            this.txbThoiHanThe.TabIndex = 24;
+            this.txbThoiHanThe.Tag = "";
+            this.txbThoiHanThe.TextChanged += new System.EventHandler(this.txbThoiHanThe_TextChanged);
+            this.txbThoiHanThe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // label3
             // 
@@ -578,6 +589,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "FormTuyChinh";
             this.Text = "Tùy chỉnh";
+            this.Load += new System.EventHandler(this.FormTuyChinh_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -610,17 +622,17 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txbTuoiToiDa;
+        private System.Windows.Forms.TextBox txbTuoiToiThieu;
+        private System.Windows.Forms.TextBox txbMucThuTienPhat;
+        private System.Windows.Forms.TextBox txbSoSachMuonMax;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txbSoNgayMuonMax;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbThoiGianLuuHanh;
+        private System.Windows.Forms.TextBox txbThoiHanThe;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txb_TenSach;
@@ -633,12 +645,12 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnCapNhat;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lbTien;
+        private System.Windows.Forms.Label lbNgayMax;
+        private System.Windows.Forms.Label lbSachMax;
+        private System.Windows.Forms.Label lbTuoiMin;
+        private System.Windows.Forms.Label lbTuoiMax;
+        private System.Windows.Forms.Label lbLuuHanh;
+        private System.Windows.Forms.Label lbthoihan;
     }
 }
