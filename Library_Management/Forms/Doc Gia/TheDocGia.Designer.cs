@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TheDocGia));
             this.pnl_TTDocGia = new System.Windows.Forms.Panel();
             this.lb_TTDocGia = new System.Windows.Forms.Label();
             this.pnl_DocGia = new System.Windows.Forms.Panel();
@@ -37,8 +38,8 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnTaoMoi = new System.Windows.Forms.Button();
             this.txtb_NgayHetHan = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dtp_NgayHetHan = new System.Windows.Forms.DateTimePicker();
+            this.txb_TongNo = new System.Windows.Forms.TextBox();
+            this.dtp_NgayLapThe = new System.Windows.Forms.DateTimePicker();
             this.dtp_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txb_Email = new System.Windows.Forms.TextBox();
             this.txb_DiaChi = new System.Windows.Forms.TextBox();
@@ -57,20 +58,13 @@
             this.lb_TTChiTiet = new System.Windows.Forms.Label();
             this.pnl_dulieu = new System.Windows.Forms.Panel();
             this.lb_DSDocGia = new System.Windows.Forms.Label();
-            this.DS_DauSach = new System.Windows.Forms.DataGridView();
-            this.MaDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayDangKi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DS_DocGia = new System.Windows.Forms.DataGridView();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.pnl_TTDocGia.SuspendLayout();
             this.pnl_DocGia.SuspendLayout();
             this.pnl_dulieu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DS_DauSach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DS_DocGia)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_TTDocGia
@@ -82,7 +76,6 @@
             this.pnl_TTDocGia.Name = "pnl_TTDocGia";
             this.pnl_TTDocGia.Size = new System.Drawing.Size(1244, 50);
             this.pnl_TTDocGia.TabIndex = 8;
-            this.pnl_TTDocGia.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_TTDocGia_Paint);
             // 
             // lb_TTDocGia
             // 
@@ -104,8 +97,8 @@
             this.pnl_DocGia.Controls.Add(this.btnXoa);
             this.pnl_DocGia.Controls.Add(this.btnTaoMoi);
             this.pnl_DocGia.Controls.Add(this.txtb_NgayHetHan);
-            this.pnl_DocGia.Controls.Add(this.textBox1);
-            this.pnl_DocGia.Controls.Add(this.dtp_NgayHetHan);
+            this.pnl_DocGia.Controls.Add(this.txb_TongNo);
+            this.pnl_DocGia.Controls.Add(this.dtp_NgayLapThe);
             this.pnl_DocGia.Controls.Add(this.dtp_NgaySinh);
             this.pnl_DocGia.Controls.Add(this.txb_Email);
             this.pnl_DocGia.Controls.Add(this.txb_DiaChi);
@@ -142,6 +135,7 @@
             this.btn_In.TabIndex = 25;
             this.btn_In.Text = "In thông tin";
             this.btn_In.UseVisualStyleBackColor = false;
+            this.btn_In.Click += new System.EventHandler(this.btn_In_Click);
             // 
             // btnLuu
             // 
@@ -157,6 +151,7 @@
             this.btnLuu.TabIndex = 24;
             this.btnLuu.Text = "Lưu thông tin";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -173,6 +168,7 @@
             this.btnXoa.TabIndex = 23;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnTaoMoi
             // 
@@ -187,6 +183,7 @@
             this.btnTaoMoi.TabIndex = 22;
             this.btnTaoMoi.Text = "Tạo mới";
             this.btnTaoMoi.UseVisualStyleBackColor = false;
+            this.btnTaoMoi.Click += new System.EventHandler(this.btnTaoMoi_Click);
             // 
             // txtb_NgayHetHan
             // 
@@ -198,24 +195,25 @@
             this.txtb_NgayHetHan.TabIndex = 21;
             this.txtb_NgayHetHan.Tag = "";
             // 
-            // textBox1
+            // txb_TongNo
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.HideSelection = false;
-            this.textBox1.Location = new System.Drawing.Point(972, 138);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 22);
-            this.textBox1.TabIndex = 20;
-            this.textBox1.Tag = "";
+            this.txb_TongNo.Enabled = false;
+            this.txb_TongNo.HideSelection = false;
+            this.txb_TongNo.Location = new System.Drawing.Point(972, 138);
+            this.txb_TongNo.Name = "txb_TongNo";
+            this.txb_TongNo.Size = new System.Drawing.Size(262, 22);
+            this.txb_TongNo.TabIndex = 20;
+            this.txb_TongNo.Tag = "";
             // 
-            // dtp_NgayHetHan
+            // dtp_NgayLapThe
             // 
-            this.dtp_NgayHetHan.Location = new System.Drawing.Point(972, 49);
-            this.dtp_NgayHetHan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtp_NgayHetHan.Name = "dtp_NgayHetHan";
-            this.dtp_NgayHetHan.Size = new System.Drawing.Size(262, 22);
-            this.dtp_NgayHetHan.TabIndex = 19;
-            this.dtp_NgayHetHan.Value = new System.DateTime(2023, 6, 9, 0, 0, 0, 0);
+            this.dtp_NgayLapThe.Location = new System.Drawing.Point(972, 49);
+            this.dtp_NgayLapThe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtp_NgayLapThe.Name = "dtp_NgayLapThe";
+            this.dtp_NgayLapThe.Size = new System.Drawing.Size(262, 22);
+            this.dtp_NgayLapThe.TabIndex = 19;
+            this.dtp_NgayLapThe.Value = new System.DateTime(2023, 6, 9, 0, 0, 0, 0);
+            this.dtp_NgayLapThe.ValueChanged += new System.EventHandler(this.dtp_NgayLapThe_ValueChanged);
             // 
             // dtp_NgaySinh
             // 
@@ -386,7 +384,7 @@
             // 
             this.pnl_dulieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
             this.pnl_dulieu.Controls.Add(this.lb_DSDocGia);
-            this.pnl_dulieu.Controls.Add(this.DS_DauSach);
+            this.pnl_dulieu.Controls.Add(this.DS_DocGia);
             this.pnl_dulieu.Location = new System.Drawing.Point(0, 275);
             this.pnl_dulieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl_dulieu.Name = "pnl_dulieu";
@@ -405,106 +403,49 @@
             this.lb_DSDocGia.TabIndex = 25;
             this.lb_DSDocGia.Text = "Danh sách thông tin độc giả";
             // 
-            // DS_DauSach
+            // DS_DocGia
             // 
-            this.DS_DauSach.AllowUserToAddRows = false;
-            this.DS_DauSach.AllowUserToDeleteRows = false;
-            this.DS_DauSach.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DS_DocGia.AllowUserToAddRows = false;
+            this.DS_DocGia.AllowUserToDeleteRows = false;
+            this.DS_DocGia.AllowUserToResizeRows = false;
+            this.DS_DocGia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DS_DauSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DS_DauSach.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_DauSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DS_DauSach.ColumnHeadersHeight = 50;
-            this.DS_DauSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaDocGia,
-            this.HoTen,
-            this.LoaiDocGia,
-            this.NgaySinh,
-            this.DiaChi,
-            this.Email,
-            this.NgayDangKi,
-            this.NgayHetHan,
-            this.TongNo});
-            this.DS_DauSach.Location = new System.Drawing.Point(9, 50);
-            this.DS_DauSach.Name = "DS_DauSach";
-            this.DS_DauSach.ReadOnly = true;
-            this.DS_DauSach.RowHeadersVisible = false;
-            this.DS_DauSach.RowHeadersWidth = 51;
-            this.DS_DauSach.RowTemplate.Height = 24;
-            this.DS_DauSach.Size = new System.Drawing.Size(1225, 416);
-            this.DS_DauSach.TabIndex = 13;
+            this.DS_DocGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DS_DocGia.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_DocGia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.DS_DocGia.ColumnHeadersHeight = 50;
+            this.DS_DocGia.Location = new System.Drawing.Point(9, 50);
+            this.DS_DocGia.Name = "DS_DocGia";
+            this.DS_DocGia.ReadOnly = true;
+            this.DS_DocGia.RowHeadersVisible = false;
+            this.DS_DocGia.RowHeadersWidth = 51;
+            this.DS_DocGia.RowTemplate.Height = 24;
+            this.DS_DocGia.Size = new System.Drawing.Size(1225, 416);
+            this.DS_DocGia.TabIndex = 13;
+            this.DS_DocGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DS_DocGia_CellClick);
             // 
-            // MaDocGia
+            // printPreviewDialog1
             // 
-            this.MaDocGia.HeaderText = "Mã độc giả";
-            this.MaDocGia.MinimumWidth = 6;
-            this.MaDocGia.Name = "MaDocGia";
-            this.MaDocGia.ReadOnly = true;
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
-            // HoTen
+            // printDocument1
             // 
-            this.HoTen.HeaderText = "Họ tên độc giả";
-            this.HoTen.MinimumWidth = 6;
-            this.HoTen.Name = "HoTen";
-            this.HoTen.ReadOnly = true;
-            // 
-            // LoaiDocGia
-            // 
-            this.LoaiDocGia.HeaderText = "Loại độc giả";
-            this.LoaiDocGia.MinimumWidth = 6;
-            this.LoaiDocGia.Name = "LoaiDocGia";
-            this.LoaiDocGia.ReadOnly = true;
-            // 
-            // NgaySinh
-            // 
-            this.NgaySinh.HeaderText = "Ngày sinh";
-            this.NgaySinh.MinimumWidth = 6;
-            this.NgaySinh.Name = "NgaySinh";
-            this.NgaySinh.ReadOnly = true;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.HeaderText = "Địa chỉ";
-            this.DiaChi.MinimumWidth = 6;
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 8;
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // NgayDangKi
-            // 
-            this.NgayDangKi.HeaderText = "Ngày đăng kí";
-            this.NgayDangKi.MinimumWidth = 8;
-            this.NgayDangKi.Name = "NgayDangKi";
-            this.NgayDangKi.ReadOnly = true;
-            // 
-            // NgayHetHan
-            // 
-            this.NgayHetHan.HeaderText = "Ngày hết hạn";
-            this.NgayHetHan.MinimumWidth = 8;
-            this.NgayHetHan.Name = "NgayHetHan";
-            this.NgayHetHan.ReadOnly = true;
-            // 
-            // TongNo
-            // 
-            this.TongNo.HeaderText = "Tổng nợ";
-            this.TongNo.MinimumWidth = 8;
-            this.TongNo.Name = "TongNo";
-            this.TongNo.ReadOnly = true;
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // TheDocGia
             // 
@@ -520,13 +461,14 @@
             this.MinimizeBox = false;
             this.Name = "TheDocGia";
             this.Text = "Thẻ độc giả";
+            this.Load += new System.EventHandler(this.TheDocGia_Load);
             this.pnl_TTDocGia.ResumeLayout(false);
             this.pnl_TTDocGia.PerformLayout();
             this.pnl_DocGia.ResumeLayout(false);
             this.pnl_DocGia.PerformLayout();
             this.pnl_dulieu.ResumeLayout(false);
             this.pnl_dulieu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DS_DauSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DS_DocGia)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -553,23 +495,16 @@
         private System.Windows.Forms.DateTimePicker dtp_NgaySinh;
         private System.Windows.Forms.TextBox txb_Email;
         private System.Windows.Forms.TextBox txtb_NgayHetHan;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dtp_NgayHetHan;
+        private System.Windows.Forms.TextBox txb_TongNo;
+        private System.Windows.Forms.DateTimePicker dtp_NgayLapThe;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnTaoMoi;
         private System.Windows.Forms.Panel pnl_dulieu;
         private System.Windows.Forms.Label lb_DSDocGia;
-        private System.Windows.Forms.DataGridView DS_DauSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDocGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LoaiDocGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayDangKi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayHetHan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TongNo;
+        private System.Windows.Forms.DataGridView DS_DocGia;
         private System.Windows.Forms.Button btn_In;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

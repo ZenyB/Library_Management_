@@ -88,6 +88,10 @@ namespace Library_Management
         private void btnXemVaCapNhat_Click(object sender, EventArgs e)
         {
             loadTheLoai();
+            btnXoa.Enabled = false;
+            btnLuu.Enabled = false;
+            btnTaoMoi.Enabled = true;
+            txb_MaTL.Text = txb_TenTL.Text = "";
         }
 
         private void DS_TheLoai_CellClick(object sender, DataGridViewCellEventArgs e)
