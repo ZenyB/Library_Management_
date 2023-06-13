@@ -84,7 +84,7 @@ namespace Library_Management.Forms.DocGia
             btnTaoMoi.Enabled = true;
             btnXoa.Enabled = true;
             btn_In.Enabled = true;
-
+            isUpdate = false;
         }
 
         public bool checkIsMail(string email)
@@ -162,6 +162,7 @@ namespace Library_Management.Forms.DocGia
             btnLuu.Enabled = true;
             isUpdate = false;
             dtp_NgayLapThe_ValueChanged(this, e);
+            isUpdate = true;
         }
 
         private void addDocGia()
@@ -179,9 +180,9 @@ namespace Library_Management.Forms.DocGia
                 MessageBox.Show("Thêm thành công.", "Thông Báo");
                 loadDS_DocGia();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                MessageBox.Show(e.Message.ToString(), "Error");
             }
         }
 
