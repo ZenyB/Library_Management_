@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,8 +39,6 @@
             this.btnXemVaCapNhat = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.DS_TheLoai = new System.Windows.Forms.DataGridView();
-            this.maTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -167,43 +165,34 @@
             // 
             // DS_TheLoai
             // 
+            this.DS_TheLoai.AllowUserToAddRows = false;
+            this.DS_TheLoai.AllowUserToDeleteRows = false;
+            this.DS_TheLoai.AllowUserToResizeRows = false;
             this.DS_TheLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DS_TheLoai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_TheLoai.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_TheLoai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_TheLoai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DS_TheLoai.ColumnHeadersHeight = 50;
-            this.DS_TheLoai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maTheLoai,
-            this.tenTheLoai});
             this.DS_TheLoai.Location = new System.Drawing.Point(8, 8);
+            this.DS_TheLoai.MultiSelect = false;
             this.DS_TheLoai.Name = "DS_TheLoai";
+            this.DS_TheLoai.ReadOnly = true;
             this.DS_TheLoai.RowHeadersVisible = false;
             this.DS_TheLoai.RowHeadersWidth = 51;
             this.DS_TheLoai.RowTemplate.Height = 24;
             this.DS_TheLoai.Size = new System.Drawing.Size(821, 565);
             this.DS_TheLoai.TabIndex = 12;
-            // 
-            // maTheLoai
-            // 
-            this.maTheLoai.HeaderText = "Mã thể loại";
-            this.maTheLoai.MinimumWidth = 6;
-            this.maTheLoai.Name = "maTheLoai";
-            // 
-            // tenTheLoai
-            // 
-            this.tenTheLoai.HeaderText = "Tên thể loại";
-            this.tenTheLoai.MinimumWidth = 6;
-            this.tenTheLoai.Name = "tenTheLoai";
+            this.DS_TheLoai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DS_TheLoai_CellClick);
             // 
             // panel7
             // 
@@ -255,6 +244,7 @@
             this.btnLuu.TabIndex = 14;
             this.btnLuu.Text = "Lưu thông tin";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnLuu_MouseDown);
             // 
             // btnXoa
             // 
@@ -271,6 +261,7 @@
             this.btnXoa.TabIndex = 13;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnXoa_MouseDown);
             // 
             // btnTaoMoi
             // 
@@ -285,6 +276,7 @@
             this.btnTaoMoi.TabIndex = 12;
             this.btnTaoMoi.Text = "Tạo mới";
             this.btnTaoMoi.UseVisualStyleBackColor = false;
+            this.btnTaoMoi.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnTaoMoi_MouseDown);
             // 
             // label5
             // 
@@ -358,6 +350,7 @@
             this.MinimizeBox = false;
             this.Name = "theLoai";
             this.Text = "Thể loại";
+            this.Load += new System.EventHandler(this.theLoai_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -398,8 +391,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnXemVaCapNhat;
         private System.Windows.Forms.DataGridView DS_TheLoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maTheLoai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenTheLoai;
         private System.Windows.Forms.Panel panel11;
     }
 }
