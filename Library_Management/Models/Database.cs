@@ -8,7 +8,7 @@ namespace Library_Management.Models
 {
     public class Database
     {
-        public static string connectionStr = @"Data Source=LAPTOP-A6JDT5M7\KAIL;Initial Catalog=TYPH;Integrated Security=True";
+        public static string connectionStr = @"Data Source=DESKTOP-L8092DN\MSSQLSERVER1;Initial Catalog=TYPH;Integrated Security=True";
         public static string parametersQueryCmd = @"SELECT * from THAMSO";
         public static string validReadersQueryCmd = @"SELECT MaDocGia, HoTen, NgHetHan, Email
                                                     FROM DOCGIA
@@ -22,9 +22,15 @@ namespace Library_Management.Models
 				                                                                FROM CUONSACH B
 				                                                                WHERE B.MaSach = CUONSACH.MaSach AND B.TinhTrang = 0)
 			                                        ORDER BY CUONSACH.MaSach";
-        public static string getNewReturnSlipCode = @"SELECT TOP (1) MAPHIEUTRASACH
-            FROM PHIEUTRASACH
-            ORDER BY MAPHIEUTRASACH DESC";
+        public static string getBookSlipCode = @"SELECT TOP (1) MAPHIEUMUONSACH
+                                                FROM phieumuon
+                                                ORDER BY maphieumuonsach DESC";
+        public static string GetNumOfBooksBorrowed(string readerCode)
+        {
+            return $@"SELECT count(*)
+                FROM PHIEUMUON, CTPHIEUMUON
+                WHERE MaDocGia = '{readerCode}' AND PHIEUMUON.MaPhieuMuonSach = CTPHIEUMUON.MaPhieuMuonSach AND TinhTrangPM = 0";
+        }
         public static string borrowSlipQuery = @"SELECT DISTINCT PHIEUMUON.MaPhieuMuonSach, PHIEUMUON.MaDocGia, HoTen, HanTra, TongNo, Email
                 FROM PHIEUMUON, CTPHIEUMUON, DOCGIA
                 WHERE PHIEUMUON.MaPhieuMuonSach = CTPHIEUMUON.MaPhieuMuonSach AND PHIEUMUON.MaDocGia = DOCGIA.MaDocGia
@@ -34,5 +40,8 @@ namespace Library_Management.Models
             WHERE PHIEUMUON.MaPhieuMuonSach = CTPHIEUMUON.MaPhieuMuonSach AND CTPHIEUMUON.MaCuonSach = CUONSACH.MaCuonSach
 		            AND CUONSACH.MaSach = SACH.MaSach AND SACH.MaDauSach = DAUSACH.MaDauSach 
 						AND TinhTrangPM = 0";
+        public static string getNewReturnSlipCode = @"SELECT TOP (1) MAPHIEUTRASACH
+            FROM PHIEUTRASACH
+            ORDER BY MAPHIEUTRASACH DESC";
     }
 }

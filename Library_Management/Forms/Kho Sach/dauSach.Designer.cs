@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +38,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.thongTinPN = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.listBox_TacGia = new System.Windows.Forms.ListBox();
             this.txb_TenDauSach = new System.Windows.Forms.TextBox();
             this.txb_MaDauSach = new System.Windows.Forms.TextBox();
             this.cb_MaTheLoai = new System.Windows.Forms.ComboBox();
@@ -63,7 +64,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnXemVaCapNhat = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.listBox_TacGia = new System.Windows.Forms.ListBox();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -173,6 +173,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(380, 702);
             this.panel3.TabIndex = 9;
+            // 
+            // listBox_TacGia
+            // 
+            this.listBox_TacGia.FormattingEnabled = true;
+            this.listBox_TacGia.ItemHeight = 16;
+            this.listBox_TacGia.Location = new System.Drawing.Point(30, 382);
+            this.listBox_TacGia.Name = "listBox_TacGia";
+            this.listBox_TacGia.Size = new System.Drawing.Size(297, 84);
+            this.listBox_TacGia.TabIndex = 38;
             // 
             // txb_TenDauSach
             // 
@@ -441,15 +450,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DS_DauSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_DauSach.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_DauSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_DauSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DS_DauSach.ColumnHeadersHeight = 50;
             this.DS_DauSach.EnableHeadersVisualStyles = false;
             this.DS_DauSach.Location = new System.Drawing.Point(8, 8);
@@ -499,15 +508,6 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(5, 1000);
             this.panel9.TabIndex = 11;
-            // 
-            // listBox_TacGia
-            // 
-            this.listBox_TacGia.FormattingEnabled = true;
-            this.listBox_TacGia.ItemHeight = 16;
-            this.listBox_TacGia.Location = new System.Drawing.Point(30, 382);
-            this.listBox_TacGia.Name = "listBox_TacGia";
-            this.listBox_TacGia.Size = new System.Drawing.Size(297, 84);
-            this.listBox_TacGia.TabIndex = 38;
             // 
             // dauSach
             // 
