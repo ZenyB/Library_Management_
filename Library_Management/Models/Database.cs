@@ -22,5 +22,17 @@ namespace Library_Management.Models
 				                                                                FROM CUONSACH B
 				                                                                WHERE B.MaSach = CUONSACH.MaSach AND B.TinhTrang = 0)
 			                                        ORDER BY CUONSACH.MaSach";
+        public static string getNewReturnSlipCode = @"SELECT TOP (1) MAPHIEUTRASACH
+            FROM PHIEUTRASACH
+            ORDER BY MAPHIEUTRASACH DESC";
+        public static string borrowSlipQuery = @"SELECT DISTINCT PHIEUMUON.MaPhieuMuonSach, PHIEUMUON.MaDocGia, HoTen, HanTra, TongNo, Email
+                FROM PHIEUMUON, CTPHIEUMUON, DOCGIA
+                WHERE PHIEUMUON.MaPhieuMuonSach = CTPHIEUMUON.MaPhieuMuonSach AND PHIEUMUON.MaDocGia = DOCGIA.MaDocGia
+                        AND TinhTrangPM = 0";
+        public static string borrowedBooksQuery = @"SELECT CTPHIEUMUON.MaPhieuMuonSach, SACH.MaSach, TenDauSach, NgMuon, CTPHIEUMUON.MaCuonSach, MaChiTietPhieuMuon
+            FROM SACH, CUONSACH, PHIEUMUON, CTPHIEUMUON, DAUSACH
+            WHERE PHIEUMUON.MaPhieuMuonSach = CTPHIEUMUON.MaPhieuMuonSach AND CTPHIEUMUON.MaCuonSach = CUONSACH.MaCuonSach
+		            AND CUONSACH.MaSach = SACH.MaSach AND SACH.MaDauSach = DAUSACH.MaDauSach 
+						AND TinhTrangPM = 0";
     }
 }

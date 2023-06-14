@@ -46,12 +46,6 @@
             this.txb_TenDocGia = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.DS_chitietPNS = new System.Windows.Forms.DataGridView();
-            this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -155,10 +149,12 @@
             // 
             // dateTimeNgayTra
             // 
+            this.dateTimeNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeNgayTra.Location = new System.Drawing.Point(877, 113);
             this.dateTimeNgayTra.Name = "dateTimeNgayTra";
             this.dateTimeNgayTra.Size = new System.Drawing.Size(235, 22);
             this.dateTimeNgayTra.TabIndex = 56;
+            this.dateTimeNgayTra.Value = new System.DateTime(2023, 6, 14, 0, 0, 0, 0);
             // 
             // label2
             // 
@@ -232,6 +228,9 @@
             // 
             // DS_chitietPNS
             // 
+            this.DS_chitietPNS.AllowUserToAddRows = false;
+            this.DS_chitietPNS.AllowUserToDeleteRows = false;
+            this.DS_chitietPNS.AllowUserToResizeRows = false;
             this.DS_chitietPNS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_chitietPNS.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -244,57 +243,18 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DS_chitietPNS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DS_chitietPNS.ColumnHeadersHeight = 50;
-            this.DS_chitietPNS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.stt,
-            this.MaPMS,
-            this.maDocGia,
-            this.tenDocGia,
-            this.ngayMuon,
-            this.ngayTra});
             this.DS_chitietPNS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DS_chitietPNS.Location = new System.Drawing.Point(0, 0);
+            this.DS_chitietPNS.MultiSelect = false;
             this.DS_chitietPNS.Name = "DS_chitietPNS";
+            this.DS_chitietPNS.ReadOnly = true;
             this.DS_chitietPNS.RowHeadersVisible = false;
             this.DS_chitietPNS.RowHeadersWidth = 51;
             this.DS_chitietPNS.RowTemplate.Height = 24;
+            this.DS_chitietPNS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DS_chitietPNS.Size = new System.Drawing.Size(1220, 511);
             this.DS_chitietPNS.TabIndex = 13;
-            // 
-            // stt
-            // 
-            this.stt.HeaderText = "STT";
-            this.stt.MinimumWidth = 6;
-            this.stt.Name = "stt";
-            // 
-            // MaPMS
-            // 
-            this.MaPMS.HeaderText = "Mã phiếu mượn sách";
-            this.MaPMS.MinimumWidth = 6;
-            this.MaPMS.Name = "MaPMS";
-            // 
-            // maDocGia
-            // 
-            this.maDocGia.HeaderText = "Mã độc giả";
-            this.maDocGia.MinimumWidth = 6;
-            this.maDocGia.Name = "maDocGia";
-            // 
-            // tenDocGia
-            // 
-            this.tenDocGia.HeaderText = "Tên độc giả";
-            this.tenDocGia.MinimumWidth = 6;
-            this.tenDocGia.Name = "tenDocGia";
-            // 
-            // ngayMuon
-            // 
-            this.ngayMuon.HeaderText = "Ngày mượn";
-            this.ngayMuon.MinimumWidth = 6;
-            this.ngayMuon.Name = "ngayMuon";
-            // 
-            // ngayTra
-            // 
-            this.ngayTra.HeaderText = "Ngày trả";
-            this.ngayTra.MinimumWidth = 6;
-            this.ngayTra.Name = "ngayTra";
+            this.DS_chitietPNS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DS_chitietPNS_CellClick);
             // 
             // panel3
             // 
@@ -318,6 +278,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "DSPhieuTS";
             this.Text = "Danh sách phiếu thu tiền";
+            this.Load += new System.EventHandler(this.DSPhieuTS_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -347,12 +308,6 @@
         private System.Windows.Forms.TextBox txb_TenDocGia;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataGridView DS_chitietPNS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPMS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maDocGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenDocGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngayMuon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngayTra;
         private System.Windows.Forms.Panel panel3;
     }
 }

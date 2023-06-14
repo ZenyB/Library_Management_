@@ -36,6 +36,8 @@ namespace Library_Management
 
         private void traCuu_Load(object sender, EventArgs e)
         {
+            btnApDung.Enabled = false;
+            btnHuy.Enabled = false;
             connection = new SqlConnection(str);
             connection.Open();
             loadCombobox();

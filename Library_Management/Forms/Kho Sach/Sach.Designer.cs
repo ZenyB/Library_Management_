@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -220,6 +220,7 @@
             this.txb_SoLuong.HideSelection = false;
             this.txb_SoLuong.Location = new System.Drawing.Point(444, 37);
             this.txb_SoLuong.Name = "txb_SoLuong";
+            this.txb_SoLuong.ReadOnly = true;
             this.txb_SoLuong.Size = new System.Drawing.Size(324, 22);
             this.txb_SoLuong.TabIndex = 18;
             this.txb_SoLuong.Tag = "";
@@ -299,6 +300,7 @@
             this.txb_TacGia.HideSelection = false;
             this.txb_TacGia.Location = new System.Drawing.Point(37, 96);
             this.txb_TacGia.Name = "txb_TacGia";
+            this.txb_TacGia.ReadOnly = true;
             this.txb_TacGia.Size = new System.Drawing.Size(324, 22);
             this.txb_TacGia.TabIndex = 11;
             this.txb_TacGia.Tag = "";
@@ -342,7 +344,7 @@
             this.btnLuu.TabIndex = 27;
             this.btnLuu.Text = "Lưu thông tin";
             this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnLuu_MouseDown);
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -402,6 +404,7 @@
             this.txb_MaSach.HideSelection = false;
             this.txb_MaSach.Location = new System.Drawing.Point(53, 42);
             this.txb_MaSach.Name = "txb_MaSach";
+            this.txb_MaSach.ReadOnly = true;
             this.txb_MaSach.Size = new System.Drawing.Size(315, 22);
             this.txb_MaSach.TabIndex = 2;
             this.txb_MaSach.Tag = "";
@@ -456,15 +459,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DS_Sach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_Sach.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_Sach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_Sach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DS_Sach.ColumnHeadersHeight = 50;
             this.DS_Sach.Location = new System.Drawing.Point(12, 6);
             this.DS_Sach.MultiSelect = false;
@@ -473,6 +476,7 @@
             this.DS_Sach.RowHeadersVisible = false;
             this.DS_Sach.RowHeadersWidth = 51;
             this.DS_Sach.RowTemplate.Height = 24;
+            this.DS_Sach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DS_Sach.Size = new System.Drawing.Size(1220, 292);
             this.DS_Sach.TabIndex = 45;
             this.DS_Sach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DS_Sach_CellClick);

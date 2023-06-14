@@ -63,7 +63,7 @@ namespace Library_Management
             btnTaoMoi.Enabled = true;
             btnXemVaCapNhat.Enabled = false;
             btnXoa.Enabled = false;
-            txb_MaSach.Text = getNextIdSach();
+            txb_MaSach.Text = "";
             txb_SoLuong.Text = "0";
             loadMaDS();
             loadTenDS();
@@ -94,7 +94,7 @@ namespace Library_Management
 
         private void btnTaoMoi_Click(object sender, EventArgs e)
         {
-            txb_MaSach.Text = getNextIdSach();
+            txb_MaSach.Text = "";
             cb_MaDS.SelectedIndex = -1;
             cb_TenSach.SelectedIndex = -1;
             txb_TacGia.Text = "";
@@ -105,16 +105,9 @@ namespace Library_Management
             btnXemVaCapNhat.Enabled = false;
             btnXoa.Enabled = false;
             btnLuu.Enabled = true;
-        }
-        private string getNextIdSach()
-        {
-            string queryGetId = "SELECT TOP 1 MaSach FROM SACH ORDER BY MaSach DESC";
-            connect(queryGetId);
-            string fullID = Convert.ToString(myCommand.ExecuteScalar());
-            int numberID = Convert.ToInt32(fullID.Substring(2));
-            string strNumber = (++numberID).ToString();
-            fullID = "MS" + strNumber.PadLeft(3, '0');
-            return fullID;
+
+            phieuNhapSach phieuNhapSach = new phieuNhapSach();
+            phieuNhapSach.ShowDialog();
         }
 
         void loadMaDS()
@@ -142,7 +135,7 @@ namespace Library_Management
             txb_NhaXB.Text = DS_Sach.CurrentRow.Cells[5].Value.ToString();
             txb_SoLuong.Text = DS_Sach.CurrentRow.Cells[6].Value.ToString();
             txb_DonGia.Text = Decimal.Parse(DS_Sach.CurrentRow.Cells[7].Value.ToString()).ToString("N2");
-            btnLuu.Enabled = false;
+            btnLuu.Enabled = true;
             btnTaoMoi.Enabled = true;
             btnXoa.Enabled = true;
             btnXemVaCapNhat.Enabled = true;
@@ -175,123 +168,67 @@ namespace Library_Management
             e.Handled = true;
         }
 
-        private void btnLuu_MouseDown(object sender, MouseEventArgs e)
+        private void suaSach()
         {
-            if (e.Button == MouseButtons.Left)
+            try
             {
-                int flag = 0;
-                for (int i = 0; i < DS_Sach.RowCount; i++)
-                {
-                    if (cb_MaDS.Text == DS_Sach.Rows[i].Cells[1].Value.ToString() && txb_NhaXB.Text.ToUpper() == DS_Sach.Rows[i].Cells[5].Value.ToString().ToUpper() &&
-                    txb_NamXB.Text == DS_Sach.Rows[i].Cells[4].Value.ToString())
-                    {
-                        flag = 1;
-                    }
-                }
-                if (flag == 0)
-                {
-                    {
-                        if (cb_MaDS.Text == "")
-                        {
-                            MessageBox.Show("Vui lòng nhập Mã Đầu Sách", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                        if (cb_TenSach.Text == "")
-                        {
-                            MessageBox.Show("Vui lòng nhập Chủ Đề", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                        if (txb_NhaXB.Text == "")
-                        {
-                            MessageBox.Show("Vui lòng nhập NXB", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                        if (txb_NamXB.Text == "")
-                        {
-                            MessageBox.Show("Vui lòng nhập Năm XB", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                        if (txb_DonGia.Text == "")
-                        {
-                            MessageBox.Show("Vui lòng nhập Đơn Giá", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                    }
-
-                    string query = "SELECT  ThoiGianLuuHanh FROM THAMSO";
-                    connect(query);
-                    int tgXB = Convert.ToInt32(myCommand.ExecuteScalar());
-
-                    if (DateTime.Now.Year - Convert.ToInt32(txb_NamXB.Text) > tgXB)
-                    {
-                        MessageBox.Show("Chỉ nhận sách xuất bản trong vòng " + tgXB.ToString() + " năm!");
-                        return;
-                    }
-
-                    float ktTriGia;
-                    bool isNumberTriGia = float.TryParse(txb_DonGia.Text, out ktTriGia);
-
-                    if (isNumberTriGia == false || ktTriGia <= 0)
-                    {
-                        MessageBox.Show("Vui lòng nhập số dương lớn hơn 0 trong ô:\nĐơn Giá.", "Thông Báo");
-                        return;
-                    }
-
-                    if (cb_MaDS.Text.Length > 0 && cb_TenSach.Text.Length > 0 && txb_TacGia.Text.Length > 0 && txb_NhaXB.Text.Length > 0 && txb_DonGia.Text.Length > 0 && isNumberTriGia == true && ktTriGia > 0)
-                    {
-                        string query1 = null;
-                        if (isUpdate)
-                        {
-                            try
-                            {
-                                query1 = "INSERT INTO SACH (MaDauSach, NhaXuatBan, NamXuatBan, SoLuong, TriGia) VALUES ('" + cb_MaDS.Text + "', N'" + txb_NhaXB.Text + "', " + txb_NamXB.Text + ", 0, " + txb_DonGia.Text + ")";
-                                connectNonQuery(query1);
-                                MessageBox.Show("Thêm thành công.", "Thông Báo");
-                                myConnection.Close();
-                            }
-                            catch
-                            {
-                                MessageBox.Show("Cập nhật thất bại.", "Thông Báo Lỗi");
-                            }
-                        }
-                        else
-                        {
-                            try
-                            {
-                                query1 = "UPDATE  SACH SET MaDauSach = '" + cb_MaDS.Text + "', NhaXuatBan = N'" + txb_NhaXB.Text + "', NamXuatBan = " + txb_NamXB.Text + ", TriGia = " + txb_DonGia.Text +
-                                                "WHERE MaSach = '" + txb_MaSach.Text + "'";
-                                connectNonQuery(query1);
-                                MessageBox.Show("Sửa thành công.", "Thông Báo");
-                            }
-                            catch
-                            {
-                                MessageBox.Show("Sửa thất bại.\nVui lòng kiểm tra lại dữ liệu.", "Thông Báo");
-                            }
-                        }
-
-                        loadDS_Sach();
-                        DS_Sach.AutoGenerateColumns = false;
-                        myConnection.Close();
-                        btnLuu.Enabled = false;
-                        btnTaoMoi.Enabled = true;
-                        btnXemVaCapNhat.Enabled = true;
-                        btnXoa.Enabled = true;
-                        DS_Sach.Enabled = true;
-                        DS_Sach.FirstDisplayedScrollingRowIndex = DS_Sach.RowCount - 1;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Vui lòng nhập đủ thông tin.", "Thông Báo");
-                        if (cb_MaDS.Text.Length == 0)
-                            cb_MaDS.Focus();
-                        else if (cb_TenSach.Text.Length == 0)
-                            cb_TenSach.Focus();
-                        else if (txb_NhaXB.Text.Length == 0)
-                            txb_NhaXB.Focus();
-                        else if (txb_DonGia.Text.Length == 0)
-                            txb_DonGia.Focus();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Tên thể loại đã tồn tại");
-                }
+                string capnhatdong;
+                capnhatdong = "UPDATE  SACH SET MaDauSach = '" + cb_MaDS.Text + "', NhaXuatBan = N'" + txb_NhaXB.Text + "', NamXuatBan = '" + txb_NamXB.Text + "', TriGia = '" + txb_DonGia.Text +
+                                "'WHERE MaSach = '" + txb_MaSach.Text + "'";
+                connectNonQuery(capnhatdong);
+                MessageBox.Show("Sửa thành công.", "Thông Báo");
+            }
+            catch
+            {
+                MessageBox.Show("Sửa thất bại.\nVui lòng kiểm tra lại dữ liệu.", "Thông Báo");
             }
         }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            //string query = "SELECT  ThoiGianLuuHanh FROM THAMSO";
+            //connect(query);
+            //int tgXB = Convert.ToInt32(myCommand.ExecuteScalar());
+
+            //if (DateTime.Now.Year - Convert.ToInt32(txb_NamXB.Text) > tgXB)
+            //{
+            //    MessageBox.Show("Chỉ nhận sách xuất bản trong vòng " + tgXB.ToString() + " năm!");
+            //    return;
+            //}
+            //float ktTriGia;
+            //bool isNumberTriGia = float.TryParse(txb_DonGia.Text, out ktTriGia);
+
+            //if (isNumberTriGia == false || ktTriGia <= 0)
+            //{
+            //    MessageBox.Show("Vui lòng nhập số dương lớn hơn 0 trong ô:\nGiá Tiền.", "Thông Báo");
+            //    return;
+            //}
+            if (cb_MaDS.Text.Length > 0 && cb_TenSach.Text.Length > 0 && txb_TacGia.Text.Length > 0 && txb_NhaXB.Text.Length > 0 && txb_DonGia.Text.Length > 0)
+            {
+                suaSach();
+                loadDS_Sach();
+                DS_Sach.AutoGenerateColumns = false;
+                myConnection.Close();
+                btnLuu.Enabled = false;
+                btnTaoMoi.Enabled = true;
+                btnXemVaCapNhat.Enabled = true;
+                btnXoa.Enabled = true;
+                DS_Sach.Enabled = true;
+                DS_Sach.FirstDisplayedScrollingRowIndex = DS_Sach.RowCount - 1;
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin.", "Thông Báo");
+                if (cb_MaDS.Text.Length == 0)
+                    cb_MaDS.Focus();
+                else if (cb_TenSach.Text.Length == 0)
+                    cb_TenSach.Focus();
+                else if (txb_NhaXB.Text.Length == 0)
+                    txb_NhaXB.Focus();
+                else if (txb_DonGia.Text.Length == 0)
+                    txb_DonGia.Focus();
+
+            }
+        } 
     }
 }
