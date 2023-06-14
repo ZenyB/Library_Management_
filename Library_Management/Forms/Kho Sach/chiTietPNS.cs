@@ -144,7 +144,6 @@ namespace Library_Management
             {
                 string truy_van = null;
                 int soluong = 0;
-                MessageBox.Show(isNewSach.ToString());
                 if (!isNewSach)
                 {
                     truy_van = "SELECT SoLuong " +
@@ -165,7 +164,6 @@ namespace Library_Management
                 bool isNumberSoLuong = int.TryParse(txb_SoLuong.Text, out ktSoLuong);
                 for (int i = 0; i < ktSoLuong; i++)
                 {
-                    MessageBox.Show("Thêm nè");
                     themCuonSach(cb_MaSach.Text, txb_MaCTPNS.Text);
                 }
                 MessageBox.Show("Thêm chi tiết phiếu nhập thành công.", "Thông Báo");
@@ -489,6 +487,12 @@ namespace Library_Management
             {
                 xoaCTPN();
             }
+        }
+
+        private void txb_NamXB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

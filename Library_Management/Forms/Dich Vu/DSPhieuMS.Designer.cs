@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -51,12 +51,6 @@
             this.btnHuy = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.DS_chitietPMS = new System.Windows.Forms.DataGridView();
-            this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenDocGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayMuon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -125,6 +119,7 @@
             this.btnCapNhat.TabIndex = 43;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = false;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // panel3
             // 
@@ -159,6 +154,7 @@
             this.btn_xemChiTiet.TabIndex = 48;
             this.btn_xemChiTiet.Text = "Xem chi tiết";
             this.btn_xemChiTiet.UseVisualStyleBackColor = false;
+            this.btn_xemChiTiet.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // txb_MaPMS
             // 
@@ -187,6 +183,7 @@
             this.dtpNgayTra.Name = "dtpNgayTra";
             this.dtpNgayTra.Size = new System.Drawing.Size(235, 22);
             this.dtpNgayTra.TabIndex = 45;
+            this.dtpNgayTra.ValueChanged += new System.EventHandler(this.dtpNgayTra_ValueChanged);
             // 
             // dtpNgayMuon
             // 
@@ -194,6 +191,7 @@
             this.dtpNgayMuon.Name = "dtpNgayMuon";
             this.dtpNgayMuon.Size = new System.Drawing.Size(235, 22);
             this.dtpNgayMuon.TabIndex = 44;
+            this.dtpNgayMuon.ValueChanged += new System.EventHandler(this.dtpNgayMuon_ValueChanged);
             // 
             // label2
             // 
@@ -290,7 +288,7 @@
             this.btnXoa.TabIndex = 33;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnXoa.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // btnHuy
             // 
@@ -316,70 +314,32 @@
             // 
             // DS_chitietPMS
             // 
+            this.DS_chitietPMS.AllowUserToAddRows = false;
+            this.DS_chitietPMS.AllowUserToResizeRows = false;
             this.DS_chitietPMS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_chitietPMS.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_chitietPMS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_chitietPMS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DS_chitietPMS.ColumnHeadersHeight = 50;
-            this.DS_chitietPMS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.stt,
-            this.MaPMS,
-            this.maDocGia,
-            this.tenDocGia,
-            this.ngayMuon,
-            this.ngayTra});
             this.DS_chitietPMS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DS_chitietPMS.Location = new System.Drawing.Point(0, 0);
+            this.DS_chitietPMS.MultiSelect = false;
             this.DS_chitietPMS.Name = "DS_chitietPMS";
+            this.DS_chitietPMS.ReadOnly = true;
             this.DS_chitietPMS.RowHeadersVisible = false;
             this.DS_chitietPMS.RowHeadersWidth = 51;
             this.DS_chitietPMS.RowTemplate.Height = 24;
+            this.DS_chitietPMS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DS_chitietPMS.Size = new System.Drawing.Size(1220, 511);
             this.DS_chitietPMS.TabIndex = 13;
             this.DS_chitietPMS.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DS_chitietPMS_CellMouseDown);
-            // 
-            // stt
-            // 
-            this.stt.HeaderText = "STT";
-            this.stt.MinimumWidth = 6;
-            this.stt.Name = "stt";
-            // 
-            // MaPMS
-            // 
-            this.MaPMS.HeaderText = "Mã phiếu mượn sách";
-            this.MaPMS.MinimumWidth = 6;
-            this.MaPMS.Name = "MaPMS";
-            // 
-            // maDocGia
-            // 
-            this.maDocGia.HeaderText = "Mã độc giả";
-            this.maDocGia.MinimumWidth = 6;
-            this.maDocGia.Name = "maDocGia";
-            // 
-            // tenDocGia
-            // 
-            this.tenDocGia.HeaderText = "Tên độc giả";
-            this.tenDocGia.MinimumWidth = 6;
-            this.tenDocGia.Name = "tenDocGia";
-            // 
-            // ngayMuon
-            // 
-            this.ngayMuon.HeaderText = "Ngày mượn";
-            this.ngayMuon.MinimumWidth = 6;
-            this.ngayMuon.Name = "ngayMuon";
-            // 
-            // ngayTra
-            // 
-            this.ngayTra.HeaderText = "Ngày trả";
-            this.ngayTra.MinimumWidth = 6;
-            this.ngayTra.Name = "ngayTra";
             // 
             // panel5
             // 
@@ -403,6 +363,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "DSPhieuMS";
             this.Text = "Danh sách phiếu mượn sách";
+            this.Load += new System.EventHandler(this.ConfirmLendBook_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -435,12 +396,6 @@
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataGridView DS_chitietPMS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaPMS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maDocGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenDocGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngayMuon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngayTra;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btn_xemChiTiet;
         private System.Windows.Forms.TextBox txb_MaPMS;

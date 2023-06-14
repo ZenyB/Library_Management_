@@ -34,6 +34,19 @@ namespace Library_Management
             binding = new BindingSource();
             dataChanged = false;
             LoadData();
+            DS_chitietPMS.Columns[0].HeaderText = "STT";
+            DS_chitietPMS.Columns[1].HeaderText = "Mã Phiếu Mượn";
+            DS_chitietPMS.Columns[2].HeaderText = "Mã Độc Giả";
+            DS_chitietPMS.Columns[3].HeaderText = "Tên Độc Giả";
+            DS_chitietPMS.Columns[4].HeaderText = "Ngày Mượn";
+            DS_chitietPMS.Columns[5].HeaderText = "Ngày Trả";
+            DS_chitietPMS.AutoGenerateColumns = false;
+            DS_chitietPMS.Columns[0].Width = 70;
+            DS_chitietPMS.Columns[1].Width = 150;
+            DS_chitietPMS.Columns[2].Width = 150;
+            DS_chitietPMS.Columns[3].Width = 300;
+            DS_chitietPMS.Columns[4].Width = 150;
+            DS_chitietPMS.Columns[4].Width = 150;
         }
 
         private void LoadData()
@@ -125,6 +138,11 @@ namespace Library_Management
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            if (dtpNgayMuon.Value > DateTime.Now || dtpNgayTra.Value < dtpNgayMuon.Value)
+            {
+                MessageBox.Show("Ngày mượn và trả sách không hợp lệ", "Thông báo lỗi");
+                return;
+            }
             opt = 1;
             btnCapNhat.Enabled = true;
             btnLuu.Enabled = false;
@@ -136,7 +154,7 @@ namespace Library_Management
             if (opt == 1)
             {
                 queryUpdateCmd = $@"UPDATE PHIEUMUON
-                SET NgMuon = '{dtpNgayMuon.Value.ToString()}', HanTra = '{dtpNgayTra.Value.ToString()}'
+                SET NgMuon = '{dtpNgayMuon.Value.Date.ToString("MM/dd/yyyy")}', HanTra = '{dtpNgayTra.Value.Date.ToString("MM/dd/yyyy")}'
                 WHERE MaPhieuMuonSach = '{txb_MaPMS.Text}'";
             }
             else if (opt == 2)
@@ -223,11 +241,6 @@ namespace Library_Management
         private void btnDetail_Click(object sender, EventArgs e)
         {
             new chITietPMS().ShowDialog();
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

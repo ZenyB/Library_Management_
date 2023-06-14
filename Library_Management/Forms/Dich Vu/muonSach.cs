@@ -689,11 +689,16 @@ namespace Library_Management
 
         private void btnChoMuon_Click(object sender, EventArgs e)
         {
+            if (dtp_NgayMuon.Value > DateTime.Now)
+            {
+                MessageBox.Show("Ngày mượn không vượt quá hôm nay", "Thông báo lỗi");
+                return;
+            }
             switch (IsValid())
             {
                 case Valid.Valid:
                     {
-                        //ShowConfirmForm();
+                        ShowConfirmForm();
                         break;
                     }
                 case Valid.MissingCode:
@@ -785,48 +790,48 @@ namespace Library_Management
             return Valid.Valid;
         }
 
-        //private void ShowConfirmForm()
-        //{
-        //    tdGetBookSlip.Join();
-        //    string code = cb_MaDG.Text.ToString();
-        //    string name = txb_TenDocGia.Text.ToString();
-        //    string email = readers[cb_MaDG.SelectedIndex].email;
-        //    string lendDate = dtp_NgayMuon.Value.ToString("yyyy-MM-dd");
-        //    string backDate = dtp_NgayTra.Value.ToString("yyyy-MM-dd");
-        //    string amount = chosenBooks.Count.ToString();
+        private void ShowConfirmForm()
+        {
+            //tdGetBookSlip.Join();
+            string code = cb_MaDG.Text.ToString();
+            string name = txb_TenDocGia.Text.ToString();
+            //string email = readers[cb_MaDG.SelectedIndex].email;
+            string lendDate = dtp_NgayMuon.Value.ToString("yyyy-MM-dd");
+            string backDate = dtp_NgayTra.Value.ToString("yyyy-MM-dd");
+            string amount = chosenBooks.Count.ToString();
 
-        //    ConfirmLendBook.borrowSlip = new BorrowSlip(slipCode, code, name, email, lendDate, backDate, amount, chosenBooks);
-        //    new ConfirmLendBook().ShowDialog();
+            thongTinPMS.borrowSlip = new BorrowSlip(slipCode, code, name, lendDate, backDate, amount, chosenBooks);
+            new thongTinPMS().ShowDialog();
 
-        //    if (lendState == "Success")
-        //    {
-        //        MessageBox.Show("Cho mượn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (lendState == "Success")
+            {
+                MessageBox.Show("Cho mượn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-        //        btnChoMuon.Enabled = false;
+                btnChoMuon.Enabled = false;
 
-        //        //chosenBooks.Clear();
-        //        //bindingChosen = new BindingSource();
-        //        //bindingChosen.DataSource = chosenBooks;
-        //        //dtgvBookChosen.DataSource = bindingChosen;
+                //chosenBooks.Clear();
+                //bindingChosen = new BindingSource();
+                //bindingChosen.DataSource = chosenBooks;
+                //dtgvBookChosen.DataSource = bindingChosen;
 
-        //        lendState = "";
-        //        tdGetBookSlip = new Thread(new ThreadStart(GetSlipCode));
-        //        tdGetBookSlip.Start();
-        //        muonSach f2 = new muonSach();
-        //        // show form 2
-        //        f2.ShowDialog(); // it fonna halt/ freeze the excution of click event.
-        //                         // dispose form 2 instance
-        //        f2 = null;
-        //        //show form 1 again
-        //        this.Show();
-        //    }
-        //    //String returnDay = 
-        //}
+                lendState = "";
+                tdGetBookSlip = new Thread(new ThreadStart(GetSlipCode));
+                tdGetBookSlip.Start();
+                muonSach f2 = new muonSach();
+                // show form 2
+                f2.ShowDialog(); // it fonna halt/ freeze the excution of click event.
+                                 // dispose form 2 instance
+                f2 = null;
+                //show form 1 again
+                this.Show();
+            }
+            //String returnDay = 
+        }
 
-        //private void btnCancel_Click(object sender, EventArgs e)
-        //{
-        //    ShowConfirmForm();
-        //}
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            ShowConfirmForm();
+        }
 
         private void chbIn_CheckedChanged(object sender, EventArgs e)
         {
@@ -853,6 +858,11 @@ namespace Library_Management
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
+            if (dtp_NgayMuon.Value > DateTime.Now)
+            {
+                MessageBox.Show("Ngày mượn không vượt quá hôm nay", "Thông báo lỗi");
+                return;
+            }
             DSPhieuMS f2 = new DSPhieuMS();
             // show form 2
             f2.ShowDialog(); // it fonna halt/ freeze the excution of click event.
