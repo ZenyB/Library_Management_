@@ -197,6 +197,12 @@
     <Compile Include="Forms\Dich Vu\traSach.Designer.cs">
       <DependentUpon>traSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="thongTinPMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="thongTinPMS.Designer.cs">
+      <DependentUpon>thongTinPMS.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -271,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dich Vu\traSach.resx">
       <DependentUpon>traSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="thongTinPMS.resx">
+      <DependentUpon>thongTinPMS.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
