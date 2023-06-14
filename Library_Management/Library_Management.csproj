@@ -59,29 +59,7 @@
     <Compile Include="Forms\DocGia\LoaiDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< Updated upstream
     <Compile Include="Forms\DocGia\LoaiDocGia.Designer.cs">
-=======
-    <Compile Include="Forms\Dich Vu\DSPhieuTS.Designer.cs">
-      <DependentUpon>DSPhieuTS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Dich Vu\DSPhieuMS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Dich Vu\DSPhieuMS.Designer.cs">
-      <DependentUpon>DSPhieuMS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Dich Vu\XacNhanMS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Dich Vu\XacNhanMS.Designer.cs">
-      <DependentUpon>XacNhanMS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Doc Gia\LoaiDocGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Doc Gia\LoaiDocGia.Designer.cs">
->>>>>>> Stashed changes
       <DependentUpon>LoaiDocGia.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DocGia\PhieuThuTien.cs">
@@ -186,20 +164,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
     <EmbeddedResource Include="Forms\DocGia\LoaiDocGia.resx">
-=======
-    <EmbeddedResource Include="Forms\Dich Vu\DSPhieuTS.resx">
-      <DependentUpon>DSPhieuTS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Dich Vu\DSPhieuMS.resx">
-      <DependentUpon>DSPhieuMS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Dich Vu\XacNhanMS.resx">
-      <DependentUpon>XacNhanMS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Doc Gia\LoaiDocGia.resx">
->>>>>>> Stashed changes
       <DependentUpon>LoaiDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DocGia\PhieuThuTien.resx">

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_TTPhieuThu = new System.Windows.Forms.Panel();
             this.lb_PhieuThu = new System.Windows.Forms.Label();
             this.pnl_DocGia = new System.Windows.Forms.Panel();
@@ -83,11 +83,7 @@
             this.lb_PhieuThu.AutoSize = true;
             this.lb_PhieuThu.Font = new System.Drawing.Font("UTM Avo", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_PhieuThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(224)))), ((int)(((byte)(181)))));
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.lb_PhieuThu.Location = new System.Drawing.Point(490, 9);
-=======
-            this.lb_PhieuThu.Location = new System.Drawing.Point(512, 0);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.lb_PhieuThu.Name = "lb_PhieuThu";
             this.lb_PhieuThu.Size = new System.Drawing.Size(369, 49);
             this.lb_PhieuThu.TabIndex = 0;
@@ -116,10 +112,6 @@
             this.pnl_DocGia.Controls.Add(this.lb_SoTienThu);
             this.pnl_DocGia.Controls.Add(this.lb_TTChiTiet);
             this.pnl_DocGia.Location = new System.Drawing.Point(0, 69);
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
-=======
-            this.pnl_DocGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.pnl_DocGia.Name = "pnl_DocGia";
             this.pnl_DocGia.Size = new System.Drawing.Size(1425, 269);
             this.pnl_DocGia.TabIndex = 10;
@@ -148,11 +140,7 @@
             this.btnLuu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(224)))), ((int)(((byte)(181)))));
             this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLuu.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.btnLuu.Location = new System.Drawing.Point(203, 221);
-=======
-            this.btnLuu.Location = new System.Drawing.Point(202, 221);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(209, 36);
@@ -196,11 +184,7 @@
             // 
             this.txt_TongNo.Enabled = false;
             this.txt_TongNo.HideSelection = false;
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.txt_TongNo.Location = new System.Drawing.Point(650, 63);
-=======
-            this.txt_TongNo.Location = new System.Drawing.Point(650, 62);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.txt_TongNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_TongNo.Name = "txt_TongNo";
             this.txt_TongNo.Size = new System.Drawing.Size(257, 26);
@@ -210,10 +194,6 @@
             // dtp_NgayHetHan
             // 
             this.dtp_NgayHetHan.Location = new System.Drawing.Point(1094, 61);
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
-=======
-            this.dtp_NgayHetHan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.dtp_NgayHetHan.Name = "dtp_NgayHetHan";
             this.dtp_NgayHetHan.Size = new System.Drawing.Size(294, 26);
             this.dtp_NgayHetHan.TabIndex = 19;
@@ -222,11 +202,7 @@
             // txb_SoTienConNo
             // 
             this.txb_SoTienConNo.HideSelection = false;
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.txb_SoTienConNo.Location = new System.Drawing.Point(650, 173);
-=======
-            this.txb_SoTienConNo.Location = new System.Drawing.Point(650, 172);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.txb_SoTienConNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_SoTienConNo.Name = "txb_SoTienConNo";
             this.txb_SoTienConNo.Size = new System.Drawing.Size(257, 26);
@@ -248,11 +224,7 @@
             this.lb_SoTienConNo.AutoSize = true;
             this.lb_SoTienConNo.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_SoTienConNo.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.lb_SoTienConNo.Location = new System.Drawing.Point(511, 173);
-=======
-            this.lb_SoTienConNo.Location = new System.Drawing.Point(511, 172);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.lb_SoTienConNo.Name = "lb_SoTienConNo";
             this.lb_SoTienConNo.Size = new System.Drawing.Size(133, 23);
             this.lb_SoTienConNo.TabIndex = 15;
@@ -263,11 +235,7 @@
             this.lb_NgayThu.AutoSize = true;
             this.lb_NgayThu.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_NgayThu.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.lb_NgayThu.Location = new System.Drawing.Point(953, 63);
-=======
-            this.lb_NgayThu.Location = new System.Drawing.Point(953, 62);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.lb_NgayThu.Name = "lb_NgayThu";
             this.lb_NgayThu.Size = new System.Drawing.Size(89, 23);
             this.lb_NgayThu.TabIndex = 14;
@@ -288,10 +256,6 @@
             // 
             this.cbb_MaDG.FormattingEnabled = true;
             this.cbb_MaDG.Location = new System.Drawing.Point(165, 120);
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
-=======
-            this.cbb_MaDG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.cbb_MaDG.Name = "cbb_MaDG";
             this.cbb_MaDG.Size = new System.Drawing.Size(294, 28);
             this.cbb_MaDG.TabIndex = 10;
@@ -299,11 +263,7 @@
             // txb_HoTen
             // 
             this.txb_HoTen.HideSelection = false;
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.txb_HoTen.Location = new System.Drawing.Point(165, 173);
-=======
-            this.txb_HoTen.Location = new System.Drawing.Point(165, 172);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.txb_HoTen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_HoTen.Name = "txb_HoTen";
             this.txb_HoTen.Size = new System.Drawing.Size(294, 26);
@@ -313,11 +273,7 @@
             // txb_MaPhieuThu
             // 
             this.txb_MaPhieuThu.HideSelection = false;
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.txb_MaPhieuThu.Location = new System.Drawing.Point(165, 63);
-=======
-            this.txb_MaPhieuThu.Location = new System.Drawing.Point(165, 62);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.txb_MaPhieuThu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txb_MaPhieuThu.Name = "txb_MaPhieuThu";
             this.txb_MaPhieuThu.Size = new System.Drawing.Size(294, 26);
@@ -329,11 +285,7 @@
             this.lb_MaPhieuThu.AutoSize = true;
             this.lb_MaPhieuThu.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_MaPhieuThu.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.lb_MaPhieuThu.Location = new System.Drawing.Point(23, 66);
-=======
-            this.lb_MaPhieuThu.Location = new System.Drawing.Point(22, 66);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.lb_MaPhieuThu.Name = "lb_MaPhieuThu";
             this.lb_MaPhieuThu.Size = new System.Drawing.Size(123, 23);
             this.lb_MaPhieuThu.TabIndex = 7;
@@ -344,11 +296,7 @@
             this.lb_HoTen.AutoSize = true;
             this.lb_HoTen.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_HoTen.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.lb_HoTen.Location = new System.Drawing.Point(23, 176);
-=======
-            this.lb_HoTen.Location = new System.Drawing.Point(22, 176);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.lb_HoTen.Name = "lb_HoTen";
             this.lb_HoTen.Size = new System.Drawing.Size(138, 23);
             this.lb_HoTen.TabIndex = 6;
@@ -359,11 +307,7 @@
             this.lb_MaDocGia.AutoSize = true;
             this.lb_MaDocGia.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_MaDocGia.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.lb_MaDocGia.Location = new System.Drawing.Point(23, 120);
-=======
-            this.lb_MaDocGia.Location = new System.Drawing.Point(22, 120);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.lb_MaDocGia.Name = "lb_MaDocGia";
             this.lb_MaDocGia.Size = new System.Drawing.Size(110, 23);
             this.lb_MaDocGia.TabIndex = 5;
@@ -386,11 +330,7 @@
             this.lb_TTChiTiet.AutoSize = true;
             this.lb_TTChiTiet.Font = new System.Drawing.Font("UTM Avo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_TTChiTiet.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.lb_TTChiTiet.Location = new System.Drawing.Point(33, 9);
-=======
-            this.lb_TTChiTiet.Location = new System.Drawing.Point(21, 11);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.lb_TTChiTiet.Name = "lb_TTChiTiet";
             this.lb_TTChiTiet.Size = new System.Drawing.Size(218, 35);
             this.lb_TTChiTiet.TabIndex = 1;
@@ -402,14 +342,8 @@
             this.pnl_dulieu.Controls.Add(this.lb_DSPhieuThu);
             this.pnl_dulieu.Controls.Add(this.DS_DauSach);
             this.pnl_dulieu.Location = new System.Drawing.Point(0, 344);
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.pnl_dulieu.Name = "pnl_dulieu";
             this.pnl_dulieu.Size = new System.Drawing.Size(1427, 603);
-=======
-            this.pnl_dulieu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnl_dulieu.Name = "pnl_dulieu";
-            this.pnl_dulieu.Size = new System.Drawing.Size(1426, 602);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.pnl_dulieu.TabIndex = 11;
             // 
             // lb_DSPhieuThu
@@ -418,11 +352,7 @@
             this.lb_DSPhieuThu.AutoSize = true;
             this.lb_DSPhieuThu.Font = new System.Drawing.Font("UTM Avo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_DSPhieuThu.ForeColor = System.Drawing.Color.White;
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.lb_DSPhieuThu.Location = new System.Drawing.Point(33, 15);
-=======
-            this.lb_DSPhieuThu.Location = new System.Drawing.Point(21, 11);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.lb_DSPhieuThu.Name = "lb_DSPhieuThu";
             this.lb_DSPhieuThu.Size = new System.Drawing.Size(386, 35);
             this.lb_DSPhieuThu.TabIndex = 25;
@@ -437,15 +367,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DS_DauSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_DauSach.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_DauSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_DauSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DS_DauSach.ColumnHeadersHeight = 50;
             this.DS_DauSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaPhieuThu,
@@ -454,22 +384,14 @@
             this.NgayThu,
             this.SoTienThu,
             this.SoTienConNo});
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.DS_DauSach.Location = new System.Drawing.Point(10, 63);
-=======
-            this.DS_DauSach.Location = new System.Drawing.Point(10, 62);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.DS_DauSach.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DS_DauSach.Name = "DS_DauSach";
             this.DS_DauSach.ReadOnly = true;
             this.DS_DauSach.RowHeadersVisible = false;
             this.DS_DauSach.RowHeadersWidth = 51;
             this.DS_DauSach.RowTemplate.Height = 24;
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.DS_DauSach.Size = new System.Drawing.Size(1390, 536);
-=======
-            this.DS_DauSach.Size = new System.Drawing.Size(1378, 520);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.DS_DauSach.TabIndex = 13;
             // 
             // MaPhieuThu
@@ -519,16 +441,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(4)))), ((int)(((byte)(32)))));
-<<<<<<< Updated upstream:Library_Management/Forms/DocGia/PhieuThuTien.Designer.cs
             this.ClientSize = new System.Drawing.Size(1400, 949);
-=======
-            this.ClientSize = new System.Drawing.Size(1400, 941);
->>>>>>> Stashed changes:Library_Management/Forms/Doc Gia/PhieuThuTien.Designer.cs
             this.Controls.Add(this.pnl_dulieu);
             this.Controls.Add(this.pnl_DocGia);
             this.Controls.Add(this.pnl_TTPhieuThu);
             this.Name = "PhieuThuTien";
-            this.Text = "Phiếu thu tiền";
+            this.Text = "PhieuThuTien";
             this.pnl_TTPhieuThu.ResumeLayout(false);
             this.pnl_TTPhieuThu.PerformLayout();
             this.pnl_DocGia.ResumeLayout(false);
