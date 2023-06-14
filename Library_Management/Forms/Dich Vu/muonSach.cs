@@ -323,6 +323,17 @@ namespace Library_Management
                 bindingChosen = new BindingSource();
                 bindingChosen.DataSource = chosenBooks;
                 DS_SachDaMuon.DataSource = bindingChosen;
+                DS_SachDaMuon.Columns[0].HeaderText = "STT";
+                DS_SachDaMuon.Columns[1].HeaderText = "Mã Sách";
+                DS_SachDaMuon.Columns[2].HeaderText = "Tên Sách";
+                DS_SachDaMuon.Columns[3].HeaderText = "Thể Loại";
+                DS_SachDaMuon.Columns[4].HeaderText = "Tác giả";
+                DS_SachDaMuon.AutoGenerateColumns = false;
+                DS_SachDaMuon.Columns[0].Width = 50;
+                DS_SachDaMuon.Columns[1].Width = 100;
+                DS_SachDaMuon.Columns[2].Width = 120;
+                DS_SachDaMuon.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                DS_SachDaMuon.Columns[4].Width = 200;
                 //dtgvBookChosen.Update();
                 //dtgvBookChosen.Refresh();
 
@@ -385,6 +396,17 @@ namespace Library_Management
                     if (row != null && row.Cells[1].Value.ToString() == bookChosen.code)
                     {
                         DS_SachDaMuon.Rows[row.Index].Selected = true;
+                        DS_SachDaMuon.Columns[0].HeaderText = "STT";
+                        DS_SachDaMuon.Columns[1].HeaderText = "Mã Sách";
+                        DS_SachDaMuon.Columns[2].HeaderText = "Tên Sách";
+                        DS_SachDaMuon.Columns[3].HeaderText = "Thể Loại";
+                        DS_SachDaMuon.Columns[4].HeaderText = "Tác giả";
+                        DS_SachDaMuon.AutoGenerateColumns = false;
+                        DS_SachDaMuon.Columns[0].Width = 50;
+                        DS_SachDaMuon.Columns[1].Width = 100;
+                        DS_SachDaMuon.Columns[2].Width = 120;
+                        DS_SachDaMuon.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        DS_SachDaMuon.Columns[4].Width = 200;
                         break;
                     }
                 }
@@ -889,6 +911,11 @@ namespace Library_Management
             f2 = null;
             //show form 1 again
             this.Show();
+        }
+
+        private void dtp_NgayMuon_ValueChanged(object sender, EventArgs e)
+        {
+            dtp_NgayTra.Value = dtp_NgayMuon.Value.AddDays(Parameters.maxLendDay);
         }
     }
 }

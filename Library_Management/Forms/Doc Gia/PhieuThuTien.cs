@@ -72,10 +72,18 @@ namespace Library_Management.Forms.DocGia
                               "FROM PHIEUTHUTIEN " +
                               "ORDER BY MaPhieuThu DESC";
             ket_noi_co_du_lieu(truy_van);
-            string MaPhieuThuMax = Convert.ToString(command.ExecuteScalar());
-            int numberMaPhieuThuMax = Convert.ToInt32(MaPhieuThuMax.Substring(3));
-            string strNumber = (++numberMaPhieuThuMax).ToString();
-            MaPhieuThuMax = "MPT" + strNumber.PadLeft(3, '0');
+            string MaPhieuThuMax = "";
+            try
+            {
+                MaPhieuThuMax = Convert.ToString(command.ExecuteScalar());
+                int numberMaPhieuThuMax = Convert.ToInt32(MaPhieuThuMax.Substring(3));
+                string strNumber = (++numberMaPhieuThuMax).ToString();
+                MaPhieuThuMax = "MPT" + strNumber.PadLeft(3, '0');
+            }
+            catch
+            {
+                MaPhieuThuMax = "MPT001";
+            }
             return MaPhieuThuMax;
         }
 

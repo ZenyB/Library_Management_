@@ -65,12 +65,12 @@
             this.btn_Them = new FontAwesome.Sharp.IconButton();
             this.btn_BoChon = new FontAwesome.Sharp.IconButton();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.labelXoa = new System.Windows.Forms.LinkLabel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.DS_SachTrongKho = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbx_TimSach = new System.Windows.Forms.TextBox();
-            this.labelXoa = new System.Windows.Forms.LinkLabel();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -155,6 +155,7 @@
             this.dtp_NgayMuon.Name = "dtp_NgayMuon";
             this.dtp_NgayMuon.Size = new System.Drawing.Size(324, 22);
             this.dtp_NgayMuon.TabIndex = 27;
+            this.dtp_NgayMuon.ValueChanged += new System.EventHandler(this.dtp_NgayMuon_ValueChanged);
             // 
             // label8
             // 
@@ -541,6 +542,18 @@
             this.panel10.Size = new System.Drawing.Size(846, 320);
             this.panel10.TabIndex = 31;
             // 
+            // labelXoa
+            // 
+            this.labelXoa.AutoSize = true;
+            this.labelXoa.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.labelXoa.Location = new System.Drawing.Point(389, 21);
+            this.labelXoa.Name = "labelXoa";
+            this.labelXoa.Size = new System.Drawing.Size(31, 16);
+            this.labelXoa.TabIndex = 26;
+            this.labelXoa.TabStop = true;
+            this.labelXoa.Text = "Xóa";
+            this.labelXoa.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelXoa_LinkClicked);
+            // 
             // panel12
             // 
             this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -615,18 +628,6 @@
             this.tbx_TimSach.TabIndex = 22;
             this.tbx_TimSach.Tag = "";
             this.tbx_TimSach.TextChanged += new System.EventHandler(this.tbx_TimSach_TextChanged);
-            // 
-            // labelXoa
-            // 
-            this.labelXoa.AutoSize = true;
-            this.labelXoa.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.labelXoa.Location = new System.Drawing.Point(389, 21);
-            this.labelXoa.Name = "labelXoa";
-            this.labelXoa.Size = new System.Drawing.Size(31, 16);
-            this.labelXoa.TabIndex = 26;
-            this.labelXoa.TabStop = true;
-            this.labelXoa.Text = "Xóa";
-            this.labelXoa.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelXoa_LinkClicked);
             // 
             // muonSach
             // 
