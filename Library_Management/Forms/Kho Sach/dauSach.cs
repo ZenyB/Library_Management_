@@ -299,7 +299,7 @@ namespace Library_Management
         {
             if (e.Button  == MouseButtons.Left) 
             {
-                if (isUpdate)
+                if (!isUpdate)
                 {
                     int flag = 0;
                     for (int i = 0; i < DS_DauSach.RowCount; i++)
@@ -359,7 +359,8 @@ namespace Library_Management
                     for (int i = 0; i < DS_DauSach.RowCount; i++)
                     {
 
-                        if (txb_TenDauSach.Text.ToUpper() == DS_DauSach.Rows[i].Cells[1].Value.ToString().ToUpper() && txb_MaDauSach.Text != DS_DauSach.Rows[i].Cells[0].Value.ToString())
+                        if (txb_TenDauSach.Text.ToUpper() == DS_DauSach.Rows[i].Cells[1].Value.ToString().ToUpper()
+                            && txb_MaDauSach.Text.ToUpper() != DS_DauSach.Rows[i].Cells[0].Value.ToString())
                         {
                             flag = 1;
                         }
@@ -407,7 +408,7 @@ namespace Library_Management
                             txb_TenDauSach.Focus();
                         }
                     }
-                    else MessageBox.Show("Tên đầu sách này đã tồn tại   ");
+                    else MessageBox.Show("Tên đầu sách này đã tồn tại.");
                 }
             }
         }
