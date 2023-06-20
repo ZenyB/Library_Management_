@@ -29,6 +29,7 @@ namespace Library_Management
 
         private string choosen;
         private int i;
+        string totalfine;
 
         List<ReturnSlip> returnSlips;
         List<ReturnBook> returnBooks;
@@ -41,8 +42,6 @@ namespace Library_Management
 
         public static string recvState = "";
         public static bool needPrint = true;
-
-        Thread tdGetNewSlipCode;
 
         string newReturnSlipCode = "";
         long fineThisPeriod = 0;
@@ -108,8 +107,10 @@ namespace Library_Management
             DS_SlipBook.Columns[1].HeaderText = "Mã Sách";
             DS_SlipBook.Columns[2].HeaderText = "Tên Sách";
             DS_SlipBook.Columns[3].HeaderText = "Ngày mượn";
-            DS_SlipBook.Columns[4].HeaderText = "Số ngày trễ";
+            DS_SlipBook.Columns[4].HeaderText = "Số ngày đã mượn";
             DS_SlipBook.Columns[5].HeaderText = "Tiền phạt";
+
+            DS_SlipBook.Columns[0].Width = DS_Choosen.Columns[0].Width = 60;
 
             DS_SlipBook.Columns[0].DataPropertyName = "stt";
             DS_SlipBook.Columns[1].DataPropertyName = "bookCode";
@@ -122,7 +123,7 @@ namespace Library_Management
             DS_Choosen.Columns[1].HeaderText = "Mã Sách";
             DS_Choosen.Columns[2].HeaderText = "Tên Sách";
             DS_Choosen.Columns[3].HeaderText = "Ngày mượn";
-            DS_Choosen.Columns[4].HeaderText = "Số ngày trễ";
+            DS_Choosen.Columns[4].HeaderText = "Số ngày đã mượn";
             DS_Choosen.Columns[5].HeaderText = "Tiền phạt";
 
             DS_Choosen.Columns[0].DataPropertyName = "stt";
@@ -185,12 +186,12 @@ namespace Library_Management
                     returnBook.bookName = reader.GetString(2);
                     DateTime dt = reader.GetDateTime(3);
                     returnBook.borrowDate = dt.ToString("dd/MM/yyyy");
-                    returnBook.borrowedDays = Math.Abs(dt.Subtract(DateTime.Now).Days + 1).ToString();
+                    returnBook.borrowedDays = Math.Abs(dt.Subtract(DateTime.Now).Days).ToString();
                     returnBook.specBookCode = reader.GetString(4);
                     returnBook.detailSlipCode = reader.GetString(5);
                     if (int.Parse(returnBook.borrowedDays) > Parameters.maxLendDay)
                     {
-                        int lateReturnDays = int.Parse(returnBook.borrowedDays) - Parameters.maxLendDay + 1;
+                        int lateReturnDays = int.Parse(returnBook.borrowedDays) - Parameters.maxLendDay;
                         returnBook.lateReturnDays = lateReturnDays;
                         returnBook.fine = CalFineThisPeriod(lateReturnDays);
                     }
@@ -200,9 +201,6 @@ namespace Library_Management
 
             conn.Close();
         }
-
-        string readerCode = "";
-        string readerName = "";
 
 
         private void UpdateData()
@@ -352,7 +350,7 @@ namespace Library_Management
 
                 fineThisPeriod += returnBook.fine;
                 txtTien.Text = fineThisPeriod.ToString();
-                txtTongNo.Text = (totalFine + fineThisPeriod).ToString();
+                totalfine = (totalFine + fineThisPeriod).ToString();
             }
             catch
             {
@@ -427,12 +425,12 @@ namespace Library_Management
 
                 fineThisPeriod -= returnBook.fine;
                 txtTien.Text = fineThisPeriod.ToString();
-                txtTongNo.Text = (totalFine + fineThisPeriod).ToString();
+                totalfine = (totalFine + fineThisPeriod).ToString();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Đã có lỗi xảy ra: " + ex.Message);
-                //MessageBox.Show($"Vui lòng chọn 1 quyển sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //MessageBox.Show("Đã có lỗi xảy ra: " + ex.Message);
+                MessageBox.Show($"Vui lòng chọn 1 quyển sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -440,9 +438,11 @@ namespace Library_Management
         {
             if (cbbReader.SelectedIndex == -1)
             {
-                txtTongNo.Text = "0";
+                totalfine = txtTongNo.Text = "0";
                 txtTien.Text = "0";
                 txb_TenDocGia.Text = "";
+                DS_Choosen.Refresh();
+                DS_SlipBook.Refresh();
             }
             else
             {
@@ -452,7 +452,7 @@ namespace Library_Management
                 string cauTruyVan = "SELECT TongNo FROM DOCGIA WHERE MaDocGia = '" + cbbReader.Text + "'";
                 connect(cauTruyVan);
                 string tongNo = Convert.ToString(myCommand.ExecuteScalar());
-                txtTongNo.Text = tongNo;
+                totalfine = txtTongNo.Text = tongNo;
 
                 cauTruyVan = "SELECT HotEN FROM DOCGIA WHERE MaDocGia = '" + cbbReader.Text + "'";
                 connect(cauTruyVan);
@@ -505,7 +505,7 @@ namespace Library_Management
 
         private void ShowConfirmForm()
         {
-            ThongTinTS.returnSlip = new ReturnSlipBook(cbbReader.Text, txb_TenDocGia.Text, returnDate.Value.ToString("yyyy-MM-dd"), txtTongNo.Text, txtTien.Text, chosenBooks);
+            ThongTinTS.returnSlip = new ReturnSlipBook(cbbReader.Text, txb_TenDocGia.Text, returnDate.Value.ToString("yyyy-MM-dd"), totalfine, txtTien.Text, chosenBooks);
             ThongTinTS.returnSlip.recvSlipCode = newReturnSlipCode;
             ThongTinTS.returnSlip.email = "";
 

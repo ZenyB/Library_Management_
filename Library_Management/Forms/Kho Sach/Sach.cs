@@ -19,7 +19,6 @@ namespace Library_Management
         private SqlDataAdapter myDataAdapter;   // Vận chuyển csdl qa DataSet
         private DataTable myTable;  // Dùng để lưu bảng lấy từ c#
         SqlCommand myCommand;
-        private bool isUpdate = false;
         public Sach()
         {
             InitializeComponent();
@@ -89,7 +88,24 @@ namespace Library_Management
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            DialogResult dlr;
+            dlr = MessageBox.Show("Bạn chắc chắn muốn xóa.", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlr == DialogResult.Yes)
+            {
+                try
+                {
+                    string xoadongSql;
+                    xoadongSql = "DELETE FROM CUONSACH WHERE MaSach = '" + txb_MaSach.Text + "'";
+                    connectNonQuery(xoadongSql);
+                    MessageBox.Show("Xóa thành công.", "Thông Báo");
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                    MessageBox.Show("Xóa thất bại.\nTrong thư viện, hiện đang có cuốn sách này.", "Thông Báo");
+                }
+            }
+            loadDS_Sach();
         }
 
         private void btnTaoMoi_Click(object sender, EventArgs e)
