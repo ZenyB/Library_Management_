@@ -26,8 +26,6 @@ namespace Library_Management
         bool isLocked = true;
         public static string slipCode = "";
 
-        int opt = -1;
-
 
         private DataTable connect(string query)
         {
