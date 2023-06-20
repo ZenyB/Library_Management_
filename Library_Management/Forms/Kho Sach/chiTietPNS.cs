@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace Library_Management
 {
@@ -144,6 +145,8 @@ namespace Library_Management
             {
                 string truy_van = null;
                 int soluong = 0;
+                int soLuongSachPN = 0;
+                int flag = 0;
                 if (!isNewSach)
                 {
                     truy_van = "SELECT SoLuong " +
@@ -152,10 +155,65 @@ namespace Library_Management
                     ket_noi_co_du_lieu(truy_van);
                     string soluongStr = Convert.ToString(command.ExecuteScalar());
                     soluong = Int32.Parse(txb_SoLuong.Text) + Int32.Parse(soluongStr);
+                    try
+                    {
+                        truy_van = "IF EXISTS " +
+                                    "(SELECT * " +
+                                    "FROM CT_PHIEUNHAP " +
+                                    $"WHERE MaPhieuNhapSach = '{txb_MaPNS.Text}' AND MaSach = '{cb_MaSach.Text}') " +
+                                    $"BEGIN SELECT 1 END ELSE SELECT 0";
+                        ket_noi_khong_du_lieu(truy_van);
+                        flag = Convert.ToInt32(command.ExecuteScalar());
+                        connection.Close();
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                    }
+
+                    if (flag == 1)
+                    {
+                        try
+                        {
+                            truy_van = "SELECT SoLuong " +
+                                        "FROM CT_PHIEUNHAP " +
+                                        $"WHERE MaPhieuNhapSach = '{txb_MaPNS.Text}' AND MaSach = '{cb_MaSach.Text}'";
+                            ket_noi_khong_du_lieu(truy_van);
+                            soLuongSachPN = Convert.ToInt32(command.ExecuteScalar());
+
+                            truy_van = "SELECT MaCTPN " +
+                                        "FROM CT_PHIEUNHAP " +
+                                        $"WHERE MaPhieuNhapSach = '{txb_MaPNS.Text}' AND MaSach = '{cb_MaSach.Text}'";
+                            ket_noi_khong_du_lieu(truy_van);
+                            txb_MaCTPNS.Text = command.ExecuteScalar().ToString();
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show(e.Message);
+                        }
+                    }
                 }
-                truy_van = "INSERT INTO CT_PHIEUNHAP (MaPhieuNhapSach, MaSach, SoLuong, DonGia) " +
-                    "VALUES ('" + txb_MaPNS.Text + "', '" + cb_MaSach.Text + "', " + txb_SoLuong.Text + ", " + txb_DonGia.Text + ")";
-                ket_noi_khong_du_lieu(truy_van);
+                else
+                {
+                    soluong = Int32.Parse(txb_SoLuong.Text);
+                }
+                try
+                {
+                    //truy_van = "INSERT INTO CT_PHIEUNHAP (MaPhieuNhapSach, MaSach, SoLuong, DonGia) " +
+                    //"VALUES ('" + txb_MaPNS.Text + "', '" + cb_MaSach.Text + "', " + txb_SoLuong.Text + ", " + txb_DonGia.Text + ")";
+                    //ket_noi_khong_du_lieu(truy_van);
+                    MessageBox.Show("Flag: " + flag);
+                    string query = "";
+                    if (flag == 1) 
+                        query = $"UPDATE CT_PHIEUNHAP SET SoLuong = {soLuongSachPN + Int32.Parse(txb_SoLuong.Text)} WHERE MaPhieuNhapSach = '{txb_MaPNS.Text}' AND MaSach = '{cb_MaSach.Text}'";
+                    else
+                        query = $"INSERT INTO CT_PHIEUNHAP (MaPhieuNhapSach, MaSach, SoLuong, DonGia) VALUES('{txb_MaPNS.Text}', '{cb_MaSach.Text}', {txb_SoLuong.Text}, {txb_DonGia.Text})";
+                    ket_noi_khong_du_lieu(query);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
 
                 truy_van = "UPDATE SACH SET SoLuong = " + soluong + " WHERE MaSach = '" + cb_MaSach.Text + "'";
                 ket_noi_khong_du_lieu(truy_van);
@@ -245,7 +303,8 @@ namespace Library_Management
                 query = "UPDATE SACH SET SoLuong = " + soluong + " WHERE MaSach = '" + cb_MaSach.Text + "'";
                 ket_noi_khong_du_lieu(query);
                 connection.Close();
-                loadMaSach();
+                //loadMaSach();
+                txb_SoLuong.Text = soluong.ToString();
                 cb_MaSach.Text = masach;
             }
             catch
@@ -295,13 +354,19 @@ namespace Library_Management
                 isNewSach = true;
                 isUpdate = false;
                 txb_DonGia.ReadOnly = false;
+                txb_DonGia.BackColor = System.Drawing.Color.White;
                 txb_NamXB.ReadOnly = false;
+                txb_NamXB.BackColor = System.Drawing.Color.White;
                 txb_NhaXB.ReadOnly = false;
+                txb_NhaXB.BackColor = System.Drawing.Color.White;
+                txb_NhaXB.Text = txb_NamXB.Text = txb_SoLuong.Text = txb_DonGia.Text = txb_TacGia.Text = txb_ThanhTien.Text = "";
+                cb_TenSach.SelectedIndex = -1;
             }  
         }
 
         private void cb_MaSach_SelectedValueChanged(object sender, EventArgs e)
         {
+            txb_ThanhTien.Text = txb_SoLuong.Text = "";
             if (cb_MaSach.SelectedValue != null && cb_MaSach.Text != "" && cb_MaSach.SelectedIndex != -1)
             {
                 isNewSach = false;
@@ -327,8 +392,11 @@ namespace Library_Management
                 ket_noi_co_du_lieu(truy_van);
                 txb_DonGia.Text = Convert.ToString(command.ExecuteScalar());
                 txb_DonGia.ReadOnly = true;
+                txb_DonGia.BackColor = System.Drawing.Color.Silver;
                 txb_NamXB.ReadOnly = true;
+                txb_NamXB.BackColor = System.Drawing.Color.Silver;
                 txb_NhaXB.ReadOnly = true;
+                txb_NhaXB.BackColor = System.Drawing.Color.Silver;
             }
         }
 
@@ -467,6 +535,7 @@ namespace Library_Management
             if (e.Button == MouseButtons.Left)
             {
                 txb_MaCTPNS.Text = generateNewMaChiTietPNS();
+                loadMaSach();
                 cb_MaSach.SelectedIndex = -1;
                 cb_TenSach.SelectedIndex = -1;
                 txb_TacGia.Text = "";
@@ -478,6 +547,7 @@ namespace Library_Management
                 btnLuu.Enabled = true;
                 btnXoa.Enabled = false;
                 btn_SachMoi.Enabled = true;
+                isUpdate = false;
             }  
         }
 

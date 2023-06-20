@@ -54,25 +54,9 @@ namespace Library_Management
             return $"{day}/{month}/{year}";
         }
 
-        private void btnAccept_Click(object sender, EventArgs e)
+        private void btn_XacNhan_Click(object sender, EventArgs e)
         {
-            if (muonSach.askBeforePrint)
-            {
-                PrintSlip();
-            }
             UpdataData();
-        }
-        Bitmap bmp;
-
-        private void PrintSlip()
-        {
-            //printDocument1.DefaultPageSettings.PaperSize = new PaperSize("MyPaper", this.Size.Width + 30, 581 - 74);
-            Graphics g = this.CreateGraphics();
-            bmp = new Bitmap(this.Size.Width, 581 - 74, g);
-            Graphics mg = Graphics.FromImage(bmp);
-            Size size = new Size(this.Size.Width, 581 - 74);
-            mg.CopyFromScreen(this.Location.X, this.Location.Y + 25, 0, 0, size);
-            //printPreviewDialog1.ShowDialog();
         }
 
         private void UpdataData()
@@ -97,39 +81,14 @@ namespace Library_Management
             cmd.ExecuteNonQuery();
             conn.Close();
 
-            //DemoDesign.LendBook.lendState = "Success";
-            //SendMail();
+            muonSach.lendState = "Success";
             this.Close();
         }
 
-        private void SendMail()
+        private void btn_Huy_Click(object sender, EventArgs e)
         {
-            string slipTitle = "<b>THÔNG TIN PHIẾU MƯỢN</b><br/><br/>";
-            string readerCode = $"<b>Mã độc giả</b>: {borrowSlip.code}<br/>";
-            string readerName = $"<b>Họ tên</b>: {borrowSlip.name}<br/>";
-            string borrowDate = $"<b>Ngày mượn</b>: {FormatDate(borrowSlip.borrowDate)}<br/>";
-            string returnDate = $"<b>Ngày trả</b>: {FormatDate(borrowSlip.returnDate)}<br/>";
-            string borrowBooksTitle = $"<br/><b>SÁCH ĐÃ MƯỢN:</b><br/>";
-            string borrowBooks = "";
-            foreach (Book book in borrowSlip.chosenBooks)
-            {
-                string bookInfo = $"<b>Mã sách:</b> {book.code}&emsp;&emsp;<b>Tên sách:</b> {book.nameBook}&emsp;&emsp;<b>Tác giả:</b> {book.author}<br/>";
-                borrowBooks += bookInfo;
-            }
-
-            string msg = slipTitle + readerCode + readerName + borrowDate + returnDate + borrowBooksTitle + borrowBooks;
-            MailService.SendMail(borrowSlip.email, msg, borrowSlip.name);
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            //DemoDesign.LendBook.lendState = "Cancelled";
+            muonSach.lendState = "Cancelled";
             this.Close();
-        }
-
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            e.Graphics.DrawImage(bmp, 0, 0);
         }
     }
 }

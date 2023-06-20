@@ -52,7 +52,6 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.chb_InPhieuMuon = new System.Windows.Forms.CheckBox();
             this.chb_MaxMuon = new System.Windows.Forms.CheckBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -252,6 +251,7 @@
             // 
             // txb_TenDocGia
             // 
+            this.txb_TenDocGia.BackColor = System.Drawing.Color.Silver;
             this.txb_TenDocGia.Location = new System.Drawing.Point(30, 154);
             this.txb_TenDocGia.Name = "txb_TenDocGia";
             this.txb_TenDocGia.Size = new System.Drawing.Size(324, 22);
@@ -336,29 +336,17 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.chb_InPhieuMuon);
             this.panel9.Controls.Add(this.chb_MaxMuon);
             this.panel9.Location = new System.Drawing.Point(12, 504);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(368, 181);
             this.panel9.TabIndex = 19;
             // 
-            // chb_InPhieuMuon
-            // 
-            this.chb_InPhieuMuon.AutoSize = true;
-            this.chb_InPhieuMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
-            this.chb_InPhieuMuon.ForeColor = System.Drawing.Color.White;
-            this.chb_InPhieuMuon.Location = new System.Drawing.Point(17, 55);
-            this.chb_InPhieuMuon.Name = "chb_InPhieuMuon";
-            this.chb_InPhieuMuon.Size = new System.Drawing.Size(161, 20);
-            this.chb_InPhieuMuon.TabIndex = 18;
-            this.chb_InPhieuMuon.Text = "In phiếu mượn sách";
-            this.chb_InPhieuMuon.UseVisualStyleBackColor = true;
-            this.chb_InPhieuMuon.CheckedChanged += new System.EventHandler(this.chbIn_CheckedChanged);
-            // 
             // chb_MaxMuon
             // 
             this.chb_MaxMuon.AutoSize = true;
+            this.chb_MaxMuon.Checked = true;
+            this.chb_MaxMuon.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chb_MaxMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold);
             this.chb_MaxMuon.ForeColor = System.Drawing.Color.White;
             this.chb_MaxMuon.Location = new System.Drawing.Point(17, 15);
@@ -381,7 +369,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(846, 697);
             this.panel6.TabIndex = 7;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // panel7
             // 
@@ -686,7 +673,6 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.CheckBox chb_InPhieuMuon;
         private System.Windows.Forms.CheckBox chb_MaxMuon;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;

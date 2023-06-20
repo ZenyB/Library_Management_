@@ -310,6 +310,7 @@
             // 
             // txb_MaTG
             // 
+            this.txb_MaTG.BackColor = System.Drawing.Color.Silver;
             this.txb_MaTG.HideSelection = false;
             this.txb_MaTG.Location = new System.Drawing.Point(30, 122);
             this.txb_MaTG.Name = "txb_MaTG";

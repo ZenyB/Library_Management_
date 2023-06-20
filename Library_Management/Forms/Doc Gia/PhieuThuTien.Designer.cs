@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhieuThuTien));
             this.pnl_TTPhieuThu = new System.Windows.Forms.Panel();
             this.lb_PhieuThu = new System.Windows.Forms.Label();
             this.pnl_DocGia = new System.Windows.Forms.Panel();
@@ -54,6 +55,8 @@
             this.pnl_dulieu = new System.Windows.Forms.Panel();
             this.lb_DSPhieuThu = new System.Windows.Forms.Label();
             this.DS_PhieuThuPhat = new System.Windows.Forms.DataGridView();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.pnl_TTPhieuThu.SuspendLayout();
             this.pnl_DocGia.SuspendLayout();
             this.pnl_dulieu.SuspendLayout();
@@ -176,6 +179,7 @@
             // 
             // txb_TongNo
             // 
+            this.txb_TongNo.BackColor = System.Drawing.Color.Silver;
             this.txb_TongNo.Enabled = false;
             this.txb_TongNo.HideSelection = false;
             this.txb_TongNo.Location = new System.Drawing.Point(578, 50);
@@ -193,9 +197,11 @@
             this.dtp_NgayThu.Size = new System.Drawing.Size(262, 22);
             this.dtp_NgayThu.TabIndex = 19;
             this.dtp_NgayThu.Value = new System.DateTime(2023, 6, 9, 0, 0, 0, 0);
+            this.dtp_NgayThu.ValueChanged += new System.EventHandler(this.dtp_NgayThu_ValueChanged);
             // 
             // txb_SoTienConNo
             // 
+            this.txb_SoTienConNo.BackColor = System.Drawing.Color.Silver;
             this.txb_SoTienConNo.HideSelection = false;
             this.txb_SoTienConNo.Location = new System.Drawing.Point(578, 138);
             this.txb_SoTienConNo.Name = "txb_SoTienConNo";
@@ -261,6 +267,7 @@
             // 
             // txb_HoTen
             // 
+            this.txb_HoTen.BackColor = System.Drawing.Color.Silver;
             this.txb_HoTen.HideSelection = false;
             this.txb_HoTen.Location = new System.Drawing.Point(147, 138);
             this.txb_HoTen.Name = "txb_HoTen";
@@ -271,6 +278,7 @@
             // 
             // txb_MaPhieuThu
             // 
+            this.txb_MaPhieuThu.BackColor = System.Drawing.Color.Silver;
             this.txb_MaPhieuThu.HideSelection = false;
             this.txb_MaPhieuThu.Location = new System.Drawing.Point(147, 50);
             this.txb_MaPhieuThu.Name = "txb_MaPhieuThu";
@@ -368,15 +376,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DS_PhieuThuPhat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_PhieuThuPhat.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_PhieuThuPhat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_PhieuThuPhat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DS_PhieuThuPhat.ColumnHeadersHeight = 50;
             this.DS_PhieuThuPhat.Location = new System.Drawing.Point(9, 50);
             this.DS_PhieuThuPhat.MultiSelect = false;
@@ -389,6 +397,20 @@
             this.DS_PhieuThuPhat.Size = new System.Drawing.Size(1225, 416);
             this.DS_PhieuThuPhat.TabIndex = 13;
             this.DS_PhieuThuPhat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DS_PhieuThuPhat_CellClick);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // PhieuThuTien
             // 
@@ -443,5 +465,7 @@
         private System.Windows.Forms.Panel pnl_dulieu;
         private System.Windows.Forms.Label lb_DSPhieuThu;
         private System.Windows.Forms.DataGridView DS_PhieuThuPhat;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

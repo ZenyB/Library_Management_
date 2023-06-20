@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -86,6 +87,43 @@ namespace Library_Management.Forms.DocGia
             }
             return MaPhieuThuMax;
         }
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            if (txb_MaPhieuThu.Text == "" || cb_MaDG.Text == "" || txb_SoTienConNo.Text == "" || dtp_NgayThu.Text == "" || txb_SoTienThu.Text == "")
+            {
+                MessageBox.Show("vui lòng chọn 1 bộ dữ liệu bên dưới để tiến hành in");
+            }
+            else
+            {
+                e.Graphics.DrawString("Phiếu Thu Tiền", new Font("Arial", 25, FontStyle.Bold), Brushes.Blue, new Point(320, 80));
+                e.Graphics.DrawString(lb_MaDocGia.Text + "             " + cb_MaDG.Text, new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(150, 190));
+                e.Graphics.DrawString("....................................................................", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(332, 196));
+
+                e.Graphics.DrawString(lb_HoTen.Text + "      " + txb_HoTen.Text, new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(150, 260));
+                e.Graphics.DrawString("..................................................................", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(335, 272));
+
+                e.Graphics.DrawString(lb_MaPhieuThu.Text + "    " + txb_MaPhieuThu.Text, new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(150, 330));
+                e.Graphics.DrawString(".....................................................................", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(315, 340));
+
+                e.Graphics.DrawString(lb_NgayThu.Text + "            " + dtp_NgayThu.Text, new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(150, 400));
+                e.Graphics.DrawString(".........................................................................", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(290, 410));
+
+                e.Graphics.DrawString(lb_TongNo.Text + "        " + txb_TongNo.Text, new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(150, 470));
+                e.Graphics.DrawString(".......................................................................", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(290, 476));
+
+                e.Graphics.DrawString(lb_SoTienThu.Text + "        " + txb_SoTienThu.Text, new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(150, 530));
+                e.Graphics.DrawString("...................................................................", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(315, 540));
+                
+                e.Graphics.DrawString(lb_SoTienConNo.Text + "        " + txb_SoTienConNo.Text, new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(150, 600));
+                e.Graphics.DrawString("............................................................", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(345, 610));
+
+                e.Graphics.DrawString("Độc giả", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(110, 700));
+                e.Graphics.DrawString("(Ký ghi rõ họ tên)", new Font("Arial", 15, FontStyle.Bold), Brushes.Black, new Point(105, 735));
+                e.Graphics.DrawString("Người lập phiếu thu", new Font("Arial", 18, FontStyle.Bold), Brushes.Black, new Point(550, 700));
+                e.Graphics.DrawString("(Ký ghi rõ họ tên)", new Font("Arial", 15, FontStyle.Bold), Brushes.Black, new Point(565, 735));
+            }
+        }
+
 
         private void PhieuThuTien_Load(object sender, EventArgs e)
         {
@@ -95,6 +133,9 @@ namespace Library_Management.Forms.DocGia
             cb_MaDG.SelectedIndex = -1;
             txb_MaPhieuThu.Text = generateNewMaPhieuThu();
             txb_HoTen.Text = "";
+            btn_In.Enabled = false;
+            btnLuu.Enabled = false;
+            btnXoa.Enabled = false;
         }
 
         private void txb_SoTienThu_KeyPress(object sender, KeyPressEventArgs e)
@@ -134,15 +175,12 @@ namespace Library_Management.Forms.DocGia
             dtp_NgayThu.Text = DS_PhieuThuPhat.CurrentRow.Cells[2].Value.ToString();
             txb_SoTienThu.Text = DS_PhieuThuPhat.CurrentRow.Cells[3].Value.ToString();
             soTienThuCu = Int32.Parse(DS_PhieuThuPhat.CurrentRow.Cells[3].Value.ToString());
-            txb_SoTienConNo.Text = "---";
-            string truy_van = "SELECT TongNo " +
-                              "FROM DOCGIA " +
-                              "WHERE DOCGIA.MaDocGia='" + cb_MaDG.Text + "' ";
-            ket_noi_khong_du_lieu(truy_van);
-            txb_TongNo.Text = Convert.ToString(command.ExecuteScalar());
+            txb_SoTienConNo.Text = DS_PhieuThuPhat.CurrentRow.Cells[4].Value.ToString(); ;
+            txb_TongNo.Text = (float.Parse(txb_SoTienConNo.Text) + float.Parse(txb_SoTienThu.Text)).ToString();
             btnLuu.Enabled = true;
             btnTaoMoi.Enabled = true;
             btnXoa.Enabled = true;
+            btn_In.Enabled = true;
             isUpdate = true;
         }
 
@@ -158,6 +196,9 @@ namespace Library_Management.Forms.DocGia
 
                 txb_TongNo.Text = tongno;
                 txb_HoTen.Text = cb_MaDG.SelectedValue.ToString();
+                txb_SoTienThu.Text = "";
+                dtp_NgayThu.Value = DateTime.Now;
+                btn_In.Enabled = false;
             }
         }
 
@@ -171,8 +212,10 @@ namespace Library_Management.Forms.DocGia
                 txb_SoTienThu.Text = "";
                 txb_SoTienConNo.Text = "";
                 txb_TongNo.Text = "";
+                dtp_NgayThu.Value = DateTime.Now;
                 isUpdate = false;
                 btnXoa.Enabled = false;
+                btnLuu.Enabled = true;
             }
         }
 
@@ -180,7 +223,11 @@ namespace Library_Management.Forms.DocGia
         {
             if (e.Button == MouseButtons.Left)
             {
-                MessageBox.Show("Tính năng đang phát triển");
+                //MessageBox.Show("Tính năng đang phát triển");
+                printPreviewDialog1.Height = this.Height;
+                printPreviewDialog1.Width = this.Width;
+                printPreviewDialog1.Document = printDocument1;
+                printPreviewDialog1.ShowDialog();
             }
         }
 
@@ -296,24 +343,23 @@ namespace Library_Management.Forms.DocGia
                         }
                     }
                 }
+                btnLuu.Enabled = false;
+                btn_In.Enabled = true;
             }
         }
 
         private void txb_SoTienThu_TextChanged(object sender, EventArgs e)
         {
-            //if (txb_SoTienThu.Text == "")
-            //    txb_SoTienConNo.Text = "";
-            //if (txb_SoTienThu.Text != "" && txb_TongNo.Text != "" && txb_SoTienThu.Text != ".")
-            //{
-            //    float k = float.Parse(txb_TongNo.Text) - float.Parse(txb_SoTienThu.Text);
-            //    if (k < 0)
-            //    {
-            //        MessageBox.Show("Số tiền thu không được lớn hơn số tiền nợ của độc giả", "Thông báo lỗi");
-            //        txb_SoTienThu.Text = "";
-            //    }
-            //    else
-            //        txb_SoTienConNo.Text = k.ToString();
-            //}
+            if (btn_In.Enabled == true)
+                btn_In.Enabled = false;
+        }
+
+        private void dtp_NgayThu_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtp_NgayThu.Value > DateTime.Now)
+            {
+                MessageBox.Show("Ngày không được vượt quá hôm nay", "Thông báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

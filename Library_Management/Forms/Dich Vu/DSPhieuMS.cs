@@ -148,7 +148,7 @@ namespace Library_Management
             btnLuu.Enabled = false;
             btnXoa.Enabled = false;
         }
-        private void UpdataData()
+        private void UpdateData()
         {
             string queryUpdateCmd = "";
             if (opt == 1)
@@ -201,22 +201,7 @@ namespace Library_Management
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            UpdataData();
-            dataChanged = true;
-            MessageBox.Show("Cập nhật dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            btnLuu.Enabled = false;
-            btnCapNhat.Enabled = false;
-            opt = -1;
-
-            txb_MaPMS.Text = "";
-            txb_MaDocGia.Text = "";
-            txb_TenDocGia.Text = "";
-            LoadData();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
             opt = 2;
             btnXoa.Enabled = false;
@@ -237,15 +222,24 @@ namespace Library_Management
             dtpNgayMuon.Value = borrowDate;
             dtpNgayTra.Value = returnDay;
         }
-
-        private void btnDetail_Click(object sender, EventArgs e)
+        private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            new chITietPMS().ShowDialog();
+            UpdateData();
+            dataChanged = true;
+            MessageBox.Show("Cập nhật dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            btnLuu.Enabled = false;
+            btnCapNhat.Enabled = false;
+            opt = -1;
+
+            txb_MaPMS.Text = "";
+            txb_MaDocGia.Text = "";
+            txb_TenDocGia.Text = "";
+            LoadData();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void btn_xemChiTiet_Click(object sender, EventArgs e)
         {
-
+            new chITietPMS().ShowDialog();
         }
     }
 }
