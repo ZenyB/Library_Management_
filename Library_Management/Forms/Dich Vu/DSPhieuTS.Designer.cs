@@ -287,7 +287,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Name = "DSPhieuTS";
-            this.Text = "Danh sách phiếu thu tiền";
+            this.Text = "Danh sách phiếu trả sách";
             this.Load += new System.EventHandler(this.DSPhieuTS_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

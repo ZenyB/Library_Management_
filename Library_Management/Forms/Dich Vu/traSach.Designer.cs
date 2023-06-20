@@ -45,8 +45,6 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.DS_SlipBook = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cbbReader = new System.Windows.Forms.ComboBox();
             this.btnTraSach = new System.Windows.Forms.Button();
@@ -188,8 +186,6 @@
             // 
             this.panel10.Controls.Add(this.panel12);
             this.panel10.Controls.Add(this.label5);
-            this.panel10.Controls.Add(this.label4);
-            this.panel10.Controls.Add(this.textBox4);
             resources.ApplyResources(this.panel10, "panel10");
             this.panel10.Name = "panel10";
             // 
@@ -229,19 +225,6 @@
             resources.ApplyResources(this.label5, "label5");
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Name = "label5";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Name = "label4";
-            // 
-            // textBox4
-            // 
-            this.textBox4.HideSelection = false;
-            resources.ApplyResources(this.textBox4, "textBox4");
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Tag = "";
             // 
             // panel3
             // 
@@ -473,8 +456,6 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.DataGridView DS_SlipBook;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.DataGridView DS_Choosen;
         private FontAwesome.Sharp.IconButton btn_Add;
         private FontAwesome.Sharp.IconButton btn_Remove;

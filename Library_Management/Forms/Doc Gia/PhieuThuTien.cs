@@ -21,7 +21,6 @@ namespace Library_Management.Forms.DocGia
         private DataTable table = new DataTable();
         private bool isUpdate = false;
         private int soTienThuCu = 0;
-        private int tongNoHienTai = 0;
         public PhieuThuTien()
         {
             InitializeComponent();
