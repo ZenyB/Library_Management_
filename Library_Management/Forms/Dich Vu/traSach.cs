@@ -97,7 +97,7 @@ namespace Library_Management
 
             returnDate.Value = DateTime.Now;
             GetNewReturnSlipCode();
-            LoadBorrowSlip();
+            DS_SlipBook.Rows.Clear();
             DS_Layout();
         }
 
@@ -436,7 +436,7 @@ namespace Library_Management
 
         private void cbbReader_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbReader.SelectedIndex == -1)
+            if (cbbReader.SelectedIndex == -1 || cbbReader.Text == "")
             {
                 totalfine = txtTongNo.Text = "0";
                 txtTien.Text = "0";
@@ -487,7 +487,7 @@ namespace Library_Management
             {
                 case Valid.MissingInfo:
                     {
-                        MessageBox.Show($"Vui lòng nhập mã phiếu mượn sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show($"Vui lòng nhập mã độc giả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         break;
                     }
                 case Valid.MissingBook:
@@ -513,15 +513,11 @@ namespace Library_Management
             if (recvState == "Success")
             {
                 MessageBox.Show("Trả sách thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //Library_Management.Home.SwitchForm(new traSach());
                 chosenBooks.Clear();
-
-                //btnReturn.Enabled = false;
 
                 recvState = "";
                 GetNewReturnSlipCode();
 
-                //btnCan.Enabled = false;
                 txb_TenDocGia.Text = "";
                 cbbReader.Text = "";
                 LoadBorrowSlip();

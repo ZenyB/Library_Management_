@@ -271,6 +271,7 @@ namespace Library_Management.Forms.DocGia
                             MessageBox.Show("Hoàn tất thu phạt", "Thông báo");
                             loadPhieuThuPhat();
                             truy_van = "update docgia set TongNo-='" + float.Parse(txb_SoTienThu.Text) + "' where madocgia='" + cb_MaDG.Text + "'";
+                            txb_SoTienConNo.Text = (float.Parse(txb_TongNo.Text) - float.Parse(txb_SoTienThu.Text)).ToString();
                             ket_noi_khong_du_lieu(truy_van);
                             connection.Close();
                         }

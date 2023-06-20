@@ -310,9 +310,11 @@
             // 
             // txb_MaTL
             // 
+            this.txb_MaTL.BackColor = System.Drawing.Color.Silver;
             this.txb_MaTL.HideSelection = false;
             this.txb_MaTL.Location = new System.Drawing.Point(30, 122);
             this.txb_MaTL.Name = "txb_MaTL";
+            this.txb_MaTL.ReadOnly = true;
             this.txb_MaTL.Size = new System.Drawing.Size(324, 22);
             this.txb_MaTL.TabIndex = 1;
             this.txb_MaTL.Tag = "";

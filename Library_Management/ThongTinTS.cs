@@ -162,7 +162,7 @@ namespace Library_Management
             dtgvChosenBook.Columns[1].HeaderText = "Mã Sách";
             dtgvChosenBook.Columns[2].HeaderText = "Tên Sách";
             dtgvChosenBook.Columns[3].HeaderText = "Ngày mượn";
-            dtgvChosenBook.Columns[4].HeaderText = "Số ngày trễ";
+            dtgvChosenBook.Columns[4].HeaderText = "Số ngày đã mượn";
             dtgvChosenBook.Columns[5].HeaderText = "Tiền phạt";
 
             dtgvChosenBook.Columns[0].DataPropertyName = "stt";
