@@ -28,8 +28,12 @@ namespace Library_Management.Models
         public static string GetNumOfBooksBorrowed(string readerCode)
         {
             return $@"SELECT count(*)
-                FROM PHIEUMUON, CTPHIEUMUON
-                WHERE MaDocGia = '{readerCode}' AND PHIEUMUON.MaPhieuMuonSach = CTPHIEUMUON.MaPhieuMuonSach AND TinhTrangPM = 0";
+                        FROM PHIEUMUON, CTPHIEUMUON, CUONSACH
+                        WHERE MaDocGia = '{readerCode}' 
+				        AND PHIEUMUON.MaPhieuMuonSach = CTPHIEUMUON.MaPhieuMuonSach 
+				        AND CUONSACH.MaCuonSach = CTPHIEUMUON.MaCuonSach
+				        AND TinhTrang = 1
+				        AND TinhTrangPM = 0";
         }
         public static string borrowSlipQuery = @"SELECT DISTINCT PHIEUMUON.MaPhieuMuonSach, PHIEUMUON.MaDocGia, HoTen, HanTra, TongNo, Email
                 FROM PHIEUMUON, CTPHIEUMUON, DOCGIA
