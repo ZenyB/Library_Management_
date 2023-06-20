@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -44,6 +44,7 @@
             this.DS_ThongKe = new System.Windows.Forms.DataGridView();
             this.lbTotalBorrow = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.lblTenBaoCao = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -197,15 +198,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DS_ThongKe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_ThongKe.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_ThongKe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_ThongKe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DS_ThongKe.ColumnHeadersHeight = 50;
             this.DS_ThongKe.Location = new System.Drawing.Point(3, 3);
             this.DS_ThongKe.MultiSelect = false;
@@ -243,12 +244,24 @@
             this.label14.TabIndex = 28;
             this.label14.Text = "Tổng số lượt mượn:";
             // 
+            // lblTenBaoCao
+            // 
+            this.lblTenBaoCao.AutoSize = true;
+            this.lblTenBaoCao.Font = new System.Drawing.Font("UTM Avo", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTenBaoCao.ForeColor = System.Drawing.Color.White;
+            this.lblTenBaoCao.Location = new System.Drawing.Point(62, 159);
+            this.lblTenBaoCao.Name = "lblTenBaoCao";
+            this.lblTenBaoCao.Size = new System.Drawing.Size(78, 29);
+            this.lblTenBaoCao.TabIndex = 30;
+            this.lblTenBaoCao.Text = "label4";
+            // 
             // FormThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(1244, 753);
+            this.Controls.Add(this.lblTenBaoCao);
             this.Controls.Add(this.lbTotalBorrow);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.panel12);
@@ -289,5 +302,6 @@
         private System.Windows.Forms.TextBox lbTotalBorrow;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTenBaoCao;
     }
 }

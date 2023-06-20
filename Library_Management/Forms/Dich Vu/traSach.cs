@@ -186,12 +186,12 @@ namespace Library_Management
                     returnBook.bookName = reader.GetString(2);
                     DateTime dt = reader.GetDateTime(3);
                     returnBook.borrowDate = dt.ToString("dd/MM/yyyy");
-                    returnBook.borrowedDays = Math.Abs(dt.Subtract(DateTime.Now).Days).ToString();
+                    returnBook.borrowedDays = Math.Abs(dt.Subtract(DateTime.Now).Days + 1).ToString();
                     returnBook.specBookCode = reader.GetString(4);
                     returnBook.detailSlipCode = reader.GetString(5);
                     if (int.Parse(returnBook.borrowedDays) > Parameters.maxLendDay)
                     {
-                        int lateReturnDays = int.Parse(returnBook.borrowedDays) - Parameters.maxLendDay;
+                        int lateReturnDays = int.Parse(returnBook.borrowedDays) - Parameters.maxLendDay + 1;
                         returnBook.lateReturnDays = lateReturnDays;
                         returnBook.fine = CalFineThisPeriod(lateReturnDays);
                     }
@@ -574,6 +574,11 @@ namespace Library_Management
             cmd.CommandText = setBookAndSlipDetailStatus;
             cmd.ExecuteNonQuery();
 
+        }
+
+        private void returnDate_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.ActiveControl = null;
         }
     }
 }

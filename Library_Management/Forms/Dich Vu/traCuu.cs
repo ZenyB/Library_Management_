@@ -145,6 +145,8 @@ namespace Library_Management
             table14.Clear();
             adapter.Fill(table14);
             txtMuon.Text = table14.Rows[0].ItemArray[0].ToString();
+
+            txbCount.Text = DS_TraCuu.Rows.Count.ToString();
         }
 
         private void DS_TraCuu_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -291,6 +293,8 @@ namespace Library_Management
                         DS_TraCuu.Rows[i].Cells[5].Value = "Chưa Mượn";
                 }
             }
+
+            txbCount.Text = DS_TraCuu.Rows.Count.ToString();
         }
 
 
