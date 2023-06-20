@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -88,7 +88,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1244, 50);
             this.panel2.TabIndex = 10;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel1
             // 
@@ -119,7 +118,7 @@
             this.btnCapNhat.TabIndex = 43;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = false;
-            this.btnCapNhat.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // panel3
             // 
@@ -154,7 +153,7 @@
             this.btn_xemChiTiet.TabIndex = 48;
             this.btn_xemChiTiet.Text = "Xem chi tiết";
             this.btn_xemChiTiet.UseVisualStyleBackColor = false;
-            this.btn_xemChiTiet.Click += new System.EventHandler(this.btnDetail_Click);
+            this.btn_xemChiTiet.Click += new System.EventHandler(this.btn_xemChiTiet_Click);
             // 
             // txb_MaPMS
             // 
@@ -288,7 +287,7 @@
             this.btnXoa.TabIndex = 33;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnDetail_Click);
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnHuy
             // 
@@ -318,15 +317,15 @@
             this.DS_chitietPMS.AllowUserToResizeRows = false;
             this.DS_chitietPMS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_chitietPMS.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_chitietPMS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_chitietPMS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DS_chitietPMS.ColumnHeadersHeight = 50;
             this.DS_chitietPMS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DS_chitietPMS.Location = new System.Drawing.Point(0, 0);

@@ -179,6 +179,7 @@
             // 
             // txb_MaLoaiDG
             // 
+            this.txb_MaLoaiDG.BackColor = System.Drawing.Color.Silver;
             this.txb_MaLoaiDG.HideSelection = false;
             this.txb_MaLoaiDG.Location = new System.Drawing.Point(30, 122);
             this.txb_MaLoaiDG.Name = "txb_MaLoaiDG";

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.maPNS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +47,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.btn_NhapSach = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnTaoMoi = new System.Windows.Forms.Button();
@@ -58,7 +59,6 @@
             this.txb_MaPNS = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.thongTinPN = new System.Windows.Forms.Label();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -204,15 +204,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DS_PNS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_PNS.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_PNS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_PNS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DS_PNS.ColumnHeadersHeight = 50;
             this.DS_PNS.Location = new System.Drawing.Point(8, 8);
             this.DS_PNS.MultiSelect = false;
@@ -290,6 +290,22 @@
             this.panel3.Size = new System.Drawing.Size(380, 678);
             this.panel3.TabIndex = 6;
             // 
+            // btnLuu
+            // 
+            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(205)))), ((int)(((byte)(203)))));
+            this.btnLuu.FlatAppearance.BorderSize = 0;
+            this.btnLuu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
+            this.btnLuu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(224)))), ((int)(((byte)(181)))));
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Location = new System.Drawing.Point(30, 460);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(324, 29);
+            this.btnLuu.TabIndex = 15;
+            this.btnLuu.Text = "Lưu thông tin";
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnLuu_MouseDown);
+            // 
             // btn_NhapSach
             // 
             this.btn_NhapSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(205)))), ((int)(((byte)(203)))));
@@ -351,6 +367,7 @@
             // 
             // txb_TongTien
             // 
+            this.txb_TongTien.BackColor = System.Drawing.Color.Silver;
             this.txb_TongTien.Location = new System.Drawing.Point(30, 269);
             this.txb_TongTien.Name = "txb_TongTien";
             this.txb_TongTien.ReadOnly = true;
@@ -388,6 +405,7 @@
             // 
             // txb_MaPNS
             // 
+            this.txb_MaPNS.BackColor = System.Drawing.Color.Silver;
             this.txb_MaPNS.HideSelection = false;
             this.txb_MaPNS.Location = new System.Drawing.Point(30, 122);
             this.txb_MaPNS.Name = "txb_MaPNS";
@@ -416,22 +434,6 @@
             this.thongTinPN.Size = new System.Drawing.Size(216, 25);
             this.thongTinPN.TabIndex = 0;
             this.thongTinPN.Text = "Thông tin phiếu nhập";
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(205)))), ((int)(((byte)(203)))));
-            this.btnLuu.FlatAppearance.BorderSize = 0;
-            this.btnLuu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(217)))), ((int)(((byte)(170)))));
-            this.btnLuu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(224)))), ((int)(((byte)(181)))));
-            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(30, 460);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(324, 29);
-            this.btnLuu.TabIndex = 15;
-            this.btnLuu.Text = "Lưu thông tin";
-            this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnLuu_MouseDown);
             // 
             // phieuNhapSach
             // 

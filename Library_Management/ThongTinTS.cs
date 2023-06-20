@@ -106,23 +106,7 @@ namespace Library_Management
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            if (muonSach.askBeforePrint)
-            {
-                PrintSlip();
-            }
             UpdataData();
-        }
-        Bitmap bmp;
-
-        private void PrintSlip()
-        {
-            printDocument1.DefaultPageSettings.PaperSize = new PaperSize("MyPaper", this.Size.Width + 30, 581 - 74);
-            Graphics g = this.CreateGraphics();
-            bmp = new Bitmap(this.Size.Width, 581 - 74, g);
-            Graphics mg = Graphics.FromImage(bmp);
-            Size size = new Size(this.Size.Width, 581 - 74);
-            mg.CopyFromScreen(this.Location.X, this.Location.Y + 25, 0, 0, size);
-            printPreviewDialog1.ShowDialog();
         }
 
         private void UpdataData()
@@ -172,12 +156,6 @@ namespace Library_Management
             traSach.recvState = "Cancelled";
             this.Close();
         }
-
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            e.Graphics.DrawImage(bmp, 0, 0);
-        }
-
         private void format()
         {
             dtgvChosenBook.Columns[0].HeaderText = "STT";

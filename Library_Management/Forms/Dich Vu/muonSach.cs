@@ -32,7 +32,6 @@ namespace Library_Management
         string readerName = "";
         bool lockReaderName = true;
         public static string lendState = "";
-        public static bool askBeforePrint = true;
 
         Thread tdGetBookSlip;
         int numborrowedBooks = -1;
@@ -67,11 +66,9 @@ namespace Library_Management
 
             bindingStock = new BindingSource();
 
-            txb_SoLuong.Text = $"Số lượng: {chosenBooks.Count}";
-            //LoadReaders();
+            txb_SoLuong.Text = $"{chosenBooks.Count}";
             LoadStockBooks();
             GetSlipCode();
-            //UpdateComboBoxReaders();
             loadMaDocGia();
             cb_MaDG.SelectedIndex = -1;
             txb_TenDocGia.Text = "";
@@ -85,15 +82,6 @@ namespace Library_Management
             DS_SachTrongKho.Columns[2].Width = 120;
             DS_SachTrongKho.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             DS_SachTrongKho.Columns[4].Width = 200;
-            //AddControlEvent();
-        }
-
-        private void UpdateComboBoxReaders()
-        {
-            foreach (Reader reader in readers)
-            {
-                cb_MaDG.Items.Add(reader.code);
-            }
         }
 
         private void GetSlipCode()
@@ -111,21 +99,6 @@ namespace Library_Management
             conn.Close();
             int stt = int.Parse(slipCode.Substring(4, 3)) + 1;
             slipCode = $"MPMS{stt:000}";
-        }
-
-        private void LoadReaders()
-        {
-            SqlConnection conn = new SqlConnection(Database.connectionStr);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(Database.validReadersQueryCmd, conn);
-            using (SqlDataReader reader = cmd.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    readers.Add(new Reader(reader.GetString(0), reader.GetString(1), reader.GetDateTime(2), reader.GetString(3)));
-                }
-            }
-            conn.Close();
         }
 
         private DataTable ket_noi_co_du_lieu(string truy_van)
@@ -334,10 +307,8 @@ namespace Library_Management
                 DS_SachDaMuon.Columns[2].Width = 120;
                 DS_SachDaMuon.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 DS_SachDaMuon.Columns[4].Width = 200;
-                //dtgvBookChosen.Update();
-                //dtgvBookChosen.Refresh();
 
-                tbx_SoSachMax.Text = $"Số lượng: {chosenBooks.Count}";
+                tbx_SoSachMax.Text = $"{chosenBooks.Count}";
 
                 if (DS_SachTrongKho.Rows.Count != 0)
                 {
@@ -476,10 +447,8 @@ namespace Library_Management
                 bindingChosen = new BindingSource();
                 bindingChosen.DataSource = chosenBooks;
                 DS_SachDaMuon.DataSource = bindingChosen;
-                //dtgvBookChosen.Update();
-                //dtgvBookChosen.Refresh();
 
-                txb_SoLuong.Text = $"Số lượng: {chosenBooks.Count}";
+                txb_SoLuong.Text = $"{chosenBooks.Count}";
                 if (DS_SachDaMuon.Rows.Count != 0)
                 {
                     DS_SachDaMuon.Rows[0].Selected = false;
@@ -568,10 +537,8 @@ namespace Library_Management
             bindingChosen = new BindingSource();
             bindingChosen.DataSource = chosenBooks;
             DS_SachDaMuon.DataSource = bindingChosen;
-            //dtgvBookChosen.Update();
-            //dtgvBookChosen.Refresh();
 
-            txb_SoLuong.Text = $"Số lượng: {chosenBooks.Count}";
+            txb_SoLuong.Text = $"{chosenBooks.Count}";
         }
 
         private void cb_MaDG_SelectedIndexChanged(object sender, EventArgs e)
@@ -721,6 +688,7 @@ namespace Library_Management
                 case Valid.Valid:
                     {
                         ShowConfirmForm();
+                        DS_SachDaMuon.Rows.Clear();
                         break;
                     }
                 case Valid.MissingCode:
@@ -735,7 +703,7 @@ namespace Library_Management
                     }
                 case Valid.BorrowedMax:
                     {
-                        MessageBox.Show($"Không được mượn quá {Parameters.maxBorrowBook} quyển sách!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show($"Mỗi độc giả chỉ được mượn {Parameters.maxBorrowBook} quyển sách!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         break;
                     }
                 case Valid.Borrowed:
@@ -814,10 +782,8 @@ namespace Library_Management
 
         private void ShowConfirmForm()
         {
-            //tdGetBookSlip.Join();
             string code = cb_MaDG.Text.ToString();
             string name = txb_TenDocGia.Text.ToString();
-            //string email = readers[cb_MaDG.SelectedIndex].email;
             string lendDate = dtp_NgayMuon.Value.ToString("yyyy-MM-dd");
             string backDate = dtp_NgayTra.Value.ToString("yyyy-MM-dd");
             string amount = chosenBooks.Count.ToString();
@@ -829,54 +795,31 @@ namespace Library_Management
             {
                 MessageBox.Show("Cho mượn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                btnChoMuon.Enabled = false;
-
-                //chosenBooks.Clear();
-                //bindingChosen = new BindingSource();
-                //bindingChosen.DataSource = chosenBooks;
-                //dtgvBookChosen.DataSource = bindingChosen;
-
                 lendState = "";
                 tdGetBookSlip = new Thread(new ThreadStart(GetSlipCode));
                 tdGetBookSlip.Start();
                 muonSach f2 = new muonSach();
-                // show form 2
-                f2.ShowDialog(); // it fonna halt/ freeze the excution of click event.
-                                 // dispose form 2 instance
-                f2 = null;
-                //show form 1 again
-                this.Show();
+                DS_SachTrongKho.Rows.Clear();
+                LoadData();
             }
-            //String returnDay = 
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            ShowConfirmForm();
-        }
-
-        private void chbIn_CheckedChanged(object sender, EventArgs e)
-        {
-            askBeforePrint = (chb_InPhieuMuon.CheckState == CheckState.Checked) ? true : false;
+            else
+            {
+                DS_SachTrongKho.Rows.Clear();
+                LoadData();
+            }
         }
 
         private void chb_MaxMuon_CheckedChanged(object sender, EventArgs e)
         {
-            string temp = "Số sách được mượn tối đa: ";
             if (chb_MaxMuon.CheckState == CheckState.Checked)
             {
-                txb_SoLuong.Text = $"{Parameters.maxBorrowBook}";
+                tbx_SoSachMax.Text = $"{Parameters.maxBorrowBook}";
             }
             else
             {
-                txb_SoLuong.Text = "Không";
+                tbx_SoSachMax.Text = "Không giới hạn";
             }
         }
-
-        //private void btnViewBorrowSlip_Click(object sender, EventArgs e)
-        //{
-        //    new DSPhieuMS().ShowDialog();
-        //}
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
@@ -892,11 +835,6 @@ namespace Library_Management
             f2 = null;
             //show form 1 again
             this.Show();
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnXemPhieuMuon_Click(object sender, EventArgs e)

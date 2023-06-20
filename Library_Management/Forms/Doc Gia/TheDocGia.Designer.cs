@@ -187,20 +187,24 @@
             // 
             // txtb_NgayHetHan
             // 
+            this.txtb_NgayHetHan.BackColor = System.Drawing.Color.Silver;
             this.txtb_NgayHetHan.Enabled = false;
             this.txtb_NgayHetHan.HideSelection = false;
             this.txtb_NgayHetHan.Location = new System.Drawing.Point(972, 96);
             this.txtb_NgayHetHan.Name = "txtb_NgayHetHan";
+            this.txtb_NgayHetHan.ReadOnly = true;
             this.txtb_NgayHetHan.Size = new System.Drawing.Size(262, 22);
             this.txtb_NgayHetHan.TabIndex = 21;
             this.txtb_NgayHetHan.Tag = "";
             // 
             // txb_TongNo
             // 
+            this.txb_TongNo.BackColor = System.Drawing.Color.Silver;
             this.txb_TongNo.Enabled = false;
             this.txb_TongNo.HideSelection = false;
             this.txb_TongNo.Location = new System.Drawing.Point(972, 138);
             this.txb_TongNo.Name = "txb_TongNo";
+            this.txb_TongNo.ReadOnly = true;
             this.txb_TongNo.Size = new System.Drawing.Size(262, 22);
             this.txb_TongNo.TabIndex = 20;
             this.txb_TongNo.Tag = "";

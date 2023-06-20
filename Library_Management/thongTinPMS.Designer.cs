@@ -159,7 +159,7 @@
             // btn_XacNhan
             // 
             this.btn_XacNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(205)))), ((int)(((byte)(203)))));
-            this.btn_XacNhan.Cursor = System.Windows.Forms.Cursors.No;
+            this.btn_XacNhan.Cursor = System.Windows.Forms.Cursors.Default;
             this.btn_XacNhan.FlatAppearance.BorderSize = 0;
             this.btn_XacNhan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
             this.btn_XacNhan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -172,7 +172,7 @@
             this.btn_XacNhan.TabIndex = 66;
             this.btn_XacNhan.Text = "Xác nhận";
             this.btn_XacNhan.UseVisualStyleBackColor = false;
-            this.btn_XacNhan.Click += new System.EventHandler(this.btnAccept_Click);
+            this.btn_XacNhan.Click += new System.EventHandler(this.btn_XacNhan_Click);
             // 
             // btn_Huy
             // 
@@ -189,10 +189,11 @@
             this.btn_Huy.TabIndex = 27;
             this.btn_Huy.Text = "Hủy";
             this.btn_Huy.UseVisualStyleBackColor = false;
-            this.btn_Huy.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
             // 
             // txb_NgayTra
             // 
+            this.txb_NgayTra.BackColor = System.Drawing.Color.Silver;
             this.txb_NgayTra.HideSelection = false;
             this.txb_NgayTra.Location = new System.Drawing.Point(821, 136);
             this.txb_NgayTra.Name = "txb_NgayTra";
@@ -203,6 +204,7 @@
             // 
             // txb_NgayMuon
             // 
+            this.txb_NgayMuon.BackColor = System.Drawing.Color.Silver;
             this.txb_NgayMuon.HideSelection = false;
             this.txb_NgayMuon.Location = new System.Drawing.Point(821, 56);
             this.txb_NgayMuon.Name = "txb_NgayMuon";
@@ -213,6 +215,7 @@
             // 
             // txb_SoLuong
             // 
+            this.txb_SoLuong.BackColor = System.Drawing.Color.Silver;
             this.txb_SoLuong.HideSelection = false;
             this.txb_SoLuong.Location = new System.Drawing.Point(256, 136);
             this.txb_SoLuong.Name = "txb_SoLuong";
@@ -245,6 +248,7 @@
             // 
             // txb_TenDocGia
             // 
+            this.txb_TenDocGia.BackColor = System.Drawing.Color.Silver;
             this.txb_TenDocGia.HideSelection = false;
             this.txb_TenDocGia.Location = new System.Drawing.Point(499, 136);
             this.txb_TenDocGia.Name = "txb_TenDocGia";
@@ -266,6 +270,7 @@
             // 
             // txb_MaPMS
             // 
+            this.txb_MaPMS.BackColor = System.Drawing.Color.Silver;
             this.txb_MaPMS.HideSelection = false;
             this.txb_MaPMS.Location = new System.Drawing.Point(176, 56);
             this.txb_MaPMS.Name = "txb_MaPMS";
@@ -298,6 +303,7 @@
             // 
             // txb_MaDocGia
             // 
+            this.txb_MaDocGia.BackColor = System.Drawing.Color.Silver;
             this.txb_MaDocGia.HideSelection = false;
             this.txb_MaDocGia.Location = new System.Drawing.Point(499, 56);
             this.txb_MaDocGia.Name = "txb_MaDocGia";

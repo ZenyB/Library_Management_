@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(traSach));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.chb_InPhieuMuon = new System.Windows.Forms.CheckBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.DS_Choosen = new System.Windows.Forms.DataGridView();
@@ -70,7 +69,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DS_Choosen)).BeginInit();
@@ -102,16 +100,8 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(39)))), ((int)(((byte)(102)))));
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.chb_InPhieuMuon);
             resources.ApplyResources(this.panel9, "panel9");
             this.panel9.Name = "panel9";
-            // 
-            // chb_InPhieuMuon
-            // 
-            resources.ApplyResources(this.chb_InPhieuMuon, "chb_InPhieuMuon");
-            this.chb_InPhieuMuon.ForeColor = System.Drawing.Color.White;
-            this.chb_InPhieuMuon.Name = "chb_InPhieuMuon";
-            this.chb_InPhieuMuon.UseVisualStyleBackColor = true;
             // 
             // panel6
             // 
@@ -136,15 +126,15 @@
             resources.ApplyResources(this.DS_Choosen, "DS_Choosen");
             this.DS_Choosen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_Choosen.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_Choosen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_Choosen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DS_Choosen.MultiSelect = false;
             this.DS_Choosen.Name = "DS_Choosen";
             this.DS_Choosen.ReadOnly = true;
@@ -217,15 +207,15 @@
             resources.ApplyResources(this.DS_SlipBook, "DS_SlipBook");
             this.DS_SlipBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_SlipBook.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle22.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_SlipBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_SlipBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DS_SlipBook.MultiSelect = false;
             this.DS_SlipBook.Name = "DS_SlipBook";
             this.DS_SlipBook.ReadOnly = true;
@@ -328,16 +318,20 @@
             // 
             // txtTongNo
             // 
+            this.txtTongNo.BackColor = System.Drawing.Color.Silver;
             this.txtTongNo.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.txtTongNo, "txtTongNo");
             this.txtTongNo.Name = "txtTongNo";
+            this.txtTongNo.ReadOnly = true;
             // 
             // txtTien
             // 
+            this.txtTien.BackColor = System.Drawing.Color.Silver;
             this.txtTien.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtTien.HideSelection = false;
             resources.ApplyResources(this.txtTien, "txtTien");
             this.txtTien.Name = "txtTien";
+            this.txtTien.ReadOnly = true;
             this.txtTien.Tag = "";
             // 
             // txb_TongTraTre
@@ -381,6 +375,7 @@
             // 
             // txb_TenDocGia
             // 
+            this.txb_TenDocGia.BackColor = System.Drawing.Color.Silver;
             this.txb_TenDocGia.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.txb_TenDocGia, "txb_TenDocGia");
             this.txb_TenDocGia.Name = "txb_TenDocGia";
@@ -427,8 +422,6 @@
             this.Name = "traSach";
             this.Load += new System.EventHandler(this.traSach_Load);
             this.panel1.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -452,7 +445,6 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.CheckBox chb_InPhieuMuon;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnTraSach;
         private System.Windows.Forms.Button btnLamMoi;

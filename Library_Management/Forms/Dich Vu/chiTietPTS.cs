@@ -75,7 +75,6 @@ namespace Library_Management
                 {
                     DS_chitietPTS.Rows[0].Selected = false;
                 }
-                btnDelete.Enabled = false;
                 DS_chitietPTS.Columns[0].HeaderText = "STT";
                 DS_chitietPTS.Columns[1].HeaderText = "Mã Chi Tiết Phiếu Mượn Sách";
                 DS_chitietPTS.Columns[2].HeaderText = "Mã Cuốn Sách";
@@ -105,11 +104,6 @@ namespace Library_Management
                 txb_MaCTPMS.Text = DS_chitietPTS.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txb_MaCuonSach.Text = DS_chitietPTS.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txb_TinhTrang.Text = DS_chitietPTS.Rows[e.RowIndex].Cells[3].Value.ToString();
-
-                if (txb_TinhTrang.Text == "Chưa trả")
-                {
-                    btnDelete.Enabled = true;
-                }
             }
         }
         private void UpdataData()
@@ -133,23 +127,12 @@ namespace Library_Management
             UpdataData();
             DSPhieuMS.dataChanged = true;
             MessageBox.Show("Cập nhật dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            btnDelete.Enabled = false;
 
             txb_MaPTS.Text = "";
             txb_MaCTPMS.Text = "";
             txb_MaCuonSach.Text = "";
             txb_TinhTrang.Text = "";
             LoadData();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            btnDelete.Enabled = false;
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

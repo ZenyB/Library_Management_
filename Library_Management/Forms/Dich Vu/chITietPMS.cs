@@ -68,8 +68,8 @@ namespace Library_Management
             {
                 DS_chitietPMS.Rows[0].Selected = false;
             }
-            btnXoa.Enabled = false;
-            btnLuu.Enabled = false;
+            //btnXoa.Enabled = false;
+            //btnLuu.Enabled = false;
             DS_chitietPMS.Columns[0].HeaderText = "STT";
             DS_chitietPMS.Columns[1].HeaderText = "Mã Chi Tiết Phiếu Mượn Sách";
             DS_chitietPMS.Columns[2].HeaderText = "Mã Cuốn Sách";
@@ -98,11 +98,11 @@ namespace Library_Management
                 txb_MaCuonSach.Text = DS_chitietPMS.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txb_TinhTrang.Text = DS_chitietPMS.Rows[e.RowIndex].Cells[3].Value.ToString();
 
-                if (txb_TinhTrang.Text == "Chưa trả")
-                {
-                    btnLuu.Enabled = false;
-                    btnXoa.Enabled = true;
-                }
+                //if (txb_TinhTrang.Text == "Chưa trả")
+                //{
+                //    btnLuu.Enabled = false;
+                //    btnXoa.Enabled = true;
+                //}
             }
         }
         private void UpdataData()
@@ -120,13 +120,13 @@ namespace Library_Management
             conn.Close();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnLuu_Click(object sender, EventArgs e)
         {
             UpdataData();
             DSPhieuMS.dataChanged = true;
             MessageBox.Show("Cập nhật dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            btnLuu.Enabled = false;
-            btnXoa.Enabled = false;
+            //btnLuu.Enabled = false;
+            //btnXoa.Enabled = false;
 
             txb_MaPMS.Text = "";
             txb_MaCTPMS.Text = "";
@@ -135,16 +135,21 @@ namespace Library_Management
             LoadData();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            btnXoa.Enabled = false;
-            btnLuu.Enabled = true;
-        }
+        //private void btnXoa_Click(object sender, EventArgs e)
+        //{
+        //    btnXoa.Enabled = false;
+        //    btnLuu.Enabled = true;
+        //}
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            btnXoa.Enabled = true;
-            btnLuu.Enabled = false;
-        }
+        //private void btnHuy_Click(object sender, EventArgs e)
+        //{
+        //    btnXoa.Enabled = true;
+        //    btnLuu.Enabled = false;
+        //}
+
+        //private void btnCancel_Click(object sender, EventArgs e)
+        //{
+
+        //}
     }
 }
