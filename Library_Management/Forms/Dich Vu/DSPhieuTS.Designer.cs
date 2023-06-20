@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -105,9 +105,11 @@
             // 
             // txb_tienPhat
             // 
+            this.txb_tienPhat.BackColor = System.Drawing.Color.Silver;
             this.txb_tienPhat.HideSelection = false;
             this.txb_tienPhat.Location = new System.Drawing.Point(877, 47);
             this.txb_tienPhat.Name = "txb_tienPhat";
+            this.txb_tienPhat.ReadOnly = true;
             this.txb_tienPhat.Size = new System.Drawing.Size(235, 22);
             this.txb_tienPhat.TabIndex = 60;
             this.txb_tienPhat.Tag = "";
@@ -130,9 +132,11 @@
             // 
             // txb_MaPTS
             // 
+            this.txb_MaPTS.BackColor = System.Drawing.Color.Silver;
             this.txb_MaPTS.HideSelection = false;
             this.txb_MaPTS.Location = new System.Drawing.Point(137, 47);
             this.txb_MaPTS.Name = "txb_MaPTS";
+            this.txb_MaPTS.ReadOnly = true;
             this.txb_MaPTS.Size = new System.Drawing.Size(235, 22);
             this.txb_MaPTS.TabIndex = 57;
             this.txb_MaPTS.Tag = "";
@@ -156,6 +160,7 @@
             this.dateTimeNgayTra.Size = new System.Drawing.Size(235, 22);
             this.dateTimeNgayTra.TabIndex = 56;
             this.dateTimeNgayTra.Value = new System.DateTime(2023, 6, 14, 0, 0, 0, 0);
+            this.dateTimeNgayTra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dateTimeNgayTra_MouseDown);
             // 
             // label2
             // 
@@ -181,9 +186,11 @@
             // 
             // txb_MaDocGia
             // 
+            this.txb_MaDocGia.BackColor = System.Drawing.Color.Silver;
             this.txb_MaDocGia.HideSelection = false;
             this.txb_MaDocGia.Location = new System.Drawing.Point(507, 47);
             this.txb_MaDocGia.Name = "txb_MaDocGia";
+            this.txb_MaDocGia.ReadOnly = true;
             this.txb_MaDocGia.Size = new System.Drawing.Size(235, 22);
             this.txb_MaDocGia.TabIndex = 52;
             this.txb_MaDocGia.Tag = "";
@@ -212,9 +219,11 @@
             // 
             // txb_TenDocGia
             // 
+            this.txb_TenDocGia.BackColor = System.Drawing.Color.Silver;
             this.txb_TenDocGia.HideSelection = false;
             this.txb_TenDocGia.Location = new System.Drawing.Point(507, 113);
             this.txb_TenDocGia.Name = "txb_TenDocGia";
+            this.txb_TenDocGia.ReadOnly = true;
             this.txb_TenDocGia.Size = new System.Drawing.Size(235, 22);
             this.txb_TenDocGia.TabIndex = 49;
             this.txb_TenDocGia.Tag = "";
@@ -234,15 +243,15 @@
             this.DS_chitietPNS.AllowUserToResizeRows = false;
             this.DS_chitietPNS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_chitietPNS.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_chitietPNS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_chitietPNS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DS_chitietPNS.ColumnHeadersHeight = 50;
             this.DS_chitietPNS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DS_chitietPNS.Location = new System.Drawing.Point(0, 0);

@@ -97,7 +97,6 @@ namespace Library_Management
             cbbReader.SelectedIndex = -1;
 
             returnDate.Value = DateTime.Now;
-
             GetNewReturnSlipCode();
             LoadBorrowSlip();
             DS_Layout();
@@ -242,14 +241,6 @@ namespace Library_Management
                 DS_SlipBook.Rows[0].Selected = false;
             }
 
-        }
-
-        void loadTongNo()
-        {
-            string cauTruyVan = "SELECT TongNo FROM DOCGIA WHERE MaDocGia = '" + cbbReader.Text + "'";
-            connect(cauTruyVan);
-            string tongNo = Convert.ToString(myCommand.ExecuteScalar());
-            txtTongNo.Text = tongNo;
         }
 
         private void GetNewReturnSlipCode()
@@ -543,37 +534,6 @@ namespace Library_Management
                 bindingChosen.DataSource = chosenBooks;
                 DS_Choosen.DataSource = bindingChosen;
             }
-        }
-
-        private void CreateReturnSlip()
-        {
-            string createReturnSlip = $@"INSERT INTO PHIEUTRASACH(MaDocGia, NgTra, TienPhatKyNay) VALUES('{cbbReader.Text}', '{returnDate.Value.ToString("yyyy-MM-dd")}', {txtTien.Text})";
-            string createReturnSlipDetail = @"";
-            string setBookAndSlipDetailStatus = @"";
-
-            foreach (ReturnBook book in chosenBooks)
-            {
-                string cauTruyVan = @"SELECT CTPHIEUMUON.MaPhieuMuonSach
-                FROM SACH, CUONSACH, PHIEUMUON, CTPHIEUMUON, DAUSACH
-                WHERE PHIEUMUON.MaPhieuMuonSach = CTPHIEUMUON.MaPhieuMuonSach AND CTPHIEUMUON.MaCuonSach = CUONSACH.MaCuonSach
-		            AND CUONSACH.MaSach = SACH.MaSach AND SACH.MaDauSach = DAUSACH.MaDauSach 
-						AND TinhTrangPM = 0'";
-                connect(cauTruyVan);
-                string maPhieuMuon = Convert.ToString(myCommand.ExecuteScalar());
-
-                createReturnSlipDetail += $@"INSERT INTO CTPT(MaPhieuTraSach, MaCuonSach, MaPhieuMuonSach, SoNgayMuon, TienPhat) VALUES('{newReturnSlipCode}','{book.specBookCode}','{maPhieuMuon}','{book.borrowedDays}','{book.fine}')" + "\n";
-                setBookAndSlipDetailStatus += $@"UPDATE CTPHIEUMUON SET TinhTrangPM = 1  WHERE MaChiTietPhieuMuon = '{book.detailSlipCode}'" + "\n" + $@"UPDATE CUONSACH SET TinhTrang = 1 WHERE MaCuonSach = '{book.specBookCode}'";
-            }
-
-            SqlConnection conn = new SqlConnection(Database.connectionStr);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(createReturnSlip, conn);
-            cmd.ExecuteNonQuery();
-            cmd.CommandText = createReturnSlipDetail;
-            cmd.ExecuteNonQuery();
-            cmd.CommandText = setBookAndSlipDetailStatus;
-            cmd.ExecuteNonQuery();
-
         }
 
         private void returnDate_MouseDown(object sender, MouseEventArgs e)

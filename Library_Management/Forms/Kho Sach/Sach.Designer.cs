@@ -156,6 +156,7 @@
             // 
             // cb_TenSach
             // 
+            this.cb_TenSach.Enabled = false;
             this.cb_TenSach.FormattingEnabled = true;
             this.cb_TenSach.Location = new System.Drawing.Point(36, 41);
             this.cb_TenSach.Name = "cb_TenSach";
@@ -213,10 +214,12 @@
             this.txb_DonGia.Size = new System.Drawing.Size(324, 22);
             this.txb_DonGia.TabIndex = 19;
             this.txb_DonGia.Tag = "";
+            this.txb_DonGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_DonGia_KeyPress);
             // 
             // txb_SoLuong
             // 
             this.txb_SoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txb_SoLuong.BackColor = System.Drawing.Color.Silver;
             this.txb_SoLuong.HideSelection = false;
             this.txb_SoLuong.Location = new System.Drawing.Point(444, 37);
             this.txb_SoLuong.Name = "txb_SoLuong";
@@ -283,6 +286,7 @@
             this.txb_NamXB.Size = new System.Drawing.Size(324, 22);
             this.txb_NamXB.TabIndex = 13;
             this.txb_NamXB.Tag = "";
+            this.txb_NamXB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_NamXB_KeyPress);
             // 
             // txb_NhaXB
             // 
@@ -297,6 +301,7 @@
             // txb_TacGia
             // 
             this.txb_TacGia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txb_TacGia.BackColor = System.Drawing.Color.Silver;
             this.txb_TacGia.HideSelection = false;
             this.txb_TacGia.Location = new System.Drawing.Point(37, 96);
             this.txb_TacGia.Name = "txb_TacGia";
@@ -401,6 +406,7 @@
             // 
             // txb_MaSach
             // 
+            this.txb_MaSach.BackColor = System.Drawing.Color.Silver;
             this.txb_MaSach.HideSelection = false;
             this.txb_MaSach.Location = new System.Drawing.Point(53, 42);
             this.txb_MaSach.Name = "txb_MaSach";

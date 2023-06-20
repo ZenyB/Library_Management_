@@ -162,5 +162,10 @@ namespace Library_Management
             DS_chitietPNS.Columns[4].DataPropertyName = "returnDate";
             DS_chitietPNS.Columns[5].DataPropertyName = "fineThisPeriod";
         }
+
+        private void dateTimeNgayTra_MouseDown(object sender, MouseEventArgs e)
+        {
+            this.ActiveControl = null;
+        }
     }
 }

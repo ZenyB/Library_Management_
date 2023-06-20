@@ -59,7 +59,7 @@ namespace Library_Management
         {
             loadDS_Sach();
             DS_Sach.Enabled = true;
-            btnLuu.Enabled = true;
+            btnLuu.Enabled = false;
             btnTaoMoi.Enabled = true;
             btnXemVaCapNhat.Enabled = false;
             btnXoa.Enabled = false;
@@ -229,6 +229,18 @@ namespace Library_Management
                     txb_DonGia.Focus();
 
             }
-        } 
+        }
+
+        private void txb_NamXB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txb_DonGia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

@@ -39,8 +39,6 @@
             this.txb_MaCuonSach = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txb_MaCTPMS = new System.Windows.Forms.TextBox();
@@ -115,8 +113,6 @@
             this.panel1.Controls.Add(this.txb_MaCuonSach);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnHuy);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txb_MaCTPMS);
@@ -130,8 +126,9 @@
             // 
             // txb_TinhTrang
             // 
+            this.txb_TinhTrang.BackColor = System.Drawing.Color.Silver;
             this.txb_TinhTrang.HideSelection = false;
-            this.txb_TinhTrang.Location = new System.Drawing.Point(441, 158);
+            this.txb_TinhTrang.Location = new System.Drawing.Point(629, 158);
             this.txb_TinhTrang.Name = "txb_TinhTrang";
             this.txb_TinhTrang.ReadOnly = true;
             this.txb_TinhTrang.Size = new System.Drawing.Size(235, 22);
@@ -140,8 +137,9 @@
             // 
             // txb_MaCuonSach
             // 
+            this.txb_MaCuonSach.BackColor = System.Drawing.Color.Silver;
             this.txb_MaCuonSach.HideSelection = false;
-            this.txb_MaCuonSach.Location = new System.Drawing.Point(132, 158);
+            this.txb_MaCuonSach.Location = new System.Drawing.Point(320, 158);
             this.txb_MaCuonSach.Name = "txb_MaCuonSach";
             this.txb_MaCuonSach.ReadOnly = true;
             this.txb_MaCuonSach.Size = new System.Drawing.Size(235, 22);
@@ -153,7 +151,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(128, 136);
+            this.label6.Location = new System.Drawing.Point(316, 136);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(106, 16);
             this.label6.TabIndex = 37;
@@ -164,51 +162,18 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(438, 136);
+            this.label3.Location = new System.Drawing.Point(626, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 16);
             this.label3.TabIndex = 38;
             this.label3.Text = "Tình trạng:";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(80)))), ((int)(((byte)(73)))));
-            this.btnDelete.Enabled = false;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
-            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(790, 140);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(198, 29);
-            this.btnDelete.TabIndex = 33;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Enabled = false;
-            this.btnHuy.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(994, 140);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(125, 29);
-            this.btnHuy.TabIndex = 32;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = false;
-            this.btnHuy.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(438, 70);
+            this.label5.Location = new System.Drawing.Point(626, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(202, 16);
             this.label5.TabIndex = 31;
@@ -219,7 +184,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(128, 70);
+            this.label4.Location = new System.Drawing.Point(316, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 16);
             this.label4.TabIndex = 30;
@@ -227,8 +192,9 @@
             // 
             // txb_MaCTPMS
             // 
+            this.txb_MaCTPMS.BackColor = System.Drawing.Color.Silver;
             this.txb_MaCTPMS.HideSelection = false;
-            this.txb_MaCTPMS.Location = new System.Drawing.Point(442, 92);
+            this.txb_MaCTPMS.Location = new System.Drawing.Point(630, 92);
             this.txb_MaCTPMS.Name = "txb_MaCTPMS";
             this.txb_MaCTPMS.ReadOnly = true;
             this.txb_MaCTPMS.Size = new System.Drawing.Size(235, 22);
@@ -237,8 +203,9 @@
             // 
             // txb_MaPTS
             // 
+            this.txb_MaPTS.BackColor = System.Drawing.Color.Silver;
             this.txb_MaPTS.HideSelection = false;
-            this.txb_MaPTS.Location = new System.Drawing.Point(132, 94);
+            this.txb_MaPTS.Location = new System.Drawing.Point(320, 94);
             this.txb_MaPTS.Name = "txb_MaPTS";
             this.txb_MaPTS.ReadOnly = true;
             this.txb_MaPTS.Size = new System.Drawing.Size(235, 22);
@@ -337,7 +304,5 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataGridView DS_chitietPTS;
         private System.Windows.Forms.TextBox txb_TinhTrang;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnHuy;
     }
 }
