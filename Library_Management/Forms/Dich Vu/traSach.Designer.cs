@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(traSach));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -49,8 +49,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbbSlipCode = new System.Windows.Forms.ComboBox();
+            this.cbbReader = new System.Windows.Forms.ComboBox();
             this.btnTraSach = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnXemPhieuTra = new System.Windows.Forms.Button();
@@ -59,13 +58,12 @@
             this.txtTongNo = new System.Windows.Forms.TextBox();
             this.txtTien = new System.Windows.Forms.TextBox();
             this.txb_TongTraTre = new System.Windows.Forms.TextBox();
-            this.datetimeNgayTra = new System.Windows.Forms.DateTimePicker();
+            this.returnDate = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txb_TenDocGia = new System.Windows.Forms.TextBox();
-            this.txb_MaDocGia = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.thongTinchitiet = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -138,15 +136,15 @@
             resources.ApplyResources(this.DS_Choosen, "DS_Choosen");
             this.DS_Choosen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_Choosen.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_Choosen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_Choosen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DS_Choosen.MultiSelect = false;
             this.DS_Choosen.Name = "DS_Choosen";
             this.DS_Choosen.ReadOnly = true;
@@ -219,15 +217,15 @@
             resources.ApplyResources(this.DS_SlipBook, "DS_SlipBook");
             this.DS_SlipBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_SlipBook.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_SlipBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_SlipBook.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DS_SlipBook.MultiSelect = false;
             this.DS_SlipBook.Name = "DS_SlipBook";
             this.DS_SlipBook.ReadOnly = true;
@@ -257,8 +255,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.cbbSlipCode);
+            this.panel3.Controls.Add(this.cbbReader);
             this.panel3.Controls.Add(this.btnTraSach);
             this.panel3.Controls.Add(this.btnLamMoi);
             this.panel3.Controls.Add(this.btnXemPhieuTra);
@@ -267,29 +264,22 @@
             this.panel3.Controls.Add(this.txtTongNo);
             this.panel3.Controls.Add(this.txtTien);
             this.panel3.Controls.Add(this.txb_TongTraTre);
-            this.panel3.Controls.Add(this.datetimeNgayTra);
+            this.panel3.Controls.Add(this.returnDate);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.txb_TenDocGia);
-            this.panel3.Controls.Add(this.txb_MaDocGia);
             this.panel3.Controls.Add(this.panel5);
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
-            // label6
+            // cbbReader
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Name = "label6";
-            // 
-            // cbbSlipCode
-            // 
-            this.cbbSlipCode.FormattingEnabled = true;
-            resources.ApplyResources(this.cbbSlipCode, "cbbSlipCode");
-            this.cbbSlipCode.Name = "cbbSlipCode";
-            this.cbbSlipCode.SelectedIndexChanged += new System.EventHandler(this.cbbSlipCode_SelectedIndexChanged);
+            this.cbbReader.FormattingEnabled = true;
+            resources.ApplyResources(this.cbbReader, "cbbReader");
+            this.cbbReader.Name = "cbbReader";
+            this.cbbReader.SelectedIndexChanged += new System.EventHandler(this.cbbReader_SelectedIndexChanged);
             // 
             // btnTraSach
             // 
@@ -300,6 +290,7 @@
             resources.ApplyResources(this.btnTraSach, "btnTraSach");
             this.btnTraSach.Name = "btnTraSach";
             this.btnTraSach.UseVisualStyleBackColor = false;
+            this.btnTraSach.Click += new System.EventHandler(this.btnTraSach_Click);
             // 
             // btnLamMoi
             // 
@@ -354,11 +345,12 @@
             resources.ApplyResources(this.txb_TongTraTre, "txb_TongTraTre");
             this.txb_TongTraTre.ForeColor = System.Drawing.Color.White;
             this.txb_TongTraTre.Name = "txb_TongTraTre";
+            this.txb_TongTraTre.ReadOnly = true;
             // 
-            // datetimeNgayTra
+            // returnDate
             // 
-            resources.ApplyResources(this.datetimeNgayTra, "datetimeNgayTra");
-            this.datetimeNgayTra.Name = "datetimeNgayTra";
+            resources.ApplyResources(this.returnDate, "returnDate");
+            this.returnDate.Name = "returnDate";
             // 
             // label8
             // 
@@ -389,14 +381,6 @@
             resources.ApplyResources(this.txb_TenDocGia, "txb_TenDocGia");
             this.txb_TenDocGia.Name = "txb_TenDocGia";
             this.txb_TenDocGia.ReadOnly = true;
-            // 
-            // txb_MaDocGia
-            // 
-            this.txb_MaDocGia.HideSelection = false;
-            resources.ApplyResources(this.txb_MaDocGia, "txb_MaDocGia");
-            this.txb_MaDocGia.Name = "txb_MaDocGia";
-            this.txb_MaDocGia.ReadOnly = true;
-            this.txb_MaDocGia.Tag = "";
             // 
             // panel5
             // 
@@ -474,13 +458,12 @@
         private System.Windows.Forms.TextBox txtTongNo;
         private System.Windows.Forms.TextBox txtTien;
         private System.Windows.Forms.TextBox txb_TongTraTre;
-        private System.Windows.Forms.DateTimePicker datetimeNgayTra;
+        private System.Windows.Forms.DateTimePicker returnDate;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txb_TenDocGia;
-        private System.Windows.Forms.TextBox txb_MaDocGia;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label thongTinchitiet;
         private System.Windows.Forms.Panel panel4;
@@ -499,7 +482,6 @@
         private System.Windows.Forms.DataGridView DS_Choosen;
         private FontAwesome.Sharp.IconButton btn_Add;
         private FontAwesome.Sharp.IconButton btn_Remove;
-        private System.Windows.Forms.ComboBox cbbSlipCode;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbbReader;
     }
 }
