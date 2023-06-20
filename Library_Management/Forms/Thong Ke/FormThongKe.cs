@@ -161,6 +161,7 @@ namespace Library_Management
         {
             if (i == 1)
             {
+                lblTenBaoCao.Text = "Tình hình mượn sách theo thể loại trong tháng " + dtpTime.Text;
                 if (DS_ThongKe.Columns.Count == 5)
                 {
                     DS_ThongKe.Columns.RemoveAt(4);
@@ -186,6 +187,8 @@ namespace Library_Management
             }
             else
             {
+
+                lblTenBaoCao.Text = "Tình hình sách trả trễ theo ngày " + dtpTime.Text;
                 DS_ThongKe.Columns[0].HeaderText = "STT";
                 DS_ThongKe.Columns[1].HeaderText = "Mã sách";
                 DS_ThongKe.Columns[2].HeaderText = "Tên sách";

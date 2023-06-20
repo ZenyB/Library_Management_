@@ -126,6 +126,7 @@
             this.btn_xemChiTiet.TabIndex = 59;
             this.btn_xemChiTiet.Text = "Xem chi tiết";
             this.btn_xemChiTiet.UseVisualStyleBackColor = false;
+            this.btn_xemChiTiet.Click += new System.EventHandler(this.btn_xemChiTiet_Click);
             // 
             // txb_MaPTS
             // 
