@@ -445,6 +445,7 @@
             this.txbTuoiToiThieu.Size = new System.Drawing.Size(114, 22);
             this.txbTuoiToiThieu.TabIndex = 35;
             this.txbTuoiToiThieu.Tag = "";
+            this.txbTuoiToiThieu.TextChanged += new System.EventHandler(this.txbTuoiToiThieu_TextChanged);
             this.txbTuoiToiThieu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress);
             // 
             // txbMucThuTienPhat
