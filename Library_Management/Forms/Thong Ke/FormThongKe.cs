@@ -32,14 +32,12 @@ namespace Library_Management
             binding = new BindingSource();
 
             cbbReportType.SelectedIndex = 0;
-            dtpTime.Value = DateTime.Now.AddMonths(-13);
+            dtpTime.Value = DateTime.Now.AddMonths(-1);
             CategoryReport();
-            //lbTitle.Location = new Point((this.Width - lbTitle.Width) / 2, lbTitle.Location.Y);
         }
 
         private void dtpTime_ValueChanged(object sender, EventArgs e)
         {
-            //lbInform.Visible = false;
             if (cbbReportType.SelectedIndex == 0)
             {
                 CategoryReport();
@@ -52,8 +50,6 @@ namespace Library_Management
 
         private void CategoryReport()
         {
-            //ChangeDS_ThongKeLayout(1);
-
             reportByCategory.Clear();
 
             string categoryReportCmd = $@"SELECT TenTheLoai AS [Tên Thể Loại], COUNT(THELOAI.MaTheLoai) AS [So Luot Muon]
@@ -94,7 +90,7 @@ namespace Library_Management
 
             binding = new BindingSource();
             binding.DataSource = reportByCategory;
-            DS_ThongKe.DataSource = binding;
+            DS_ThongKe.DataSource = binding; 
 
             if (DS_ThongKe.Rows.Count != 0)
             {
@@ -106,15 +102,18 @@ namespace Library_Management
                 //lbInform.Text = $"Không có quyển sách nào được mượn trong tháng {dtp.Value.Month}";
                 //lbInform.Location = new Point((this.Width - lbInform.Width) / 2, lbInform.Location.Y);
             }
+
+
+            ChangeDS_ThongKeLayout(1);
         }
 
         private void LateReport()
         {
-            //ChangeDS_ThongKeLayout(2);
+            ChangeDS_ThongKeLayout(2);
 
             reportLate.Clear();
 
-            string lateReportCmd = $@"SELECT CTPHIEUMUON.MaCuonSach AS 'Mã Đầu Sách', TenDauSach AS 'Tên Đầu Sách', NgMuon AS 'Người Mượn'
+            string lateReportCmd = $@"SELECT CTPHIEUMUON.MaCuonSach AS [Mã Đầu Sách], TenDauSach AS [Tên Đầu Sách], NgMuon AS [Người Mượn]
                 FROM CTPHIEUMUON, PHIEUMUON, CUONSACH, SACH, DAUSACH
                 WHERE PHIEUMUON.MaPhieuMuonSach = CTPHIEUMUON.MaPhieuMuonSach AND CUONSACH.MaCuonSach = CTPHIEUMUON.MaCuonSach
 			                AND CUONSACH.MaSach = SACH.MaSach AND SACH.MaDauSach = DAUSACH.MaDauSach
@@ -133,6 +132,13 @@ namespace Library_Management
                 }
             }
             conn.Close();
+            int stt = 1;
+            foreach (ReportLate report in reportLate)
+            {
+                report.stt = stt;
+                stt++;
+            }
+
             reportLate.OrderByDescending(o => o.lateReturnDays).ThenBy(o => o.bookCode).ThenBy(o => o.borrowDate).ToList();
 
             binding = new BindingSource();
@@ -159,6 +165,8 @@ namespace Library_Management
                 {
                     DS_ThongKe.Columns.RemoveAt(4);
                 }
+
+                DS_ThongKe.Columns[0].HeaderText = "STT";
                 DS_ThongKe.Columns[1].HeaderText = "Tên thể loại";
                 DS_ThongKe.Columns[2].HeaderText = "Số lượt mượn";
                 DS_ThongKe.Columns[3].HeaderText = "Tỉ lệ";
@@ -167,20 +175,18 @@ namespace Library_Management
                 DS_ThongKe.Columns[2].Width = 224;
                 DS_ThongKe.Columns[3].Width = 230;
 
+                DS_ThongKe.Columns[0].DataPropertyName = "stt";
                 DS_ThongKe.Columns[1].DataPropertyName = "categoryName";
                 DS_ThongKe.Columns[2].DataPropertyName = "numsOfBorrowings";
                 DS_ThongKe.Columns[3].DataPropertyName = "rate";
 
-                //lbTotalBorrowTitle.Visible = true;
                 lbTotalBorrow.Visible = true;
 
                 dtpTime.CustomFormat = "MM/yyyy";
-
-                //lbTitleName.Text = $"Tình Hình Mượn Sách Theo Thể Loại Tháng {dtp.Value.Month.ToString()}";
             }
             else
             {
-
+                DS_ThongKe.Columns[0].HeaderText = "STT";
                 DS_ThongKe.Columns[1].HeaderText = "Mã sách";
                 DS_ThongKe.Columns[2].HeaderText = "Tên sách";
                 DS_ThongKe.Columns[3].HeaderText = "Ngày mượn";
@@ -194,19 +200,16 @@ namespace Library_Management
                 DS_ThongKe.Columns[3].Width = 180;
                 DS_ThongKe.Columns[4].Width = 224;
 
+                DS_ThongKe.Columns[0].DataPropertyName = "stt";
                 DS_ThongKe.Columns[1].DataPropertyName = "bookCode";
                 DS_ThongKe.Columns[2].DataPropertyName = "bookName";
                 DS_ThongKe.Columns[3].DataPropertyName = "borrowDate";
                 DS_ThongKe.Columns[4].DataPropertyName = "lateReturnDays";
 
-                //lbTotalBorrowTitle.Visible = false;
                 lbTotalBorrow.Visible = false;
 
                 dtpTime.CustomFormat = "dd/MM/yyyy";
-
-                //lbTitleName.Text = $"Sách Trả Trễ {dtp.Value.ToString("dd/MM/yyyy")}";
             }
-            //lbTitleName.Location = new Point((this.Width - lbTitleName.Width) / 2, lbTitleName.Location.Y);
         }
 
         private void cbbReportType_SelectedIndexChanged(object sender, EventArgs e)
@@ -218,7 +221,7 @@ namespace Library_Management
             }
             else
             {
-                //dtpTime.Value = DateTime.Now;
+                dtpTime.Value = DateTime.Now;
                 LateReport();
             }
         }

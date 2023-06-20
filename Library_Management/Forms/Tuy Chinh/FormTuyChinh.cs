@@ -101,7 +101,7 @@ namespace Library_Management
             {
                 if (int.Parse(txbSoNgayMuonMax.Text) == 0)
                 {
-                    MessageBox.Show("Số Ngày mượn tối đa không được bằng 0");
+                    MessageBox.Show("Số Ngày mượn tối đa không được bằng 0", "Thông báo");
                     txbSoNgayMuonMax.Text = "";
                 }
             }
@@ -115,7 +115,7 @@ namespace Library_Management
             {
                 if (int.Parse(txbThoiHanThe.Text) == 0)
                 {
-                    MessageBox.Show("Giá Trị của thời gian thẻ không được bằng 0");
+                    MessageBox.Show("Giá Trị của thời gian thẻ không được bằng 0", "Thông báo");
                     txbThoiHanThe.Text = "";
                 }
             }
@@ -129,7 +129,7 @@ namespace Library_Management
             {
                 if (int.Parse(txbThoiGianLuuHanh.Text) == 0)
                 {
-                    MessageBox.Show("Thời gian lưu hành của sách không được bằng 0"); txbThoiGianLuuHanh.Text = "";
+                    MessageBox.Show("Thời gian lưu hành của sách không được bằng 0", "Thông báo"); txbThoiGianLuuHanh.Text = "";
                 }
             }
             catch
@@ -142,7 +142,7 @@ namespace Library_Management
             {
                 if (int.Parse(txbTuoiToiDa.Text) == 0)
                 {
-                    MessageBox.Show("Tuổi tối đa của độc giả mượn sách không được bằng 0"); txbTuoiToiDa.Text = "";
+                    MessageBox.Show("Tuổi tối đa của độc giả mượn sách không được bằng 0", "Thông báo"); txbTuoiToiDa.Text = "";
                 }
             }
             catch
@@ -155,7 +155,7 @@ namespace Library_Management
             {
                 if (int.Parse(txbSoSachMuonMax.Text) == 0)
                 {
-                    MessageBox.Show("Số sách mượn tối đa không được phép bằng 0"); txbSoSachMuonMax.Text = "";
+                    MessageBox.Show("Số sách mượn tối đa không được phép bằng 0", "Thông báo"); txbSoSachMuonMax.Text = "";
                 }
             }
             catch
@@ -190,7 +190,7 @@ namespace Library_Management
                     adapter.Fill(a);
                     if (int.Parse(a.Rows[0].ItemArray[0].ToString()) > int.Parse(txbTuoiToiDa.Text))
                     {
-                        MessageBox.Show("quy định về tuổi tối đa không được phép nhỏ hơn tuổi tối thiểu");
+                        MessageBox.Show("Quy định về tuổi tối đa không được phép nhỏ hơn tuổi tối thiểu", "Thông báo");
                         i = 1;
                     }
                     else
@@ -211,7 +211,12 @@ namespace Library_Management
                     adapter.Fill(b);
                     if (int.Parse(b.Rows[0].ItemArray[0].ToString()) < int.Parse(txbTuoiToiThieu.Text))
                     {
-                        MessageBox.Show("quy định về tuổi tối đa không được phép nhỏ hơn tuổi tối thiểu");
+                        MessageBox.Show("Quy định về tuổi tối đa không được phép nhỏ hơn tuổi tối thiểu", "Thông báo");
+                        i = 1;
+                    }
+                    else if (txbTuoiToiThieu.Text == "0")
+                    {
+                        MessageBox.Show("Quy định về tuổi tối thiểu phải lơn hơn 0", "Thông báo");
                         i = 1;
                     }
                     else
@@ -235,9 +240,18 @@ namespace Library_Management
                 }
                 if (txbMucThuTienPhat.Text != "")
                 {
-                    command = connection.CreateCommand();
-                    command.CommandText = "update Thamso set MucThuTienPhat='" + double.Parse(txbMucThuTienPhat.Text) + "' ";
-                    command.ExecuteNonQuery();
+                    if (txbMucThuTienPhat.Text != "0")
+                    {
+                        command = connection.CreateCommand();
+                        command.CommandText = "update Thamso set MucThuTienPhat='" + double.Parse(txbMucThuTienPhat.Text) + "' ";
+                        command.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Quy định số tiền phạt không được bé hơn hoặc bằng 0đ!", "Thông báo");
+                        txbMucThuTienPhat.Text = "";
+                        return;
+                    }
                 }
                 txbThoiHanThe.Text = "";
                 txbThoiGianLuuHanh.Text = "";
@@ -247,12 +261,25 @@ namespace Library_Management
                 txbSoSachMuonMax.Text = "";
                 txbMucThuTienPhat.Text = "";
                 if (i == 0)
-                    MessageBox.Show("Cập nhật quy định thành công");
+                    MessageBox.Show("Cập nhật quy định thành công", "Thông báo");
                 loadQD();
             }
             else
-                MessageBox.Show("Tất Cả Các ô đều đang trống, không thể cập nhật");
+                MessageBox.Show("Tất Cả Các ô đều đang trống, không thể cập nhật", "Thông báo");
 
+        }
+
+        private void txbTuoiToiThieu_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (int.Parse(txbTuoiToiDa.Text) == 0)
+                {
+                    MessageBox.Show("Tuổi tối thiểu của độc giả mượn sách không được bằng 0", "Thông báo"); txbTuoiToiDa.Text = "";
+                }
+            }
+            catch
+            { }
         }
     }
 }
