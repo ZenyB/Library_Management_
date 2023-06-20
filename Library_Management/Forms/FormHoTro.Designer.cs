@@ -58,7 +58,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -105,6 +104,7 @@
             this.button3.TabIndex = 33;
             this.button3.Text = "Liên hệ";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -121,6 +121,7 @@
             this.button2.TabIndex = 32;
             this.button2.Text = "Liên hệ";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -137,6 +138,7 @@
             this.button1.TabIndex = 31;
             this.button1.Text = "Liên hệ";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -201,6 +203,7 @@
             this.btnLienHe1.TabIndex = 26;
             this.btnLienHe1.Text = "Liên hệ";
             this.btnLienHe1.UseVisualStyleBackColor = false;
+            this.btnLienHe1.Click += new System.EventHandler(this.btnLienHe1_Click);
             // 
             // label6
             // 
@@ -244,6 +247,7 @@
             this.btn_GuiHT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_GuiHT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_GuiHT.UseVisualStyleBackColor = false;
+            this.btn_GuiHT.Click += new System.EventHandler(this.btn_GuiHT_Click);
             // 
             // FormHoTro
             // 

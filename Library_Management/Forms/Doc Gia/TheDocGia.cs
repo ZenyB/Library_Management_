@@ -319,7 +319,7 @@ namespace Library_Management.Forms.DocGia
                 connect(query);
                 int tuoiMax = Convert.ToInt32(command.ExecuteScalar());
 
-                string[] nam = dtp_NgaySinh.Text.Split('/');
+                string[] nam = dtp_NgaySinh.Value.ToString("dd/MM/yyyy").Split('/');
                 int NamSinh = Convert.ToInt32(nam[2]);
                 int tuoi = DateTime.Now.Year - NamSinh;
 
