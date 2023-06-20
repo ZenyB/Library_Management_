@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.thongTinchitiet = new System.Windows.Forms.Label();
             this.btnApDung = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbCount = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -312,15 +312,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DS_TraCuu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DS_TraCuu.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DS_TraCuu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("UTM Avo", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(201)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DS_TraCuu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DS_TraCuu.ColumnHeadersHeight = 50;
             this.DS_TraCuu.Location = new System.Drawing.Point(8, 0);
             this.DS_TraCuu.MultiSelect = false;
@@ -329,6 +329,7 @@
             this.DS_TraCuu.RowHeadersVisible = false;
             this.DS_TraCuu.RowHeadersWidth = 51;
             this.DS_TraCuu.RowTemplate.Height = 24;
+            this.DS_TraCuu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DS_TraCuu.Size = new System.Drawing.Size(821, 603);
             this.DS_TraCuu.TabIndex = 13;
             this.DS_TraCuu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DS_TraCuu_CellClick);
@@ -471,25 +472,26 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.textBox1);
+            this.panel8.Controls.Add(this.txbCount);
             this.panel8.Controls.Add(this.label3);
             this.panel8.Location = new System.Drawing.Point(14, 57);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(208, 28);
             this.panel8.TabIndex = 14;
             // 
-            // textBox1
+            // txbCount
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(56, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(40, 24);
-            this.textBox1.TabIndex = 20;
-            this.textBox1.Text = "(e.g)";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbCount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+            this.txbCount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbCount.Font = new System.Drawing.Font("UTM Avo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbCount.ForeColor = System.Drawing.Color.White;
+            this.txbCount.Location = new System.Drawing.Point(56, 5);
+            this.txbCount.Name = "txbCount";
+            this.txbCount.ReadOnly = true;
+            this.txbCount.Size = new System.Drawing.Size(40, 24);
+            this.txbCount.TabIndex = 20;
+            this.txbCount.Text = "(e.g)";
+            this.txbCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -592,7 +594,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbCount;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton rbtn_TinhTrang;
         private System.Windows.Forms.RadioButton rbtn_TacGia;
