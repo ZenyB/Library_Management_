@@ -536,5 +536,24 @@ namespace Library_Management
         {
             this.ActiveControl = null;
         }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            cbbReader.SelectedIndex = -1;
+            totalfine = txtTongNo.Text = "0";
+            txtTien.Text = "0";
+            txb_TenDocGia.Text = "";
+
+            returnView.Clear();
+            chosenBooks.Clear();
+
+            bindingReturn = new BindingSource();
+            bindingReturn.DataSource = returnView;
+            DS_SlipBook.DataSource = bindingReturn;
+
+            bindingChosen = new BindingSource();
+            bindingChosen.DataSource = chosenBooks;
+            DS_Choosen.DataSource = bindingChosen;
+        }
     }
 }

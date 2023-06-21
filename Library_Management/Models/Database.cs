@@ -8,7 +8,7 @@ namespace Library_Management.Models
 {
     public class Database
     {
-        public static string connectionStr = @"Data Source=DESKTOP-L8092DN\MSSQLSERVER1;Initial Catalog=TYPH;Integrated Security=True";
+        public static string connectionStr = @"Data Source=LAPTOP-A6JDT5M7\KAIL;Initial Catalog=TYPH;Integrated Security=True";
         public static string parametersQueryCmd = @"SELECT * from THAMSO";
         public static string validReadersQueryCmd = @"SELECT MaDocGia, HoTen, NgHetHan, Email
                                                     FROM DOCGIA
