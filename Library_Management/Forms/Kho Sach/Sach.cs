@@ -147,8 +147,8 @@ namespace Library_Management
             cb_MaDS.Text = DS_Sach.CurrentRow.Cells[1].Value.ToString();
             cb_TenSach.Text = DS_Sach.CurrentRow.Cells[2].Value.ToString();
             txb_TacGia.Text = DS_Sach.CurrentRow.Cells[3].Value.ToString();
-            txb_NamXB.Text = DS_Sach.CurrentRow.Cells[4].Value.ToString();
-            txb_NhaXB.Text = DS_Sach.CurrentRow.Cells[5].Value.ToString();
+            txb_NamXB.Text = DS_Sach.CurrentRow.Cells[5].Value.ToString();
+            txb_NhaXB.Text = DS_Sach.CurrentRow.Cells[4].Value.ToString();
             txb_SoLuong.Text = DS_Sach.CurrentRow.Cells[6].Value.ToString();
             txb_DonGia.Text = Decimal.Parse(DS_Sach.CurrentRow.Cells[7].Value.ToString()).ToString("N2");
             btnLuu.Enabled = true;
@@ -202,23 +202,23 @@ namespace Library_Management
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            //string query = "SELECT  ThoiGianLuuHanh FROM THAMSO";
-            //connect(query);
-            //int tgXB = Convert.ToInt32(myCommand.ExecuteScalar());
+            string query = "SELECT  ThoiGianLuuHanh FROM THAMSO";
+            connect(query);
+            int tgXB = Convert.ToInt32(myCommand.ExecuteScalar());
 
-            //if (DateTime.Now.Year - Convert.ToInt32(txb_NamXB.Text) > tgXB)
-            //{
-            //    MessageBox.Show("Chỉ nhận sách xuất bản trong vòng " + tgXB.ToString() + " năm!");
-            //    return;
-            //}
-            //float ktTriGia;
-            //bool isNumberTriGia = float.TryParse(txb_DonGia.Text, out ktTriGia);
+            if (DateTime.Now.Year - Convert.ToInt32(txb_NamXB.Text) > tgXB)
+            {
+                MessageBox.Show("Chỉ nhận sách xuất bản trong vòng " + tgXB.ToString() + " năm!");
+                return;
+            }
+            float ktTriGia;
+            bool isNumberTriGia = float.TryParse(txb_DonGia.Text, out ktTriGia);
 
-            //if (isNumberTriGia == false || ktTriGia <= 0)
-            //{
-            //    MessageBox.Show("Vui lòng nhập số dương lớn hơn 0 trong ô:\nGiá Tiền.", "Thông Báo");
-            //    return;
-            //}
+            if (isNumberTriGia == false || ktTriGia <= 0)
+            {
+                MessageBox.Show("Vui lòng nhập số dương lớn hơn 0 trong ô:\nGiá Tiền.", "Thông Báo");
+                return;
+            }
             if (cb_MaDS.Text.Length > 0 && cb_TenSach.Text.Length > 0 && txb_TacGia.Text.Length > 0 && txb_NhaXB.Text.Length > 0 && txb_DonGia.Text.Length > 0)
             {
                 suaSach();
